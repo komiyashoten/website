@@ -1,4 +1,8 @@
 <?php
+include('lib/custom-functions.php');
+include('lib/shortcodes.php');
+include('lib/custom-fields.php');
+
 // ウィジェットエリア
 // サイドバーのウィジェット
 register_sidebar( array(

@@ -1,6 +1,7 @@
 <?php get_template_part('html-head'); ?>
 
 <script src="/wp-content/themes/komiya/js/jquery.bxslider.js"></script>
+<script src="<?php assets('js','common.js'); ?>"></script>
 <link rel="stylesheet" href="/wp-content/themes/komiya/css/jquery.bxslider.css">
 <script>
 jQuery(document).ready(function(){

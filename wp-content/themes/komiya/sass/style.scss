@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import 'libs/vars';
+@import 'libs/functions';
 
 $breakpoints: (
   'sm': 'screen and (max-width: 480px)',
@@ -1034,7 +1036,7 @@ header .fix-navi-pc .fix-navi-logo{
 		}
 	}
 	ul.col2,
-	ul.col3, {
+	ul.col3 {
 		li.side_taxonomy_title {
 			width: 100%;
 			color: #ccc;
@@ -4811,5 +4813,126 @@ h2.elHeading {
 		font-size: 1.4rem;
 		margin-bottom: 0.5em;
 		font-family: "Quicksand", "游ゴシック体", "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	}
+}
+
+
+/* まとめページ
+----------------------------------------- */
+
+#summary_header{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img{
+		position: absolute;
+		width: 100%;
+		height: 600px;
+		object-fit: cover;
+		z-index: 1;
+	}
+
+	.summary_titles{
+		position: relative;
+		z-index: 2;
+		*{
+			color: #fff;
+			text-align: center;
+		}
+		.category{
+			margin-bottom: 20px;
+			a{
+				text-decoration: underline;
+				font-size: 12px;
+			}
+		}
+		h1{
+			font-size: 35px;
+			font-family: _font('mincho');
+			
+			span{
+				padding-top: 10px;
+				display: block;
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+.content{
+
+	&.summary{
+		width: 100%;
+		float: static;
+
+		@include mq() {
+			width: 87%;
+		}
+
+		&>h1{
+			text-align: center;
+			font-family: _font('mincho');
+		}
+		h1,h2,h3,h4{
+			text-align: center;
+		}
+
+		p{
+			width: 70%;
+			margin: 1em auto;
+
+			@include mq() {
+				width: 90%;
+			}
+		}
+	}
+
+	.inpage_linkbox{
+		width: 70%;
+		margin: 20px auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include mq() {
+			width: 90%;
+		}
+
+		a{
+			width: calc(50% - 10px);
+			flex-basis: calc(50% - 10px);
+			border: solid 1px #dedede;
+			display: block;
+			padding: 15px;
+			text-align: center;
+			margin-bottom: 20px;
+			color: _palette('black');
+			position: relative;
+			font-size: 13px;
+
+			@include mq() {
+				width: 100%;
+				flex-basis: 100%;
+			}
+
+			&:after{
+				content: '';
+				display: block;
+				width: 10px;
+				height: 6px;
+				background: url(../img/arrow_bottom.svg) no-repeat;
+				background-size: 10px 6px;
+				position: absolute;
+				bottom: 7px;
+				top: auto;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+		}
 	}
 }

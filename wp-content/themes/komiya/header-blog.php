@@ -14,6 +14,8 @@ jQuery(function() {
 });
 </script>
 <?php wp_head(); ?>
+<script src="<?php assets('js','jquery-3.3.1.min.js'); ?>"></script>
+<script src="<?php assets('js','common.js'); ?>"></script>
 </head>
 <body onclick="checkSelect();">
 <header id="backtotop">
