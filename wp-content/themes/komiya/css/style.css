@@ -5145,3 +5145,10 @@ h2.elHeading {
   right: 0;
   margin: auto;
 }
+.swiper-container {
+  width: 85%;
+  margin: 20px auto;
+}
+.swiper-container .swiper-pagination {
+  bottom: 0 !important;
+}
