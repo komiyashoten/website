@@ -4936,3 +4936,12 @@ h2.elHeading {
 		}
 	}
 }
+
+.swiper-container{
+	width: 85%;
+	margin: 20px auto;
+
+	.swiper-pagination{
+		bottom: 0 !important;
+	}
+}

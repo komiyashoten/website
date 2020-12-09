@@ -8,11 +8,13 @@
 <link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/komiya/css/style.css">
 <link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/komiya/css/hamburger.css">
 <link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/komiya/css/accordion.css">
+<link rel="stylesheet" type="text/css" media="all" href="<?php assets("css","swiper.min.css"); ?>">
 
 <link href="https://fonts.googleapis.com/css?family=Amiri|Frank+Ruhl+Libre|Halant|Libre+Baskerville|Lora|Lusitana|PT+Serif|Quattrocento|Scheherazade|Unna|Vollkorn" rel="stylesheet">
 
 <?php wp_head(); ?>
 
+<script src="<?php assets("js","swiper.min.js"); ?>"></script>
 <script type="text/javascript" src="/wp-content/themes/komiya/js/hamburger.js"></script>
 
 <script type="text/javascript">

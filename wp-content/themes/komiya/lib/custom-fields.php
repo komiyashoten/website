@@ -8,10 +8,10 @@ function add_custom_field() {
  
 
 function create_summary() {
-    $keyname = array('summary_en', 'summary_ja');
+    $keyname = array('まとめ英語タイトル', 'まとめ日本語タイトル');
     global $post;
     foreach($keyname as $key):
-        if($key == 'summary_en'):
+        if($key == 'まとめ英語タイトル'):
             $placeholder = 'まとめタイトル（英語）';
         else:
             $placeholder = 'まとめタイトル（日本語）';
@@ -28,7 +28,7 @@ function create_summary() {
 // カスタムフィールドの保存
 add_action( 'save_post', 'save_custom_field' );
 function save_custom_field( $post_id ) {
-    $custom_fields = ['summary_en','summary_ja'];
+    $custom_fields = ['まとめ英語タイトル','まとめ日本語タイトル'];
  
     foreach( $custom_fields as $d ) {
         if ( isset( $_POST['nonce-' . $d] ) && $_POST['nonce-' . $d] ) {

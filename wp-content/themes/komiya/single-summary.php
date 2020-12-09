@@ -10,8 +10,8 @@ Template Post Type: post
 		<img src="<?php echo kmy_get_thumbnail(get_the_ID()); ?>">
 		<div class="summary_titles">
 			<div class="category"><?php the_category(', ');?></div>
-			<h1><?php echo get_post_meta(get_the_ID(),'summary_en',true); ?>
-				<span><?php echo get_post_meta(get_the_ID(),'summary_ja',true); ?></span>
+			<h1><?php echo get_post_meta(get_the_ID(),'まとめ英語タイトル',true); ?>
+				<span><?php echo get_post_meta(get_the_ID(),'まとめ日本語タイトル',true); ?></span>
 			</h1>
 		</div>
 	</section>
