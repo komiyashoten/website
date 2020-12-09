@@ -76,7 +76,7 @@
 	</ul>
 	</div>
 </div>
-<div class="copyright">&copy; 2019 KOMIYA SHOTEN All Rights Reserved.</div>
+<div class="copyright">&copy; <?php echo date('Y') ?> KOMIYA SHOTEN All Rights Reserved.</div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
 <script>objectFitImages();</script>
