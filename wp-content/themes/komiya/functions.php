@@ -391,12 +391,16 @@ add_filter( 'mce_external_plugins', 'add_add_shortcode_button_plugin' );
 function add_add_shortcode_button_plugin( $plugin_array ) {
   $plugin_array[ 'slider_shortcode_button_plugin' ] = get_template_directory_uri() . '/js/editor-button.js';
   $plugin_array[ 'inPageLink_shortcode_button_plugin' ] = get_template_directory_uri() . '/js/editor-button.js';
+  $plugin_array[ 'product_shortcode_button_plugin' ] = get_template_directory_uri() . '/js/editor-button.js';
+  $plugin_array[ 'products_shortcode_button_plugin' ] = get_template_directory_uri() . '/js/editor-button.js';
   return $plugin_array;
 }
 add_filter( 'mce_buttons', 'add_shortcode_button' );
 function add_shortcode_button( $buttons ) {
   $buttons[] = 'slider';
   $buttons[] = 'inPageLink';
+  $buttons[] = 'product';
+  $buttons[] = 'products';
   return $buttons;
 }
 add_action( 'admin_print_footer_scripts', 'add_shortcode_quicktags' );
@@ -406,6 +410,8 @@ function add_shortcode_quicktags() {
   <script>
     QTags.addButton( 'slider_shortcode', '[スライダー]', '[スライダー]', '[/スライダー]' );
     QTags.addButton( 'inPageLink_shortcode', '[ページ内リンク]', '[ページ内リンク]', '[/ページ内リンク]' );
+    QTags.addButton( 'product_shortcode', '[商品]', '[商品 id="" link=""]', '' );
+    QTags.addButton( 'products_shortcode', '[複数商品]', '[複数商品]', '[/複数商品]' );
   </script>
 <?php
   }
