@@ -83,6 +83,16 @@ function ks_showProduct( $atts, $content = null ) {
 			$thumbnail_id = get_post_thumbnail_id($the_query->post->ID);
 			$image = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail' );
 			$src = $image[0];
+			//商品URLからyahooかrakutenか判定する
+			if( get_post_meta($post->ID,'商品ページURL', true) ):
+				$goods_url = get_post_meta($post->ID,'商品ページURL', true);
+			else:
+				$goods_url = null;
+			endif;
+			//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
+			$which_shop = which_shop($goods_url);
+			$$which_shop = $goods_url;
+
 			//もし新フィールドに値がなければ旧フィールドのURLを楽天のURLとする
 			if( get_post_meta($post->ID,'楽天', true) ):
 				$rakuten = get_post_meta($post->ID,'楽天', true);
@@ -97,10 +107,26 @@ function ks_showProduct( $atts, $content = null ) {
 			$return.='		<img src="'.kmy_get_thumbnail($post->ID).'">';
 			$return.='	</div>';
 			$return.='	<div class="product_content">';
+			$return.='		<p class="product_brand">'.get_post_meta($post->ID,'ブランド', true).'</p>';
 			$return.='		<div class="product_lead">'.get_post_meta($post->ID,'リード', true).'</div>';
 			$return.='		<p class="product_title">'.$post->post_title.'</p>';
 			$return.='		<p class="product_kind">'.get_post_meta($post->ID,'大分類', true).'</p>';
 			$return.='		<p class="product_price">¥'.get_post_meta($post->ID,'値段', true).'</p>';
+			$return.='	</div>';
+			//マウスオーバーの表示領域
+			$return.='	<div class="links">';
+			if( $rakuten != null ):
+				//楽天のURLがあれば楽天のボタン表示
+				$return.='<a class="product_button" href="'.$rakuten.'">楽天で詳細を見る</a>';
+			endif;
+			if( $yahoo != null ):
+				//ヤフーのURLがあればヤフーのボタン表示
+				$return.='<a class="product_button" href="'.$yahoo.'">ヤフーで詳細を見る</a>';
+			endif;
+			if( $amazon != null ):
+				//アマゾンのURLがあればアマゾンのボタン表示
+				$return.='<a class="product_button" href="'.$amazon.'">アマゾンで詳細を見る</a>';
+			endif;			
 			$return.='	</div>';
 			$return.='</section>';
         endwhile;
@@ -108,3 +134,11 @@ function ks_showProduct( $atts, $content = null ) {
 	return $return;
 }
 add_shortcode('商品', 'ks_showProduct');
+
+// 複数商品の場合の囲いショートコード 
+function ks_showProducts( $atts, $content = null ) {
+	// ショートコードを内部で出力
+	$content = do_shortcode( shortcode_unautop( $content ) );
+  return '<div class="products_box">'.$content.'</div>';
+  }
+  add_shortcode('複数商品', 'ks_showProducts');
