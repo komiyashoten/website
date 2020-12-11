@@ -5152,3 +5152,32 @@ h2.elHeading {
 .swiper-container .swiper-pagination {
   bottom: 0 !important;
 }
+.product_box {
+  display: flex;
+  width: 85%;
+  margin: 40px auto;
+}
+.product_box .product_thumbnail {
+  flex-basis: 30%;
+  width: 30%;
+}
+.product_box .product_content {
+  flex-basis: 70%;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 2em;
+}
+.product_box .product_content p {
+  margin: 0;
+}
+.product_box .product_content .product_lead {
+  line-height: 1.5em;
+  margin-bottom: 15px;
+}
+.product_box .product_content .product_title {
+  font-weight: bold;
+  line-height: 1.25em;
+}
+.product_box .product_content .product_price {
+  font-weight: bold;
+}

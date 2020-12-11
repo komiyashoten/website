@@ -48,4 +48,63 @@ function sliders( $atts, $content = null ) {
 }
 add_shortcode('スライダー', 'sliders');
 
+//商品の表示
+function ks_showProduct( $atts, $content = null ) {
+	extract(
+		shortcode_atts(
+			array(
+				'id' => '',
+				'link' => '',
+				'count' => 1,
+			),
+			$atts
+		)
+	);
 
+	if($link){
+		//URL指定の場合
+		$id = url_to_postid($link);
+	}
+
+	$args = array(
+		'number_posts'    => $count,
+		'posts_per_page'  => $count,
+		'post_type'       => 'product',
+		'post_status'     => 'publish',
+		'orderby'         => 'menu_order',
+		'order'           => "ASC",
+		'post__in'		  => array( $id ), //将来的に複数になる可能性のためarray
+	);
+
+	$the_query = new WP_Query( $args );
+	if( $the_query->have_posts() ):
+		while ( $the_query->have_posts() ): $the_query->the_post();
+			$post = $the_query->post;
+			$thumbnail_id = get_post_thumbnail_id($the_query->post->ID);
+			$image = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail' );
+			$src = $image[0];
+			//もし新フィールドに値がなければ旧フィールドのURLを楽天のURLとする
+			if( get_post_meta($post->ID,'楽天', true) ):
+				$rakuten = get_post_meta($post->ID,'楽天', true);
+			else:
+				$rakuten = get_post_meta($post->ID,'商品ページURL', true);
+			endif;
+			$yahoo = get_post_meta($post->ID,'Yahoo', true);
+			$amazon = get_post_meta($post->ID,'Amazon', true);
+			
+			$return.='<section class="product_box">';
+			$return.='	<div class="product_thumbnail">'; //サムネイル
+			$return.='		<img src="'.kmy_get_thumbnail($post->ID).'">';
+			$return.='	</div>';
+			$return.='	<div class="product_content">';
+			$return.='		<div class="product_lead">'.get_post_meta($post->ID,'リード', true).'</div>';
+			$return.='		<p class="product_title">'.$post->post_title.'</p>';
+			$return.='		<p class="product_kind">'.get_post_meta($post->ID,'大分類', true).'</p>';
+			$return.='		<p class="product_price">¥'.get_post_meta($post->ID,'値段', true).'</p>';
+			$return.='	</div>';
+			$return.='</section>';
+        endwhile;
+    endif;
+	return $return;
+}
+add_shortcode('商品', 'ks_showProduct');

@@ -4945,3 +4945,37 @@ h2.elHeading {
 		bottom: 0 !important;
 	}
 }
+
+.product_box{
+	display: flex;
+	width: 85%;
+	margin: 40px auto;
+
+	.product_thumbnail{
+		flex-basis: 30%;
+		width: 30%;
+	}
+
+	.product_content{
+		flex-basis: 70%;
+		width: 70%;
+		box-sizing: border-box;
+		padding: 2em;
+
+		p{
+			margin: 0;
+		}
+
+		.product_lead{
+			line-height: 1.5em;
+			margin-bottom: 15px;
+		}
+		.product_title{
+			font-weight: bold;
+			line-height: 1.25em;
+		}
+		.product_price{
+			font-weight: bold;
+		}
+	}
+}
