@@ -410,7 +410,7 @@ function add_shortcode_quicktags() {
   <script>
     QTags.addButton( 'slider_shortcode', '[スライダー]', '[スライダー]', '[/スライダー]' );
     QTags.addButton( 'inPageLink_shortcode', '[ページ内リンク]', '[ページ内リンク]', '[/ページ内リンク]' );
-    QTags.addButton( 'product_shortcode', '[商品]', '[商品 id="" link=""]', '' );
+    QTags.addButton( 'product_shortcode', '[商品]', '[商品 id=""]', '' );
     QTags.addButton( 'products_shortcode', '[複数商品]', '[複数商品]', '[/複数商品]' );
   </script>
 <?php

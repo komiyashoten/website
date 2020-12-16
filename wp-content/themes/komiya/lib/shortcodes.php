@@ -43,7 +43,7 @@ function sliders( $atts, $content = null ) {
 	$return.= '<div class="swiper-pagination swiper-pagination-black"></div>';
 	$return.= '</div>';
 
-	$return.= '<script>jQuery(function(){ var swiper = new Swiper(".swiper-container", { loop: true, navigation: {nextEl: ".swiper-button-next",prevEl: ".swiper-button-prev",},pagination: {el: ".swiper-pagination",},}); });</script>';
+	$return.= '<script>jQuery(function(){ var swiper = new Swiper(".swiper-container", { loop: true, navigation: {nextEl: ".swiper-button-next",prevEl: ".swiper-button-prev",},pagination: {el: ".swiper-pagination", clickable: true,},}); });</script>';
 	return $return;
 }
 add_shortcode('スライダー', 'sliders');
@@ -109,7 +109,7 @@ function ks_showProduct( $atts, $content = null ) {
 			$return.='	<div class="product_content">';
 			$return.='		<p class="product_brand">'.get_post_meta($post->ID,'ブランド', true).'</p>';
 			$return.='		<div class="product_lead">'.get_post_meta($post->ID,'リード', true).'</div>';
-			$return.='		<p class="product_title">'.$post->post_title.'</p>';
+			$return.='		<p class="product_title">'.get_post_meta($post->ID,'シリーズ名', true).'</p>';
 			$return.='		<p class="product_kind">'.get_post_meta($post->ID,'大分類', true).'</p>';
 			$return.='		<p class="product_price">¥'.get_post_meta($post->ID,'値段', true).'</p>';
 			$return.='	</div>';

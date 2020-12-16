@@ -49,7 +49,7 @@
 
       ed.addCommand( 'product', function() {
         var selected_text = ed.selection.getContent(),
-            return_text = '[商品 id="" link=""]';
+            return_text = '[商品 id=""]';
         ed.execCommand( 'mceInsertContent', 0, return_text );
       });
     },
