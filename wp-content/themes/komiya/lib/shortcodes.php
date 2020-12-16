@@ -84,23 +84,18 @@ function ks_showProduct( $atts, $content = null ) {
 			$image = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail' );
 			$src = $image[0];
 			//商品URLからyahooかrakutenか判定する
-			if( get_post_meta($post->ID,'商品ページURL', true) ):
-				$goods_url = get_post_meta($post->ID,'商品ページURL', true);
-			else:
-				$goods_url = null;
-			endif;
+			$goods_url = get_post_meta($post->ID,'商品ページURL', true);
 			//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
 			$which_shop = which_shop($goods_url);
 			$$which_shop = $goods_url;
 
-			//もし新フィールドに値がなければ旧フィールドのURLを楽天のURLとする
-			if( get_post_meta($post->ID,'楽天', true) ):
-				$rakuten = get_post_meta($post->ID,'楽天', true);
-			else:
-				$rakuten = get_post_meta($post->ID,'商品ページURL', true);
-			endif;
-			$yahoo = get_post_meta($post->ID,'Yahoo', true);
+			//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
+			$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
+			$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
 			$amazon = get_post_meta($post->ID,'Amazon', true);
+
+			$size = wp_get_object_terms($post->ID, "size");
+			$ribs = wp_get_object_terms($post->ID, "ribs");
 			
 			$return.='<section class="product_box">';
 			$return.='	<div class="product_thumbnail">'; //サムネイル
@@ -109,7 +104,7 @@ function ks_showProduct( $atts, $content = null ) {
 			$return.='	<div class="product_content">';
 			$return.='		<p class="product_brand">'.get_post_meta($post->ID,'ブランド', true).'</p>';
 			$return.='		<div class="product_lead">'.get_post_meta($post->ID,'リード', true).'</div>';
-			$return.='		<p class="product_title">'.get_post_meta($post->ID,'シリーズ名', true).'</p>';
+			$return.='		<h3 class="product_title">'.get_post_meta($post->ID,'シリーズ名', true).'&nbsp;&nbsp;<span>'.$size[0]->name.'&nbsp;'.$ribs[0]->name.'</span></h3>';
 			$return.='		<p class="product_kind">'.get_post_meta($post->ID,'大分類', true).'</p>';
 			$return.='		<p class="product_price">¥'.get_post_meta($post->ID,'値段', true).'</p>';
 			$return.='	</div>';

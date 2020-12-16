@@ -5003,14 +5003,29 @@ h2.elHeading {
 		}
 
 		.product_lead{
-			line-height: 1.5em;
-			margin-bottom: 15px;
+			font-size: 1.45rem;
+			margin-bottom: 2em;
+			line-height: 1.9;
 		}
 		.product_title{
+			text-align: left;
+			font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+			font-size: 1.42rem;
+			margin-bottom: 0.1em;
 			font-weight: bold;
-			line-height: 1.25em;
+
+			span{
+				font-size: 1.4rem;
+				font-weight: normal;
+			}
+		}
+		.product_kind{
+			font-size: 1.3rem;
+			margin-bottom: 0.5em;
+			margin-top: 0;
 		}
 		.product_price{
+			font-size: 1.55rem;
 			font-weight: bold;
 		}
 	}
@@ -5106,14 +5121,39 @@ h2.elHeading {
 
 		.product_content{
 			width: 100%;
-			padding: .5em;
+			padding: 0;
 
 			.product_brand{
 				display: block;
+				font-size: 1.3rem;
+				margin: 1em 0.5em 0 0.5em;
+				line-height: 1;
 			}
 
 			.product_lead{
 				display: none;
+			}
+
+			.product_title{
+				font-size: 1.5rem;
+				font-weight: bold;
+				margin: 0 0.4em 0 0.4em;
+				line-height: 1.8;
+	
+				span{
+					font-size: 1.2rem;
+					font-weight: normal;
+					margin: 0em 0.5em 0 0.5em;
+				}
+			}
+			.product_kind{
+				font-size: 1.2rem;
+				margin: 0em 0.5em 0 0.5em;
+			}
+			.product_price{
+				font-weight: normal;
+				font-size: 1.3rem;
+				margin: 0em 0.5em 0 0.5em;
 			}
 		}
 	}
