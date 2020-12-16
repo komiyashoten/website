@@ -5045,6 +5045,17 @@ h2.elHeading {
   justify-content: center;
   align-items: center;
 }
+#summary_header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, .2);
+}
 #summary_header img {
   position: absolute;
   width: 100%;
@@ -5239,6 +5250,7 @@ h2.elHeading {
   text-align: center;
   color: #000;
   margin: 0 10px;
+  width: 180px;
 }
 .product_box .links .product_button:hover {
   opacity: 0.8;
@@ -5306,4 +5318,10 @@ h2.elHeading {
 }
 .products_box .links .product_button {
   margin: 10px 0;
+}
+.swiper-pagination-bullet {
+  width: 11px !important;
+  height: 11px !important;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
 }
