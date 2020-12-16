@@ -84,22 +84,14 @@ function ks_showProduct( $atts, $content = null ) {
 			$image = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail' );
 			$src = $image[0];
 			//商品URLからyahooかrakutenか判定する
-			if( get_post_meta($post->ID,'商品ページURL', true) ):
-				$goods_url = get_post_meta($post->ID,'商品ページURL', true);
-			else:
-				$goods_url = null;
-			endif;
+			$goods_url = get_post_meta($post->ID,'商品ページURL', true);
 			//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
 			$which_shop = which_shop($goods_url);
 			$$which_shop = $goods_url;
 
-			//もし新フィールドに値がなければ旧フィールドのURLを楽天のURLとする
-			if( get_post_meta($post->ID,'楽天', true) ):
-				$rakuten = get_post_meta($post->ID,'楽天', true);
-			else:
-				$rakuten = get_post_meta($post->ID,'商品ページURL', true);
-			endif;
-			$yahoo = get_post_meta($post->ID,'Yahoo', true);
+			//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
+			$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
+			$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
 			$amazon = get_post_meta($post->ID,'Amazon', true);
 			
 			$return.='<section class="product_box">';
