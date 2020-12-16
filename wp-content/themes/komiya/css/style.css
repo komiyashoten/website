@@ -5214,6 +5214,11 @@ h2.elHeading {
 .product_box .product_content .product_title {
   font-weight: bold;
   line-height: 1.25em;
+  font-size: 1.5rem;
+}
+.product_box .product_content .product_title span {
+  font-size: 1.4rem;
+  font-weight: normal;
 }
 .product_box .product_content .product_price {
   font-weight: bold;

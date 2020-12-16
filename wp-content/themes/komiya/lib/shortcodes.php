@@ -93,6 +93,9 @@ function ks_showProduct( $atts, $content = null ) {
 			$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
 			$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
 			$amazon = get_post_meta($post->ID,'Amazon', true);
+
+			$size = wp_get_object_terms($post->ID, "size");
+			$ribs = wp_get_object_terms($post->ID, "ribs");
 			
 			$return.='<section class="product_box">';
 			$return.='	<div class="product_thumbnail">'; //サムネイル
@@ -101,7 +104,7 @@ function ks_showProduct( $atts, $content = null ) {
 			$return.='	<div class="product_content">';
 			$return.='		<p class="product_brand">'.get_post_meta($post->ID,'ブランド', true).'</p>';
 			$return.='		<div class="product_lead">'.get_post_meta($post->ID,'リード', true).'</div>';
-			$return.='		<p class="product_title">'.get_post_meta($post->ID,'シリーズ名', true).'</p>';
+			$return.='		<p class="product_title">'.get_post_meta($post->ID,'シリーズ名', true).'&nbsp;&nbsp;<span>'.$size[0]->name.'&nbsp;'.$ribs[0]->name.'</span></p>';
 			$return.='		<p class="product_kind">'.get_post_meta($post->ID,'大分類', true).'</p>';
 			$return.='		<p class="product_price">¥'.get_post_meta($post->ID,'値段', true).'</p>';
 			$return.='	</div>';
