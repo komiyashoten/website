@@ -19,10 +19,7 @@
 		様々なライフスタイルに合わせて、もっと快適にお使いいただける傘を目指して、<br>
 		小宮商店が企画した海外製の傘が、「小宮商店 Daily Use Umbrella」の傘です。</p>
 		<p class="du_top_lead center" style="margin-bottom: 1.2em;">以下のオンラインショップでお買い求めいただけます。</p>
-		<div class="du_online_shops"><a href="https://www.amazon.co.jp/s?me=A2H72AY1Q15C3Z&marketplaceID=A1VC38T7YXB528">Amazon店</a><a href="https://store.shopping.yahoo.co.jp/komiya/">Yahoo!ショッピング店</a></div><br>
-		<p class="du_top_lead center">株式会社東急ハンズ様や株式会社ロフト様の主要店舗でもお買い求めいただけます。<br>
-		お取り扱い商品については各店舗へお問い合わせください。</p>
-
+		<div class="du_online_shops"><a href="https://www.amazon.co.jp/s?me=A2H72AY1Q15C3Z&marketplaceID=A1VC38T7YXB528">Amazon店</a><a href="https://store.shopping.yahoo.co.jp/komiya/">Yahoo!ショッピング店</a></div>
 		<ul class="du_top_series_list">
 			<?php 
 			$page_list = new WP_Query([ 'post_type' =>'page', 'post_parent' => $page_id, 'posts_per_page' => 100, 'order' => 'ASC' ]);
