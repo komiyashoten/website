@@ -4020,19 +4020,22 @@ footer .rakuten {
 		}
 	}
 }
-
+/*
 p, td, th {
 	font-size: 15.5px;
 	margin-bottom: 0.5em;
 	word-break: normal !important;
 	word-wrap: break-word;
 }
+*/
 .sp_page {
 	padding: 1.2em;
 }
+/*
 div, p {
 	box-sizing: border-box;
 }
+*/
 .product_page .danraku1 {
 	width: 558px;
 	margin: 4em auto 0 auto;
@@ -4145,6 +4148,7 @@ div, p {
 	letter-spacing: 0.2em;
 	line-height: 1.9;
 }
+/*
 h4 {
 	font-size: 1.85rem;
 	margin-bottom: 1.1em;
@@ -4273,7 +4277,7 @@ p {
 	width: 970px;
 	height: 580px;
 	object-fit: cover;
-	font-family: 'object-fit: cover;'; /* IE対策 */
+	font-family: 'object-fit: cover;';
 }
 .sp_page_header .series_header .bg img {
 	width: 100%;
@@ -4298,7 +4302,7 @@ p {
 	font-size: 1.35rem;
 }
 
-
+*/
 /* ヤフー商品ページ 上書き
 ----------------------------------------- */
 body#shpBody,
@@ -5135,4 +5139,4 @@ h2.elHeading {
 	height: 11px !important;
 	opacity: 1;
 	background: rgba(0, 0, 0, 0.2);
-  }
+}
