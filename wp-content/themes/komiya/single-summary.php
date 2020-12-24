@@ -17,7 +17,7 @@ Template Post Type: post
 	</section>
 	<section class="blog clear">
 		<div class="content summary">
-			<h1><?php the_title(); ?> -test</h1>
+			<h1><?php the_title(); ?></h1>
 			<p><?php the_content(); ?></p>			
 		</div>
 	</section>
