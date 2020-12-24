@@ -34,3 +34,12 @@ function assets($path="",$key="",$return=""){
     }
     
 }
+
+//URLから楽天かヤフーかを調べる関数
+function which_shop($val){
+    if(strpos($val,"rakuten") != false){
+        return "rakuten";
+    }else if(strpos($val,"yahoo")){
+        return "yahoo";
+    }
+}

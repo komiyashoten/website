@@ -19,14 +19,6 @@ Template Post Type: post
 		<div class="content summary">
 			<h1><?php the_title(); ?></h1>
 			<p><?php the_content(); ?></p>			
-			<div class="prev_next clear">
-				<div class="prev">
-					<?php previous_post_link('<div class="title">前の記事</div>%link', '%title'); ?>
-				</div>
-				<div class="next">
-					<?php next_post_link('<div class="title">次の記事</div>%link', '%title'); ?>
-				</div>
-			</div>
 		</div>
 	</section>
 <?php endwhile; endif; ?>
