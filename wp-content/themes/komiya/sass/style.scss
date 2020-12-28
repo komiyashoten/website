@@ -56,10 +56,8 @@ input[type="button"] {
   border-radius: 0;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
-  -moz-appearance: button;
   appearance: button;
   border: none;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -173,7 +171,6 @@ article img {
 }
 
 h1,h2,h3,h4,h5,p,div,span,li {
-	-webkit-font-feature-settings: "palt";
 	font-feature-settings : "palt";
 }
 .only_sp {
@@ -285,10 +282,7 @@ p.dummy {
 	margin-top: -6px;
 }
 .banner1 {
-	display: -webkit-box;
-	display: -ms-flexbox;	
-	display: flex;	
-	-ms-flex-pack: distribute;
+	display: flex;
 	justify-content: space-around;
 	margin-top: 3.2em;
 	@include mq(md) {
@@ -307,11 +301,7 @@ p.dummy {
 		}
 		a {
 			color: #333;
-			display: -webkit-box;
-			display: -ms-flexbox;
 			display: flex;
-			-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
 			justify-content: space-between;
 			padding: 1.2em 2.5em;
 			position: relative;
@@ -367,13 +357,8 @@ p.dummy {
 }
 .banner2,
 .banner2gray {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	width: 65%;
 	margin: 2em auto 0 auto;
@@ -425,13 +410,8 @@ h3.banner_title {
 	font-weight: bold;
 }
 .banner3 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	li{
 		width: 48.5%;
@@ -463,7 +443,6 @@ h3.banner_title {
 				width: 35%;
 				height: 12vw;
 				float: left;
-				-o-object-fit: cover;
 				object-fit: cover;
 				font-family: 'object-fit: cover;'; /* IE対策 */
 				@include mq(md) {
@@ -543,7 +522,6 @@ h3.banner_title {
 			width: 42%;
 			height: 120px;
 			float: left;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -604,7 +582,6 @@ h3.banner_title {
 			width: 40%;
 			height: 170px;
 			float: left;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -734,11 +711,7 @@ header {
 					color: #777;
 				}
 				&:hover + .dropdown_inner {
-					display: -webkit-box;
-					display: -ms-flexbox;
 					display: flex;
-					-webkit-box-pack: center;
-					-ms-flex-pack: center;
 					justify-content: center;
 				}
 			}
@@ -752,11 +725,7 @@ header {
 				padding: 2.5em 0 2.3em 0;
 				font-size:1.35rem;
 				&:hover {
-					display: -webkit-box;
-					display: -ms-flexbox;
 					display: flex;
-					-webkit-box-pack: center;	
-					-ms-flex-pack: center;
 					justify-content: center;
 				}
 				h3 {
@@ -780,7 +749,6 @@ header {
 						display: block;
 						text-align: left;
 						line-height: 2.7;
-						-webkit-font-feature-settings: "palt";
 						font-feature-settings : "palt";
 						a {
 							padding: 0;
@@ -1135,8 +1103,6 @@ header .fix-navi-pc .fix-navi-logo{
 			position: relative;
 			cursor: pointer;
 			z-index: 0;
-			opacity: 0.5;
-			font-weight: bold;
 		}
 		input[type="checkbox"] {
 			position: absolute;
@@ -1148,7 +1114,6 @@ header .fix-navi-pc .fix-navi-logo{
 			opacity: 0.5;
 			z-index: -1;
 			cursor: pointer;
-			clip: rect(0, 0, 0, 0);
 		}
 		input[type="checkbox"]:after {
 			position: absolute;
@@ -1170,10 +1135,8 @@ header .fix-navi-pc .fix-navi-logo{
 		text-overflow: ellipsis;
 		outline: none;
 		background: transparent;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 		-webkit-appearance: none;
-		-moz-appearance: none;
 		appearance: none;
 		padding: 0.6em 1em;
 		margin: 0 auto;
@@ -1289,7 +1252,6 @@ header .fix-navi-pc .fix-navi-logo{
 				img {
 					width:100%;
 					height: 85vh;
-					-o-object-fit: cover;
 					object-fit: cover;
 					font-family: 'object-fit: cover;'; /* IE対策 */
 				}
@@ -1319,8 +1281,6 @@ header .fix-navi-pc .fix-navi-logo{
 .top_handmade,
 .top_gift,
 .top_shop{
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	background: #fff;
 	font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
@@ -1338,7 +1298,6 @@ header .fix-navi-pc .fix-navi-logo{
 		img {
 			width: 100%;
 			height: 100%;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -1436,8 +1395,6 @@ header .fix-navi-pc .fix-navi-logo{
 .top_about {
 	li {
 		&:first-child{
-			-webkit-box-ordinal-group: 3;	order: 2;
-			-ms-flex-order: 2;
 			order: 2;
 		}
 	}
@@ -1526,8 +1483,6 @@ header .fix-navi-pc .fix-navi-logo{
 }
 
 .top_men_women {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	@include mq(md) {
 		display: block;
@@ -1589,7 +1544,6 @@ header .fix-navi-pc .fix-navi-logo{
 			width: 100%;
 			@include mq(md) {
 				height: 280px;
-				-o-object-fit: cover;
 				object-fit: cover;
 			}
 		}
@@ -1619,8 +1573,6 @@ header .fix-navi-pc .fix-navi-logo{
 		a {
 			padding: 0.7em;
 			border-bottom: dotted 1px #ccc;
-			display: -webkit-box;
-			display: -ms-flexbox;
 			display: flex;
 			color: #333;
 			@include mq(md) {
@@ -1663,13 +1615,8 @@ header .fix-navi-pc .fix-navi-logo{
 ----------------------------------------- */
 .thumbnail_set {
 	ul {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
 		justify-content: space-between;
-		-ms-flex-flow: wrap;
 		flex-flow: wrap;
 		li {
 			width: 32%;
@@ -1724,17 +1671,10 @@ header .fix-navi-pc .fix-navi-logo{
 }
 .thumbnail_set2 {
 	ul {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
 		justify-content: center;
-		-ms-flex-flow: wrap;
 		flex-flow: wrap;
 		@include mq(md) {
-			-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
 			justify-content: space-between;
 		}
 		li {
@@ -1898,15 +1838,10 @@ ul.product_list {
 	text-align: center;
 	border-top: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	@include mq(lg) {
 		padding: 1em 0.3em;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 	}
 	@include mq(md) {
@@ -1978,11 +1913,7 @@ ul.product_list {
 
 .thumbnail_set3 {
 	ul {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
 		justify-content: center;
 		li {
 			width: 22%;
@@ -2181,7 +2112,6 @@ h3.section_title1 {
 						margin: auto;
 						content: "";
 						vertical-align: middle;
-						-webkit-box-sizing: border-box;
 						box-sizing: border-box;
 						width: 33px;
 						height: 33px;
@@ -2217,7 +2147,6 @@ h3.section_title1 {
 				img {
 					width:100%;
 					height: 530px;
-					-o-object-fit: cover;
 					object-fit: cover;
 					font-family: 'object-fit: cover;'; /* IE対策 */
 				}
@@ -2242,13 +2171,8 @@ h3.section_title1 {
 }
 
 .series_list2 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 	@include mq(md) {
 		display: block;
@@ -2332,13 +2256,8 @@ h3.section_title1 {
 }
 .series_category_list {
 	margin: 24px 0 16px 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .series_category_list li {
@@ -2418,7 +2337,6 @@ h3.section_title1 {
 						margin: auto;
 						content: "";
 						vertical-align: middle;
-						-webkit-box-sizing: border-box;
 						box-sizing: border-box;
 						width: 33px;
 						height: 33px;
@@ -2446,7 +2364,6 @@ h3.section_title1 {
 			.bg {
 				img {
 					height: 500px;
-					-o-object-fit: cover;
 					object-fit: cover;
 					font-family: 'object-fit: cover;'; /* IE対策 */
 				}
@@ -2472,7 +2389,6 @@ h3.section_title1 {
 	-o-object-fit: cover;
 	object-fit: cover;
 	font-family: 'object-fit: cover;'; /* IE対策 */
-	-o-object-position: 50% 25%;
 	object-position: 50% 25%; /* 横% 縦% */
 }
 .big_banner li a .black {
@@ -2561,23 +2477,15 @@ h3.section_title1 {
 		}
 	}
 	.col2 {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
 		justify-content: space-between;
 		@include mq(md) {
 			display: block;
 		}
 		div.left_col {
-		  -webkit-box-ordinal-group: 2;
-		  -ms-flex-order: 1;
 		  order:1;
 		}
 		div.right_col {
-		  -webkit-box-ordinal-group: 3;
-		  -ms-flex-order: 2;
 		  order:2;
 		}
 		div {
@@ -2597,13 +2505,8 @@ h3.section_title1 {
 		}
 	}
 	.col4 {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
 		justify-content: center;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		@include mq(md) {
 			display: block;
@@ -2708,7 +2611,6 @@ h3.section_title1 {
 		img {
 			width: 100%;
 			height: 580px;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -2842,7 +2744,6 @@ h3.series_list_title {
 		img {
 			width: 100%;
 			height: 280px;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -2892,13 +2793,8 @@ h3.series_list_title {
 		}
 	}
 	.col2 {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
 		justify-content: space-between;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		@include mq(md) {
 			display: block;
@@ -2948,13 +2844,8 @@ h3.series_list_title {
 	li {
 		width: 800px;
 		margin: 0 auto 2.4em auto;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
 		justify-content: space-between;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		@include mq(lg) {
 			display: block;
@@ -3047,13 +2938,8 @@ h3.series_list_title {
 }
 .du_top_series_list,
 .du_top_series_list_s {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	width: 1127px;
 	margin: 2em auto 0;
@@ -3093,13 +2979,8 @@ h3.series_list_title {
 				}
 				.tags {
 					margin-top: 1.1em;
-					display: -webkit-box;
-					display: -ms-flexbox;
 					display: flex;
-					-webkit-box-pack: center;
-					-ms-flex-pack: center;
 					justify-content: center;
-					-ms-flex-wrap: wrap;
 					flex-wrap: wrap;
 					span {
 						border: 1px solid #ddd;
@@ -3176,13 +3057,8 @@ h3.series_list_title {
 	}
 	.tags {
 		margin-top: 1.3em;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
 		justify-content: center;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		a {
 			border: 1px solid #ddd;
@@ -3331,11 +3207,7 @@ h3.series_list_title {
   .yahoo_top_nav {
 	  font-size: 1.33rem;
 	  background: #333;
-	  display: -webkit-box;
-	  display: -ms-flexbox;
 	  display: flex;
-	  -webkit-box-pack: end;
-	  -ms-flex-pack: end;
 	  justify-content: flex-end;
 	  padding: 0 1.2em;
 	  li {
@@ -3364,13 +3236,8 @@ h3.series_list_title {
 	  margin-bottom: 1.4em;
   }
   .yahoo_du_big_tags {
-	  display: -webkit-box;
-	  display: -ms-flexbox;
 	  display: flex;
-	  -webkit-box-pack: center;
-	  -ms-flex-pack: center;
 	  justify-content: center;
-	  -ms-flex-wrap: wrap;
 	  flex-wrap: wrap;
 	  margin: 0 3em;
 	  li {
@@ -3395,11 +3262,7 @@ h3.series_list_title {
 	  ul {
 		  background: #ccc;
 		  padding: 25px;
-		  display: -webkit-box;
-		  display: -ms-flexbox;
 		  display: flex;
-		  -webkit-box-pack: center;
-		  -ms-flex-pack: center;
 		  justify-content: center;
 		  li {
 			  margin: 0 13px;
@@ -3561,14 +3424,10 @@ h3.series_list_title {
 			display: block;
 		}
 		div.left_col {
-		  -webkit-box-ordinal-group: 2;
-		  -ms-flex-order: 1;
 		  order:1;
 		}
 		div.right_col {
-			-webkit-box-ordinal-group: 3;
-			-ms-flex-order: 2;
-			order:2;
+		  order:2;
 		}
 		div {
 			width: 46%;
@@ -3655,10 +3514,7 @@ h2.blog_section_title {
 	.category_list {
 		margin-top: 0.7em;
 		padding-bottom: 3.5em;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		li {
 			margin-bottom: 0.5em;
@@ -3682,8 +3538,6 @@ h2.blog_section_title {
 /* SHOP
 ----------------------------------------- */
 .shop_info {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	padding: 2em 0 0.8em 0;
 	@include mq(md) {
@@ -3730,8 +3584,6 @@ h2.blog_section_title {
 	}
 }
 .event_info {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	padding: 0 0 2em 0;
 	@include mq(md) {
@@ -3769,8 +3621,6 @@ h2.blog_section_title {
 			border-top: dotted 1px #ddd;
 			li {
 				a {
-					display: -webkit-box;
-					display: -ms-flexbox;
 					display: flex;
 					border-bottom: dotted 1px #ddd;
 					padding: 0.7em;
@@ -3892,11 +3742,7 @@ ul.event_info_table li::first-child {
 	padding: 2.2em 5vw 4em 5vw;
 	border-top: #f1f1f1 9px solid;
 	ul {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
 		justify-content: space-between;
 		margin: 0 auto;
 		@include mq(md) {
@@ -3969,11 +3815,7 @@ footer {
 }
 
 .footer_navi {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	font-size: 1.2rem;
 	margin: 0 auto;
@@ -3997,11 +3839,7 @@ footer {
 			}
 		}
 		.sns_icon {
-			display: -webkit-box;
-			display: -ms-flexbox;
 			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
 			justify-content: center;
 			li {
 				margin: 2.8em 0.8em 0 0.8em;
@@ -4013,15 +3851,10 @@ footer {
 	}
 	.wrap_footer_navi_list {
 		width: 68%;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
 		justify-content: space-between;
 		@include mq(md) {
 			width: 100%;
-			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
 		}
 	}
@@ -4065,10 +3898,7 @@ footer {
 
 .instagram {
 	ul{
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		li {
 			width: 20%;
@@ -4098,7 +3928,6 @@ footer {
 				img {
 					width: 100%;
 					height: 100%;
-					-o-object-fit: cover;
 					object-fit: cover;
 					font-family: 'object-fit: cover;'; /* IE対策 */
 				}
@@ -4158,20 +3987,15 @@ textarea {
 }
 
 
-/* 楽天、ヤフー商品ページ
+/* 楽天
 ----------------------------------------- */
 footer .rakuten {
 }
 .rakuten_footer {
 	margin: 0 auto;
 	font-size: 1.3rem;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	@include mq(md) {
 		width: 100%;
@@ -4196,52 +4020,46 @@ footer .rakuten {
 		}
 	}
 }
-
+/*
 p, td, th {
 	font-size: 15.5px;
 	margin-bottom: 0.5em;
 	word-break: normal !important;
 	word-wrap: break-word;
 }
-table table .sp_page,
-body#shpBody .sp_page {
+*/
+.sp_page {
 	padding: 1.2em;
 }
+/*
 div, p {
 	box-sizing: border-box;
 }
-table table .product_page .danraku1,
-body#shpBody .product_page .danraku1 {
+*/
+.product_page .danraku1 {
 	width: 558px;
 	margin: 4em auto 0 auto;
 }
-table table .sp_page .product_page .danraku1,
-body#shpBody .sp_page .product_page .danraku1 {
+.sp_page .product_page .danraku1 {
 	width: 100%;
 	margin: 3em auto 0 auto;
 	padding: 0;
 }
-table table .product_page .danraku1 .honbun1,	
-body#shpBody .product_page .danraku1 .honbun1 {
+.product_page .danraku1 .honbun1 {
 	line-height: 1.77;
 }
-table table .sp_page .product_page .danraku1 .honbun1,	
-body#shpBody .sp_page .product_page .danraku1 .honbun1 {
+.sp_page .product_page .danraku1 .honbun1 {
 	line-height: 1.7;
 }
-table table .product_page .gazou1,
-table table .product_info .gazou1,
-body#shpBody .product_page .gazou1,
-body#shpBody .product_info .gazou1{
+.product_page .gazou1,
+.product_info .gazou1{
 	text-align: center;
 	margin: 3em auto 0 auto;
 }
-table table .sp_page .product_page .gazou1,
-body#shpBody .sp_page .product_page .gazou1 {
+.sp_page .product_page .gazou1 {
 	margin: 2.5em auto 0 auto;
 }
-table table .product_page .gazou1 .caption-big1,
-body#shpBody .product_page .gazou1 .caption-big1 {
+.product_page .gazou1 .caption-big1 {
 	font-size: 22px;
 	line-height: 1.4;
 	font-weight: bold;
@@ -4249,66 +4067,54 @@ body#shpBody .product_page .gazou1 .caption-big1 {
 	margin-top: 0.3em;
 	color: #2376c9;
 }
-table table .sp_page .product_page .gazou1 .caption-big1,
-body#shpBody .sp_page .product_page .gazou1 .caption-big1 {
+.sp_page .product_page .gazou1 .caption-big1 {
 	font-size: 15.5px;
 }
-table table .product_page .midashi1,
-body#shpBody .product_page .midashi1 {
+.product_page .midashi1 {
 	font-weight: bold;
 	font-size: 31px;
 	line-height: 1.4 !important;
 	color: #2376c9;
 	margin-bottom: 15px;
 }
-table table .sp_page .product_page .midashi1,
-body#shpBody .sp_page .product_page .midashi1 {
+.sp_page .product_page .midashi1 {
 	font-size: 22px;
 	line-height: 1.55 !important;
 	margin-bottom: 0.6em;
 }
-table table .seo-taisaku,
-body#shpBody .seo-taisaku {
+.seo-taisaku {
 	font-size: 12px;
 	color: #666666;
 	text-align: left;
 	line-height:1.8;
 }
-table table .common-sale,
-body#shpBody .common-sale {
+.common-sale {
 	display: none;
 	text-align: center;
 	margin-bottom: 30px !important;
 }
-table table .common-sale img,
-body#shpBody .common-sale img {
+.common-sale img {
 	width: 450px;
 }
-table table .sp_page .product_page .common-sale img,
-body#shpBody .sp_page .product_page .common-sale img {
+.sp_page .product_page .common-sale img {
 	width: 100% !important;
 }
-table table .sp_page .product_page .komiyashoten,
-body#shpBody .sp_page .product_page .komiyashoten {
+.sp_page .product_page .komiyashoten {
 	background: #fbf5ea;
 	padding: 2em 1.5em;
 	margin: 2em 0;
 }
-table table .sp_page .product_page .kanren .honbun1,
-body#shpBody .sp_page .product_page .kanren .honbun1 {
+.sp_page .product_page .kanren .honbun1 {
 	font-size: 13px;
 	color: #666;
 }
 
-table table .product_info,
-body#shpBody .product_info {
+.product_info {
 	width: 500px;
 	line-height:1.8;
 }
-table table .product_info td,	
-table table .product_info th,
-body#shpBody .product_info td,
-body#shpBody .product_info th {
+.product_info td,
+.product_info th {
 	line-height: 1.5;
 	font-size: 13px !important;
 	padding: 0.5em;
@@ -4316,8 +4122,7 @@ body#shpBody .product_info th {
 
 /* 楽天、ヤフー商品ページ
 ----------------------------------------- */
-table table #risFil,
-body#shpBody #risFil{
+#risFil{
 	.risfHeadPart{
 		height: auto;
 		.risfHeadCheck{
@@ -4325,36 +4130,31 @@ body#shpBody #risFil{
 	  	}
   	}
 }
-table table .rakuten_pc_hanbai_setsumei,
-body#shpBody .rakuten_pc_hanbai_setsumei {
+.rakuten_pc_hanbai_setsumei {
 	width: 970px;
 }
-table table .rakuten_pc_hanbai_setsumei h3,	
-table table .rakuten_pc_hanbai_setsumei .yahoo_h3,
-body#shpBody .rakuten_pc_hanbai_setsumei h3,
-body#shpBody .rakuten_pc_hanbai_setsumei .yahoo_h3 {
+.rakuten_pc_hanbai_setsumei h3,
+.rakuten_pc_hanbai_setsumei .yahoo_h3 {
 	font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 	font-size: 2rem;
 	margin-bottom: 1.8em;
 	letter-spacing: 0.2em;
 	line-height: 1.9;
 }
-table table .sp_page h3,
-body#shpBody .sp_page h3 {
+.sp_page h3 {
 	font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 	font-size: 2rem;
 	margin-bottom: 1.8em;
 	letter-spacing: 0.2em;
 	line-height: 1.9;
 }
-table table h4,
-body#shpBody h4 {
+/*
+h4 {
 	font-size: 1.85rem;
 	margin-bottom: 1.1em;
 	letter-spacing: 0.2em;
 }
-table table h5,
-body#shpBody h5 {
+h5 {
 	font-size: 1.63rem;
 	margin-bottom: 1em;
 	letter-spacing: 0.27em;
@@ -4366,106 +4166,75 @@ p {
 	line-height: 2.2;
 	margin-bottom: 2em;
 }
-table table .margin1, 
-body#shpBody .margin1 {
+.margin1 {
 	margin-bottom: 6em;
 }
-table table .margin2,
-body#shpBody .margin2 {
+.margin2 {
 	margin-bottom: 3em;
 }
-table table .left,
-body#shpBody .left {
+.left {
 	float: left;
 }
-table table .right,
-body#shpBody .right {
+.right {
 	float: right;
 }
-table table .max,
-body#shpBody .max {
+.max {
 	width: 100%;
 	img {
 		width: 100%;
 	}
 }
-table table .col2,
-body#shpBody .col2 {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.col2 {
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
+	flex-wrap: wrap;
+
 }
-table table .col2 div.left_col,
-body#shpBody .col2 div.left_col {
-	-webkit-box-ordinal-group: 2;
-	-ms-flex-order: 1;
+.col2 div.left_col {
 	order:1;
 }
-table table .col2 div.right_col,
-body#shpBody .col2 div.right_col {
-	-webkit-box-ordinal-group: 3;
-	-ms-flex-order: 2;
+.col2 div.right_col {
 	order:2;
 }
-table table .col2 div,
-body#shpBody .col2 div {
+.col2 div {
 	width: 46%;
 }
-table table .col2 img,
-body#shpBody .col2 img {
+.col2 img {
 	max-width: 100%;
 }
 
-table table .col4,
-body#shpBody .col4 {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.col4 {
 	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
-table table .col4 div,
-body#shpBody .col4 div {
+.col4 div {
 	width: 22%;
 	margin: 0 1% 1.2% 1%;
 }
-table table .col4 img,
-body#shpBody .col4 img {
+.col4 img {
 	width: 100%;
 	max-width: 100%;
 }
-table table .text_center,
-body#shpBody .text_center {
+.text_center {
 	width: 620px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: justify;
 }
-table table .caption_right,
-table table .caption_left,
-table table .caption_center,
-body#shpBody .caption_right,
-body#shpBody .caption_left,
-body#shpBody .caption_center{
+.caption_right,
+.caption_left,
+.caption_center{
 	margin-top: 0.4em;
 	font-size: 1.25rem;
 }
-table table .caption_right,
-body#shpBody .caption_right{
+.caption_right{
 	text-align: right;
 }
-table table .caption_left,
-body#shpBody .caption_left{
+.caption_left{
 	text-align: left;
 }
-table table .caption_center,
-body#shpBody .caption_center{
+.caption_center{
 	text-align: center;
 }
 
@@ -4508,7 +4277,7 @@ body#shpBody .caption_center{
 	width: 970px;
 	height: 580px;
 	object-fit: cover;
-	font-family: 'object-fit: cover;'; /* IE対策 */
+	font-family: 'object-fit: cover;';
 }
 .sp_page_header .series_header .bg img {
 	width: 100%;
@@ -4523,19 +4292,17 @@ body#shpBody .caption_center{
 .sp_page_header .series_header .black {
 	width: 100%;
 }
-table table .series_header .individual_product,
-body#shpBody .series_header .individual_product {
+.series_header .individual_product {
 	margin-top: 2em;
 }
-table table .series_header .individual_product span,
-body#shpBody .series_header .individual_product span {
+.series_header .individual_product span {
 	background: #fff;
 	color: #333;
 	padding: 0.9em 1.1em;
 	font-size: 1.35rem;
 }
 
-
+*/
 /* ヤフー商品ページ 上書き
 ----------------------------------------- */
 body#shpBody,
@@ -4614,8 +4381,6 @@ h2.elHeading {
 
 .blog_list1 {
 	margin-bottom: 3em;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	@include mq(md) {
 		display: block;
@@ -4628,7 +4393,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 28vw;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -4654,11 +4418,7 @@ h2.elHeading {
 }
 .blog_list2 {
 	margin-bottom: 5em;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 	@include mq(md) {
 		margin-bottom: 3em;
@@ -4675,7 +4435,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 22vw;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 			@include mq(md) {
@@ -4706,13 +4465,8 @@ h2.elHeading {
 	}
 }
 .blog_list2_3 {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	@include mq(md) {
 		display: block;
@@ -4729,7 +4483,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 13vw;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 			@include mq(md) {
@@ -4772,10 +4525,7 @@ h2.elHeading {
 
 .blog_list3 {
 	margin-bottom: 3em;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-pack: distribute;
 	justify-content: space-around;
 	@include mq(md) {
 		display: block;
@@ -4788,7 +4538,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 24vw;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -4806,10 +4555,7 @@ h2.elHeading {
 }
 .blog_list3_3 {
 	margin-bottom: 3em;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-pack: distribute;
 	justify-content: space-around;
 	@include mq(md) {
 		display: block;
@@ -4822,7 +4568,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 15vw;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -4842,10 +4587,7 @@ h2.elHeading {
 
 .blog_list4 {
 	margin-bottom: 3em;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-pack: distribute;
 	justify-content: space-around;
 	@include mq(md) {
 		display: block;
@@ -4858,7 +4600,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 27vw;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -4876,8 +4617,6 @@ h2.elHeading {
 }
 
 .menus {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	@include mq(lg) {
 		display: block;
@@ -4903,8 +4642,6 @@ h2.elHeading {
 
 
 .two_cubes {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	@include mq(md) {
 		display: block;
@@ -4919,7 +4656,6 @@ h2.elHeading {
 		img {
 			width: 100%;
 			height: 100%;
-			-o-object-fit: cover;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'; /* IE対策 */
 		}
@@ -4952,10 +4688,7 @@ h2.elHeading {
 .four_cubes {
 	margin-bottom: 3em;
 	ul{
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		li {
 			width: 25%;
@@ -4985,7 +4718,6 @@ h2.elHeading {
 				img {
 					width: 100%;
 					height: 100%;
-					-o-object-fit: cover;
 					object-fit: cover;
 					font-family: 'object-fit: cover;'; /* IE対策 */
 				}
@@ -5089,6 +4821,7 @@ h2.elHeading {
 		font-family: "Quicksand", "游ゴシック体", "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	}
 }
+
 
 /* まとめページ
 ----------------------------------------- */
@@ -5406,4 +5139,4 @@ h2.elHeading {
 	height: 11px !important;
 	opacity: 1;
 	background: rgba(0, 0, 0, 0.2);
-  }
+}
