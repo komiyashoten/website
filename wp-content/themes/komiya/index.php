@@ -1,6 +1,6 @@
 <?php get_header('top'); ?>
  
-<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/rinji-news/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;"><span style="color: #af8569;">●</span> 新型コロナ対策のため、営業日時を変更しています。 ※オンラインショップは通常営業 [12/22更新]</a></div>
+<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/rinji-news/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;"><span style="color: #af8569;">●</span> 新型コロナ対策のため、営業日時を変更しています。 ※オンラインショップは通常営業 [12/22更新]:</a></div>
 
 <section>
 
