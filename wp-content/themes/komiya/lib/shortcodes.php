@@ -133,6 +133,8 @@ add_shortcode('商品', 'ks_showProduct');
 function ks_showProducts( $atts, $content = null ) {
 	// ショートコードを内部で出力
 	$content = do_shortcode( shortcode_unautop( $content ) );
-  return '<div class="products_box">'.$content.'</div>';
-  }
-  add_shortcode('複数商品', 'ks_showProducts');
+	$cnt = mb_substr_count($content, '<section class="product_box">');
+	if( $cnt > 5 ) $cnt = 5;
+	return '<div class="products_box product_col'.$cnt.'">'.$content.'</div>';
+}
+add_shortcode('複数商品', 'ks_showProducts');

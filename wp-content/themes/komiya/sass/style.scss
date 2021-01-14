@@ -5009,15 +5009,26 @@ h2.elHeading {
 		}
 
 		.product_lead{
-			line-height: 1.5em;
-			margin-bottom: 15px;
+			font-size: 1.45rem;
+			margin-bottom: 2em;
+			line-height: 1.9;
 		}
 		.product_title{
 			font-weight: bold;
 			line-height: 1.25em;
+			text-align: left;
+			font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+			font-size: 1.42rem;
+			margin-bottom: 0.1em;
+			font-weight: bold;
+		}
+		.product_kind{
+			font-size: 1.3rem;
+			margin-bottom: 0.5em;
 		}
 		.product_price{
 			font-weight: bold;
+			font-size: 1.55rem;
 		}
 	}
 
@@ -5072,6 +5083,131 @@ h2.elHeading {
 	flex-wrap: wrap;
 	width: 85%;
 	margin: 40px auto;
+	justify-content: center;
+
+	@include mq() {
+		width: 100%;
+	}
+
+	&.product_col0{
+		display: none;
+	}
+
+	&.product_col3{
+		justify-content: space-between;
+		.product_box{
+			margin: auto 0;
+			flex-basis: calc(100% / 3 - 7px);
+			width: calc(100% / 3 - 7px);
+			
+			&:nth-of-type(2n){
+				margin-left: 5px;
+	
+				@include mq() {
+					margin: 0;
+				}
+			}
+			&:nth-of-type(3n){
+				margin-right: 0;
+				margin-left: 5px;
+	
+				@include mq() {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&.product_col4{
+		justify-content: space-between;
+
+		@include mq() {
+			justify-content: space-between;
+		}
+		.product_box{
+			margin: auto 0;
+			flex-basis: calc(100% / 4 - 5px);
+			width: calc(100% / 4 - 5px);
+
+			@include mq() {
+				flex-basis: calc(100% / 2 - 6px);
+				width: calc(100% / 2 - 6px);
+			}
+
+			&:nth-of-type(2n){
+				margin-left: 0;
+	
+				@include mq() {
+					margin: 0;
+				}
+			}
+			&:nth-of-type(3n){
+				margin-right: 0;
+				margin-left: 0;
+	
+				@include mq() {
+					margin: 0;
+				}
+			}
+
+			.product_title{
+				margin-bottom: .5em;
+			}
+			.product_kind{
+				margin-bottom: 0;
+			}
+		}
+		.links{
+			.product_button{
+				@include mq() {
+					width: 90%;
+					font-size: 1.15rem;
+					padding: 0.85em 1em;
+				}
+			}
+		}
+}
+
+	&.product_col5{
+
+		@include mq() {
+			justify-content: space-between;
+		}
+
+		.product_box{
+			flex-basis: calc(100% / 5 - 7px);
+			width: calc(100% / 5 - 7px);
+
+			@include mq() {
+				flex-basis: calc(100% / 2 - 6px);
+				width: calc(100% / 2 - 6px);
+			}
+
+			.product_title,
+			.product_kind{
+				@include mq() {
+					font-size: 1.3rem;
+				}
+			}
+
+			.product_price{
+				@include mq() {
+					font-size: 1.5rem;
+				}
+			}
+			
+			.links{
+				.product_button{
+					width: 145px;
+					font-size: 1rem;
+
+					@include mq() {
+						width: 90%;
+					}
+				}
+			}
+		}
+	}
 
 	br{
 		display: none;
@@ -5090,22 +5226,6 @@ h2.elHeading {
 			margin: 10px 0 !important;
 		}
 
-		&:nth-of-type(2n){
-			margin-left: 5px;
-
-			@include mq() {
-				margin: 0;
-			}
-		}
-		&:nth-of-type(3n){
-			margin-right: 0;
-			margin-left: 5px;
-
-			@include mq() {
-				margin: 0;
-			}
-		}
-
 		.product_thumbnail{
 			width: 100%;
 		}
@@ -5114,6 +5234,10 @@ h2.elHeading {
 			width: 100%;
 			padding: .5em;
 
+			.product_title{
+				text-align: left;
+			}
+	
 			.product_brand{
 				display: block;
 			}

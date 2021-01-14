@@ -1,35 +1,27 @@
-@charset "UTF-8";
+@charset "utf-8";
 /* リセット
------------------------------------------ */
-html, body, h1, h2, h3, h4, h5, h6, p, div,
-ul, ol, li, dl, dt, dd,
-table, caption, th, td,
-form, button, label, address, blockquote,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+ ----------------------------------------- */
+html, body, h1, h2, h3, h4, h5, h6, p, div, ul, ol, li, dl, dt, dd, table, caption, th, td, form, button, label, address, blockquote, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   font-weight: normal;
 }
-
 img, abbr {
   border: none;
   vertical-align: bottom;
 }
-
 ul, ol, li {
   list-style: none;
 }
-
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 /* iOSでのデフォルトスタイルをリセット */
 input {
   margin: 0;
@@ -37,33 +29,26 @@ input {
   border: 0;
   outline: 0;
 }
-
-input[type="submit"],
-input[type="button"] {
+input[type="submit"], input[type="button"] {
   border-radius: 0;
   -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
   appearance: button;
   border: none;
   box-sizing: border-box;
   cursor: pointer;
 }
-
-input[type="submit"]::-webkit-search-decoration,
-input[type="button"]::-webkit-search-decoration {
+input[type="submit"]::-webkit-search-decoration, input[type="button"]::-webkit-search-decoration {
   display: none;
 }
-
-input[type="submit"]::focus,
-input[type="button"]::focus {
+input[type="submit"]::focus, input[type="button"]::focus {
   outline-offset: -2px;
 }
-
 /* ベース
------------------------------------------ */
+ ----------------------------------------- */
 html {
   font-size: 62.5%;
 }
-
 body {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.6rem;
@@ -74,53 +59,52 @@ body {
   -webkit-text-size-adjust: 100%;
   /* スマホで縦横の向きを変えた時に文字サイズ固定 */
 }
-
 @media screen and (max-width: 600px) {
   body {
     font-size: 1.4rem;
   }
 }
-
 img, video, object {
   max-width: 100%;
   height: auto;
-  width: 100%\9;
+  width: 100% \9;
   /* IE8のみ適用 */
 }
-
 a {
   color: #007dcd;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 a:hover {
   text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 /* 基本要素のデフォルト
------------------------------------------ */
+ ----------------------------------------- */
 h1 {
   font-size: 3.8rem;
 }
-
 @media screen and (max-width: 960px) {
   h1 {
     font-size: 3.2rem;
   }
 }
-
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 2.5rem;
   }
 }
-
 h1 a {
   color: #000;
 }
-
 h2 {
   font-family: 'Quattrocento', serif;
   font-size: 3.1rem;
@@ -129,7 +113,6 @@ h2 {
   letter-spacing: 0.15em;
   line-height: 1;
 }
-
 h2 .sub {
   font-size: 1.4rem;
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -137,7 +120,6 @@ h2 .sub {
   letter-spacing: 0.15em;
   line-height: 1.8;
 }
-
 .taxonomy_page h2 {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.8rem;
@@ -147,145 +129,114 @@ h2 .sub {
   letter-spacing: 0.1em;
   padding-left: 0;
 }
-
 h3 {
   font-size: 2.6rem;
   margin-bottom: 0.2em;
   line-height: 1.8;
 }
-
 p {
   margin-bottom: 2em;
 }
-
 p:last-child {
   margin-bottom: 0;
 }
-
 .lead {
   font-size: 1.8rem;
   margin-bottom: 4em;
 }
-
 article img {
   margin-bottom: 15px;
 }
-
 h1, h2, h3, h4, h5, p, div, span, li {
   font-feature-settings: "palt";
 }
-
 .only_sp {
   display: none;
 }
-
 @media screen and (max-width: 600px) {
   .only_sp {
     display: block;
   }
 }
-
 .only_pc {
   display: block;
 }
-
 @media screen and (max-width: 600px) {
   .only_pc {
     display: none;
   }
 }
-
 /* 全体レイアウト
------------------------------------------ */
+ ----------------------------------------- */
 .body1 {
   margin: 2em auto;
   padding: 0 4.5%;
 }
-
 .side_area {
   width: 280px;
   float: left;
 }
-
 @media screen and (max-width: 600px) {
   .side_area {
     display: none;
   }
 }
-
 .right_area {
   width: calc(100% - 340px);
   float: right;
 }
-
 @media screen and (max-width: 600px) {
   .right_area {
     width: 100%;
   }
 }
-
-.inner,
-.site_width_inner {
+.inner, .site_width_inner {
   padding: 1.5em;
 }
-
 @media screen and (max-width: 960px) {
-  .inner,
-  .site_width_inner {
+  .inner, .site_width_inner {
     padding: 1.8em;
   }
 }
-
-.site_width_inner,
-.site_width {
+.site_width_inner, .site_width {
   width: 1120px;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 960px) {
-  .site_width_inner,
-  .site_width {
+  .site_width_inner, .site_width {
     width: auto;
   }
 }
-
 /* 使い回しコンポーネント
------------------------------------------ */
+ ----------------------------------------- */
 .bgcolor1 {
   background: #f1f1f1;
 }
-
 .bgcolor2 {
   background: #333;
 }
-
 .center {
   text-align: center;
   line-height: 2;
   font-size: 1.63rem;
 }
-
 h4.catch2 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   margin-bottom: 0.7em;
   font-size: 2.7rem;
 }
-
 h4.midashi1 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
-
 p.dummy {
   margin: 3.3em 0;
 }
-
 p.dummy img {
   width: 840px;
   height: 550px;
 }
-
 .arrow01 {
   text-align: right;
   padding-right: 1.1em;
@@ -295,11 +246,9 @@ p.dummy img {
   position: relative;
   display: inline-block;
 }
-
 .arrow01:hover {
   color: #888;
 }
-
 .arrow01::before {
   content: '';
   width: 12px;
@@ -307,33 +256,31 @@ p.dummy img {
   border: 0px;
   border-top: solid 2px #c1a078;
   border-right: solid 2px #c1a078;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   top: 50%;
   right: 0;
   margin-top: -6px;
 }
-
 .banner1 {
   display: flex;
   justify-content: space-around;
   margin-top: 3.2em;
 }
-
 @media screen and (max-width: 600px) {
   .banner1 {
     display: block;
     margin-top: 2em;
   }
 }
-
 .banner1 li {
   width: 46%;
   border: 1px solid #e9e9e9;
   font-size: 1.55rem;
   text-align: left;
 }
-
 @media screen and (max-width: 600px) {
   .banner1 li {
     font-size: 1.45rem;
@@ -341,51 +288,51 @@ p.dummy img {
     margin-bottom: 1.2em;
   }
 }
-
 .banner1 li a {
   color: #333;
   display: flex;
   justify-content: space-between;
   padding: 1.2em 2.5em;
   position: relative;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 @media screen and (max-width: 600px) {
   .banner1 li a {
     padding: 0.8em 1.2em;
     display: block;
   }
 }
-
 .banner1 li a:hover {
   background: #f6f6f6;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner1 li a .title {
   width: 40%;
 }
-
 @media screen and (max-width: 600px) {
   .banner1 li a .title {
     width: 100%;
   }
 }
-
 .banner1 li a .lead {
   width: 60%;
   font-size: 1.2rem;
   margin: 0;
 }
-
 @media screen and (max-width: 600px) {
   .banner1 li a .lead {
     width: 92%;
     margin: 0.4em 0 0 0;
   }
 }
-
 .banner1 li a .lead::after {
   content: '';
   width: 10px;
@@ -393,31 +340,27 @@ p.dummy img {
   border: 0px;
   border-top: solid 2px #c1a078;
   border-right: solid 2px #c1a078;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   top: 50%;
   right: 18px;
   margin-top: -7px;
 }
-
-.banner2,
-.banner2gray {
+.banner2, .banner2gray {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 65%;
   margin: 2em auto 0 auto;
 }
-
 @media screen and (max-width: 600px) {
-  .banner2,
-  .banner2gray {
+  .banner2, .banner2gray {
     width: 100%;
   }
 }
-
-.banner2 a,
-.banner2gray a {
+.banner2 a, .banner2gray a {
   font-size: 1.48rem;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   text-align: center;
@@ -431,10 +374,8 @@ p.dummy img {
   padding: 0.7em 0.5em 0.8em 0.8em;
   border-radius: 40px;
 }
-
 @media screen and (max-width: 600px) {
-  .banner2 a,
-  .banner2gray a {
+  .banner2 a, .banner2gray a {
     font-size: 1.3rem;
     width: auto;
     padding: 0.4em 0.8em 0.4em 1.2em;
@@ -442,25 +383,18 @@ p.dummy img {
     margin-right: 10px;
   }
 }
-
-.banner2 a:last-child,
-.banner2gray a:last-child {
+.banner2 a:last-child, .banner2gray a:last-child {
   margin-right: 0;
 }
-
-.banner2 a:hover,
-.banner2gray a:hover {
+.banner2 a:hover, .banner2gray a:hover {
   background: #f9f9f9;
 }
-
 .banner2gray a {
   background: #f1f1f1;
 }
-
 .banner2gray a:hover {
   background: #f6f6f6;
 }
-
 h3.banner_title {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 1.7rem;
@@ -469,13 +403,11 @@ h3.banner_title {
   margin-top: 3em;
   font-weight: bold;
 }
-
 .banner3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .banner3 li {
   width: 48.5%;
   font-size: 1.3rem;
@@ -483,25 +415,29 @@ h3.banner_title {
   margin-bottom: 2.7em;
   text-align: center;
 }
-
 @media screen and (max-width: 960px) {
   .banner3 li {
     width: 100%;
     margin-bottom: 1.5em;
   }
 }
-
 .banner3 li a {
   color: #333;
   display: block;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner3 li a:hover {
   background: #f6f6f6;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner3 li a img {
   width: 35%;
   height: 12vw;
@@ -510,14 +446,12 @@ h3.banner_title {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 @media screen and (max-width: 600px) {
   .banner3 li a img {
     width: 100%;
     height: 27vw;
   }
 }
-
 .banner3 li a .text {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   width: 65%;
@@ -525,25 +459,21 @@ h3.banner_title {
   padding: 2em 1.5em 0.5em 1.5em;
   letter-spacing: 0.1em;
 }
-
 @media screen and (max-width: 600px) {
   .banner3 li a .text {
     padding: 1.3em 1.5em 1.3em 1.5em;
     width: 100%;
   }
 }
-
 .banner3 li a .text .catch {
   margin-bottom: 1.2em;
 }
-
 @media screen and (max-width: 600px) {
   .banner3 li a .text .catch {
     margin-bottom: 1em;
     font-size: 1.25rem;
   }
 }
-
 .banner3 li a .text .link {
   font-size: 1.4rem;
   margin-top: 0.9em;
@@ -551,7 +481,6 @@ h3.banner_title {
   position: relative;
   display: inline;
 }
-
 .banner3 li a .text .link::before {
   content: '';
   width: 12px;
@@ -559,13 +488,14 @@ h3.banner_title {
   border: 0px;
   border-top: solid 2px #c1a078;
   border-right: solid 2px #c1a078;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   top: 55%;
   right: -14px;
   margin-top: -6px;
 }
-
 .banner4 {
   width: 480px;
   font-size: 1.3rem;
@@ -573,24 +503,28 @@ h3.banner_title {
   margin: 0 auto;
   text-align: center;
 }
-
 @media screen and (max-width: 960px) {
   .banner4 {
     width: 100%;
   }
 }
-
 .banner4 a {
   color: #333;
   display: block;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner4 a:hover {
   background: #f6f6f6;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner4 a img {
   width: 42%;
   height: 120px;
@@ -599,20 +533,17 @@ h3.banner_title {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .banner4 a .text {
   width: 58%;
   float: left;
   padding: 3.5em 1.5em 0.5em 1.5em;
   letter-spacing: 0.12em;
 }
-
 .banner4 a .text .link {
   font-size: 1.5rem;
   position: relative;
   display: inline;
 }
-
 .banner4 a .text .link::before {
   content: '';
   width: 12px;
@@ -620,13 +551,14 @@ h3.banner_title {
   border: 0px;
   border-top: solid 2px #c1a078;
   border-right: solid 2px #c1a078;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   top: 55%;
   right: -14px;
   margin-top: -8px;
 }
-
 .banner5 {
   width: 600px;
   font-size: 1.3rem;
@@ -634,24 +566,28 @@ h3.banner_title {
   margin: 0 auto;
   text-align: center;
 }
-
 @media screen and (max-width: 960px) {
   .banner5 {
     width: 100%;
   }
 }
-
 .banner5 a {
   color: #333;
   display: block;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner5 a:hover {
   background: #f6f6f6;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .banner5 a img {
   width: 40%;
   height: 170px;
@@ -660,18 +596,15 @@ h3.banner_title {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .banner5 a .text {
   width: 60%;
   float: left;
   padding: 2em 1.5em 0.5em 1.5em;
   letter-spacing: 0.1em;
 }
-
 .banner5 a .text .catch {
   margin-bottom: 1.2em;
 }
-
 .banner5 a .text .link {
   font-size: 1.4rem;
   margin-top: 0.9em;
@@ -679,7 +612,6 @@ h3.banner_title {
   position: relative;
   display: inline;
 }
-
 .banner5 a .text .link::before {
   content: '';
   width: 12px;
@@ -687,23 +619,22 @@ h3.banner_title {
   border: 0px;
   border-top: solid 2px #c1a078;
   border-right: solid 2px #c1a078;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
   top: 55%;
   right: -14px;
   margin-top: -6px;
 }
-
 .pager {
   text-align: center;
 }
-
 .pager span {
   font-size: 1.5rem;
   margin-left: 0.7em;
   margin-right: 0.7em;
 }
-
 .pager a {
   font-size: 1.5rem;
   padding: 0.8em 1em;
@@ -713,113 +644,91 @@ h3.banner_title {
   color: #333;
   margin-right: 0.2em;
 }
-
 .pager a:hover {
   background: #eee;
 }
-
-.pager a.prev,
-.pager a.next {
+.pager a.prev, .pager a.next {
   background: #333;
   border: none;
   color: #fff;
 }
-
-.pager a.prev:hover,
-.pager a.next:hover {
+.pager a.prev:hover, .pager a.next:hover {
   background: #666;
 }
-
 .btn01 {
   margin: 1em 0 1em 0;
 }
-
 .btn01 a {
   background: #444;
   color: #fff;
   padding: 0.8em 1em;
   border-radius: 12px;
 }
-
 .btn01 a:hover {
   background: #666;
 }
-
 /* ヘッダー
------------------------------------------ */
+ ----------------------------------------- */
 header {
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
-
 header .rakuten_site_title {
   position: absolute;
   left: 2.3em;
   top: 1em;
   font-size: 1.3rem;
 }
-
 @media screen and (max-width: 600px) {
   header .rakuten_site_title {
     display: none;
   }
 }
-
 header h1 {
   padding: 1em 1em 1.1em 1em;
   width: 100%;
   text-align: center;
 }
-
 @media screen and (max-width: 960px) {
   header h1 {
     padding: 50px 0 0 0;
   }
 }
-
 header h1 .logo_komiyashoten {
   width: 213px;
 }
-
 @media screen and (max-width: 960px) {
   header h1 .logo_komiyashoten {
     display: none;
   }
 }
-
 header .navi-pc {
   margin-bottom: 0.9em;
   font-size: 1.42rem;
   letter-spacing: 0.1em;
   text-align: center;
 }
-
 @media screen and (max-width: 960px) {
   header .navi-pc {
     display: none;
   }
 }
-
 header .navi-pc li {
   display: inline-block;
 }
-
 header .navi-pc li a {
   color: #000;
   display: block;
   padding: 0 1.5em;
 }
-
 header .navi-pc li a:hover {
   color: #777;
 }
-
 header .navi-pc li a:hover + .dropdown_inner {
   display: flex;
   justify-content: center;
 }
-
 header .navi-pc li .dropdown_inner {
   display: none;
   position: absolute;
@@ -830,12 +739,10 @@ header .navi-pc li .dropdown_inner {
   padding: 2.5em 0 2.3em 0;
   font-size: 1.35rem;
 }
-
 header .navi-pc li .dropdown_inner:hover {
   display: flex;
   justify-content: center;
 }
-
 header .navi-pc li .dropdown_inner h3 {
   letter-spacing: 0.1em;
   font-size: 1.5rem;
@@ -846,76 +753,61 @@ header .navi-pc li .dropdown_inner h3 {
   width: 120px;
   font-weight: bold;
 }
-
 header .navi-pc li .dropdown_inner ul {
   display: inline-block;
   padding: 0 2.5em;
   border-right: 1px solid #ddd;
 }
-
 header .navi-pc li .dropdown_inner ul:last-child {
   border-right: none;
 }
-
 header .navi-pc li .dropdown_inner ul li {
   display: block;
   text-align: left;
   line-height: 2.7;
   font-feature-settings: "palt";
 }
-
 header .navi-pc li .dropdown_inner ul li a {
   padding: 0;
 }
-
 header .navi-pc li .dropdown_inner ul li.select_title {
   font-weight: bold;
   color: #bbb;
 }
-
 header .navi-pc li .dropdown_inner ul li.img_banner a {
   padding: 10px 17px;
   margin: 0.5em 0 1.2em 0;
   border: 1px solid #ddd;
 }
-
 header .navi-pc li .dropdown_inner ul li.img_banner a:hover {
   background: #f9f9f9;
 }
-
 header .navi-sp {
   display: none;
 }
-
 @media screen and (max-width: 960px) {
   header .navi-sp {
     display: block;
   }
 }
-
 header .navi-sp nav {
   padding: 0;
   font-size: 1.3rem;
 }
-
 header .navi-sp nav .small_logo {
   text-align: center;
 }
-
 header .navi-sp nav .small_logo a {
   width: 100%;
   display: block;
 }
-
 header .navi-sp nav .small_logo a:hover {
   opacity: 0.7;
 }
-
 header .navi-sp nav .small_logo a img {
   width: 73%;
   padding: 1.5em 0;
 }
-
 header .sp_header {
   position: fixed;
   top: 0;
@@ -926,61 +818,51 @@ header .sp_header {
   padding: 10px 0;
   text-align: center;
 }
-
 header .sp_header a {
   color: #333;
 }
-
 header .top_sub_nav {
   position: absolute;
   top: 1em;
   right: 2.5em;
   font-size: 1.2rem;
 }
-
 @media screen and (max-width: 960px) {
   header .top_sub_nav {
     display: none;
   }
 }
-
 header .top_sub_nav li {
   display: inline-block;
   line-height: 1.2;
-  border-right: 1px solid #CCC;
+  border-right: 1px solid #ccc;
   padding-right: 1em;
   margin-left: 1em;
 }
-
 header .top_sub_nav li:last-child {
   border-right: none;
   padding-right: 0;
 }
-
 header .top_sub_nav li a {
   color: #333;
 }
-
 header .top_sub_nav .jiten {
   font-size: 1.36rem;
   letter-spacing: 0.2em;
   font-weight: bold;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
 header .top_sub_nav .jiten a {
   display: block;
   float: right;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   padding: 7px 15px 8px 17px;
   margin-top: 0.8em;
   color: #333;
 }
-
 header .top_sub_nav .jiten a:hover {
   background: #f9f9f9;
 }
-
 header .fix-navi-pc {
   position: fixed;
   top: 0;
@@ -989,7 +871,6 @@ header .fix-navi-pc {
   background: #fff;
   padding: 0.8em 0;
 }
-
 .fix-navi-logo {
   display: none;
   position: fixed;
@@ -997,72 +878,58 @@ header .fix-navi-pc {
   left: 0;
   padding: 0.8em 1.4em 0.8em 1.4em;
 }
-
 .fix-navi-logo img {
   width: 93px;
   padding-left: 0.25em;
   padding-bottom: 0.45em;
 }
-
 header .fix-navi-pc .fix-navi-logo {
   display: inline;
 }
-
 .breadcrumbs {
   font-size: 1.2rem;
   padding: 0 5em 0.6em 5em;
   letter-spacing: normal;
   color: #bbb;
 }
-
 @media screen and (max-width: 960px) {
   .breadcrumbs {
     display: none;
   }
 }
-
 .breadcrumbs span {
   color: #333;
 }
-
 .breadcrumbs a {
   color: #333;
   margin: 0 0.4em;
 }
-
 .breadcrumbs a:hover {
   color: #888;
 }
-
 .breadcrumbs a span:hover {
   color: #888;
 }
-
 .breadcrumbs .current-item {
   margin: 0 0.2em;
   color: #333;
 }
-
 .breadcrumbs br {
   display: none;
 }
-
 /* サイドエリア
------------------------------------------ */
+ ----------------------------------------- */
 .left_nav {
   border-top: 1px solid #ddd;
 }
-
 .left_nav > li {
   width: 50%;
   float: left;
   border-bottom: 1px solid #ddd;
 }
-
 .left_nav > li:nth-child(odd) {
   border-right: 1px solid #ddd;
 }
-
 .left_nav > li > a {
   display: block;
   padding: 1.2em 1.7em;
@@ -1070,15 +937,12 @@ header .fix-navi-pc .fix-navi-logo {
   text-align: center;
   color: #333;
 }
-
 .left_nav > li > a:hover {
   color: #888;
 }
-
 .left_sub_nav {
   border-top: 1px solid #ddd;
 }
-
 .left_sub_nav li {
   padding: 0.9em 2em;
   width: 50%;
@@ -1086,19 +950,15 @@ header .fix-navi-pc .fix-navi-logo {
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
-
 .left_sub_nav li:nth-child(odd) {
   border-right: 1px solid #ddd;
 }
-
 .left_sub_nav li a {
   color: #333;
 }
-
 .left_sub_nav li a:hover {
   color: #888;
 }
-
 .navi-sp .left_brands h4 {
   font-weight: bold;
   color: #bbb;
@@ -1106,25 +966,20 @@ header .fix-navi-pc .fix-navi-logo {
   border-top: 1px solid #ddd;
   padding: 0.5em 0;
 }
-
 .navi-sp .left_brands li {
   border-top: 1px solid #ddd;
   text-align: center;
 }
-
 .navi-sp .left_brands li a {
   display: block;
   padding: 2px 0;
 }
-
 .navi-sp .left_brands li a:hover {
   opacity: 0.7;
 }
-
 .navi-sp .left_brands li a img {
   width: 42%;
 }
-
 .left_jiten {
   font-size: 1.32rem;
   letter-spacing: 0.2em;
@@ -1132,22 +987,18 @@ header .fix-navi-pc .fix-navi-logo {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   margin: 4px 0 38px 25px;
 }
-
 .left_jiten a {
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   padding: 10px 17px 11px 19px;
   color: #333;
 }
-
 .left_jiten a:hover {
   background: #f9f9f9;
 }
-
 .side_category_menu {
   margin: 0 0 2.4em 0;
   font-size: 1.3rem;
 }
-
 .side_category_menu h3 {
   letter-spacing: 0.1em;
   font-size: 2.1rem;
@@ -1157,46 +1008,36 @@ header .fix-navi-pc .fix-navi-logo {
   font-weight: bold;
   margin: 0 0 1.6em 0;
 }
-
 .side_category_menu h3 a {
   color: #333;
 }
-
 .side_category_menu h3 a:hover {
   color: #888;
 }
-
 .side_category_menu ul {
   border-top: 1px solid #ddd;
   padding-top: 1.5em;
   margin-bottom: 1.5em;
 }
-
 .side_category_menu ul li {
   line-height: 2.7;
   display: block;
 }
-
 .side_category_menu ul li a {
   color: #333;
 }
-
 .side_category_menu ul li a:hover {
   color: #888;
 }
-
 .side_category_menu ul.col2 li {
   float: left;
   width: 50%;
 }
-
 .side_category_menu ul.col3 li {
   float: left;
   width: 33%;
 }
-
-.side_category_menu ul.col2 li.side_taxonomy_title,
-.side_category_menu ul.col3 li.side_taxonomy_title {
+.side_category_menu ul.col2 li.side_taxonomy_title, .side_category_menu ul.col3 li.side_taxonomy_title {
   width: 100%;
   color: #ccc;
   display: block;
@@ -1204,50 +1045,40 @@ header .fix-navi-pc .fix-navi-logo {
   margin-bottom: 0.7em;
   line-height: 1.7;
 }
-
 .side_area .left_brands {
   margin-top: 2.5em;
 }
-
 .side_area .left_brands h4 {
   font-weight: bold;
   color: #ccc;
   margin-bottom: 1em;
 }
-
 .side_area .left_brands li {
   border: 1px solid #ddd;
   margin-bottom: 1.3em;
   text-align: center;
 }
-
 .side_area .left_brands li a {
   display: block;
   padding: 4px 0;
 }
-
 .side_area .left_brands li a:hover {
   opacity: 0.7;
 }
-
 .side_area .left_brands li a img {
   width: 48%;
 }
-
 .searchandfilter div > ul > li > h4 {
   padding: 0.5em 0;
 }
-
 .searchandfilter div > ul > li > ul {
   border-top: 1px solid #ddd;
 }
-
 .searchandfilter ul:after {
   content: " ";
   display: block;
   clear: both;
 }
-
 .searchandfilter li.cat-item {
   border-bottom: 1px solid #ddd;
   float: left;
@@ -1256,11 +1087,9 @@ header .fix-navi-pc .fix-navi-logo {
   text-align: center;
   position: relative;
 }
-
 .searchandfilter li.cat-item:nth-child(odd) {
   border-right: 1px solid #ddd;
 }
-
 .searchandfilter li.cat-item label {
   display: block;
   padding: 0.4em 0;
@@ -1268,7 +1097,6 @@ header .fix-navi-pc .fix-navi-logo {
   cursor: pointer;
   z-index: 0;
 }
-
 .searchandfilter li.cat-item input[type="checkbox"] {
   position: absolute;
   top: 0;
@@ -1280,7 +1108,6 @@ header .fix-navi-pc .fix-navi-logo {
   z-index: -1;
   cursor: pointer;
 }
-
 .searchandfilter li.cat-item input[type="checkbox"]:after {
   position: absolute;
   top: 0;
@@ -1291,11 +1118,9 @@ header .fix-navi-pc .fix-navi-logo {
   background: #fff;
   z-index: -1;
 }
-
 .searchandfilter li.cat-item input[type="checkbox"]:checked:after {
   background: #ddd;
 }
-
 .searchandfilter select {
   width: 85%;
   cursor: pointer;
@@ -1303,6 +1128,7 @@ header .fix-navi-pc .fix-navi-logo {
   outline: none;
   background: transparent;
   box-shadow: none;
+  -webkit-appearance: none;
   appearance: none;
   padding: 0.6em 1em;
   margin: 0 auto;
@@ -1312,15 +1138,12 @@ header .fix-navi-pc .fix-navi-logo {
   text-align-last: center;
   text-align: -webkit-center;
 }
-
 .searchandfilter select option {
   text-align: center;
 }
-
 .searchandfilter select::-ms-expand {
   display: none;
 }
-
 .searchandfilter input[type="submit"] {
   display: block;
   border-style: none;
@@ -1332,52 +1155,49 @@ header .fix-navi-pc .fix-navi-logo {
   cursor: pointer;
   font-size: 1.27rem;
 }
-
 .searchandfilter input[type="submit"]:hover {
   background: #f8f8f8;
 }
-
 .searchandfilter h4 {
   font-weight: bold;
   color: #bbb;
   text-align: center;
 }
-
 /* 絞り込みフォーム
------------------------------------------ */
+ ----------------------------------------- */
 .cat-item > .children {
   padding-left: 1em;
 }
-
 /* 商品検索ページ
------------------------------------------ */
+ ----------------------------------------- */
 .search_nav {
   font-size: 1.2rem;
 }
-
 /* トップページ
------------------------------------------ */
+ ----------------------------------------- */
 .top_main a {
   display: block;
   height: 85vh;
 }
-
 .big_main_slide li {
   position: relative;
 }
-
 .big_main_slide li a:hover .black {
   opacity: 0.25;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .big_main_slide li a .text {
   position: absolute;
   width: 100%;
   height: 85vh;
   z-index: 999;
 }
-
+@media screen and (max-width: 600px) {
+}
 .big_main_slide li a .text img {
   width: 450px;
   position: absolute;
@@ -1387,7 +1207,6 @@ header .fix-navi-pc .fix-navi-logo {
   bottom: 0;
   margin: auto;
 }
-
 @media screen and (max-width: 600px) {
   .big_main_slide li a .text img {
     padding: 0.7em;
@@ -1397,35 +1216,30 @@ header .fix-navi-pc .fix-navi-logo {
     bottom: inherit;
   }
 }
-
 .big_main_slide li a .text img.left_top {
   top: 53px;
   left: 6.5vw;
   right: inherit;
   bottom: inherit;
 }
-
 @media screen and (max-width: 600px) {
   .big_main_slide li a .text img.left_top {
     top: 135px;
     left: inherit;
   }
 }
-
 .big_main_slide li a .text img.right_top {
   top: 53px;
   left: inherit;
   right: 6.5vw;
   bottom: inherit;
 }
-
 @media screen and (max-width: 600px) {
   .big_main_slide li a .text img.right_top {
     top: 135px;
     right: inherit;
   }
 }
-
 .big_main_slide li a .bg img {
   width: 100%;
   height: 85vh;
@@ -1433,123 +1247,80 @@ header .fix-navi-pc .fix-navi-logo {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .big_main_slide li a .black {
   background: #000;
   position: absolute;
   width: 100%;
   height: 85vh;
   opacity: 0.16;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 @media screen and (max-width: 600px) {
   .big_main_slide li a .black {
     opacity: 0.3;
   }
 }
-
 .top_about_handmade {
   padding: 2.3em 0;
 }
-
-.top_about,
-.top_handmade,
-.top_gift,
-.top_shop {
+.top_about, .top_handmade, .top_gift, .top_shop {
   display: flex;
   background: #fff;
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about,
-  .top_handmade,
-  .top_gift,
-  .top_shop {
+  .top_about, .top_handmade, .top_gift, .top_shop {
     display: block;
   }
 }
-
-.top_about li,
-.top_handmade li,
-.top_gift li,
-.top_shop li {
+.top_about li, .top_handmade li, .top_gift li, .top_shop li {
   width: 50%;
   height: 36vw;
   position: relative;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li,
-  .top_handmade li,
-  .top_gift li,
-  .top_shop li {
+  .top_about li, .top_handmade li, .top_gift li, .top_shop li {
     width: 100%;
     height: inherit;
   }
 }
-
-.top_about li img,
-.top_handmade li img,
-.top_gift li img,
-.top_shop li img {
+.top_about li img, .top_handmade li img, .top_gift li img, .top_shop li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
-.top_about li .bottom_link,
-.top_handmade li .bottom_link,
-.top_gift li .bottom_link,
-.top_shop li .bottom_link {
+.top_about li .bottom_link, .top_handmade li .bottom_link, .top_gift li .bottom_link, .top_shop li .bottom_link {
   position: absolute;
   bottom: 1.1em;
   right: 1.4em;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .bottom_link,
-  .top_handmade li .bottom_link,
-  .top_gift li .bottom_link,
-  .top_shop li .bottom_link {
+  .top_about li .bottom_link, .top_handmade li .bottom_link, .top_gift li .bottom_link, .top_shop li .bottom_link {
     position: inherit;
     right: inherit;
     text-align: center;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li a,
-  .top_handmade li a,
-  .top_gift li a,
-  .top_shop li a {
+  .top_about li a, .top_handmade li a, .top_gift li a, .top_shop li a {
     font-size: 1.3rem;
   }
 }
-
-.top_about li .top_main_catch,
-.top_handmade li .top_main_catch,
-.top_gift li .top_main_catch,
-.top_shop li .top_main_catch {
+.top_about li .top_main_catch, .top_handmade li .top_main_catch, .top_gift li .top_main_catch, .top_shop li .top_main_catch {
   padding: 2vw;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .top_main_catch,
-  .top_handmade li .top_main_catch,
-  .top_gift li .top_main_catch,
-  .top_shop li .top_main_catch {
+  .top_about li .top_main_catch, .top_handmade li .top_main_catch, .top_gift li .top_main_catch, .top_shop li .top_main_catch {
     padding: 4vw 0 8vw 0;
   }
 }
-
-.top_about li .top_main_catch h3,
-.top_handmade li .top_main_catch h3,
-.top_gift li .top_main_catch h3,
-.top_shop li .top_main_catch h3 {
+.top_about li .top_main_catch h3, .top_handmade li .top_main_catch h3, .top_gift li .top_main_catch h3, .top_shop li .top_main_catch h3 {
   font-size: 1.5vw;
   color: #000;
   letter-spacing: 0.14em;
@@ -1557,86 +1328,50 @@ header .fix-navi-pc .fix-navi-logo {
   line-height: 2.1;
   margin-top: 6vw;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .top_main_catch h3,
-  .top_handmade li .top_main_catch h3,
-  .top_gift li .top_main_catch h3,
-  .top_shop li .top_main_catch h3 {
+  .top_about li .top_main_catch h3, .top_handmade li .top_main_catch h3, .top_gift li .top_main_catch h3, .top_shop li .top_main_catch h3 {
     font-size: 3.8vw;
   }
 }
-
-.top_about li .top_main_catch img,
-.top_handmade li .top_main_catch img,
-.top_gift li .top_main_catch img,
-.top_shop li .top_main_catch img {
+.top_about li .top_main_catch img, .top_handmade li .top_main_catch img, .top_gift li .top_main_catch img, .top_shop li .top_main_catch img {
   width: 12.5vw;
   margin: 0 auto;
   display: block;
   margin-top: 2.9vw;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .top_main_catch img,
-  .top_handmade li .top_main_catch img,
-  .top_gift li .top_main_catch img,
-  .top_shop li .top_main_catch img {
+  .top_about li .top_main_catch img, .top_handmade li .top_main_catch img, .top_gift li .top_main_catch img, .top_shop li .top_main_catch img {
     width: 36vw;
     margin-top: 4.5vw;
     margin-bottom: 7vw;
   }
 }
-
-.top_about li .top_handmade_catch,
-.top_handmade li .top_handmade_catch,
-.top_gift li .top_handmade_catch,
-.top_shop li .top_handmade_catch {
+.top_about li .top_handmade_catch, .top_handmade li .top_handmade_catch, .top_gift li .top_handmade_catch, .top_shop li .top_handmade_catch {
   padding: 2vw;
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .top_handmade_catch,
-  .top_handmade li .top_handmade_catch,
-  .top_gift li .top_handmade_catch,
-  .top_shop li .top_handmade_catch {
+  .top_about li .top_handmade_catch, .top_handmade li .top_handmade_catch, .top_gift li .top_handmade_catch, .top_shop li .top_handmade_catch {
     padding: 7vw 2vw 8vw 2vw;
   }
 }
-
-.top_about li .top_handmade_catch img,
-.top_handmade li .top_handmade_catch img,
-.top_gift li .top_handmade_catch img,
-.top_shop li .top_handmade_catch img {
+.top_about li .top_handmade_catch img, .top_handmade li .top_handmade_catch img, .top_gift li .top_handmade_catch img, .top_shop li .top_handmade_catch img {
   width: 14.3vw;
   margin: 0 auto;
   display: block;
   margin-top: 3.7vw;
 }
-
 @media screen and (max-width: 960px) {
-  .top_about li .top_handmade_catch img,
-  .top_handmade li .top_handmade_catch img,
-  .top_gift li .top_handmade_catch img,
-  .top_shop li .top_handmade_catch img {
+  .top_about li .top_handmade_catch img, .top_handmade li .top_handmade_catch img, .top_gift li .top_handmade_catch img, .top_shop li .top_handmade_catch img {
     width: 18vw;
     margin-top: 3vw;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .top_handmade_catch img,
-  .top_handmade li .top_handmade_catch img,
-  .top_gift li .top_handmade_catch img,
-  .top_shop li .top_handmade_catch img {
+  .top_about li .top_handmade_catch img, .top_handmade li .top_handmade_catch img, .top_gift li .top_handmade_catch img, .top_shop li .top_handmade_catch img {
     width: 33vw;
   }
 }
-
-.top_about li .top_handmade_catch h3,
-.top_handmade li .top_handmade_catch h3,
-.top_gift li .top_handmade_catch h3,
-.top_shop li .top_handmade_catch h3 {
+.top_about li .top_handmade_catch h3, .top_handmade li .top_handmade_catch h3, .top_gift li .top_handmade_catch h3, .top_shop li .top_handmade_catch h3 {
   font-size: 2.5rem;
   color: #000;
   letter-spacing: 0.15em;
@@ -1644,74 +1379,50 @@ header .fix-navi-pc .fix-navi-logo {
   line-height: 2.1;
   margin-top: 2.6vw;
 }
-
 @media screen and (max-width: 960px) {
-  .top_about li .top_handmade_catch h3,
-  .top_handmade li .top_handmade_catch h3,
-  .top_gift li .top_handmade_catch h3,
-  .top_shop li .top_handmade_catch h3 {
+  .top_about li .top_handmade_catch h3, .top_handmade li .top_handmade_catch h3, .top_gift li .top_handmade_catch h3, .top_shop li .top_handmade_catch h3 {
     font-size: 2.3rem;
     margin-top: 3.3vw;
   }
 }
-
-.top_about li .top_handmade_catch .text1,
-.top_handmade li .top_handmade_catch .text1,
-.top_gift li .top_handmade_catch .text1,
-.top_shop li .top_handmade_catch .text1 {
+.top_about li .top_handmade_catch .text1, .top_handmade li .top_handmade_catch .text1, .top_gift li .top_handmade_catch .text1, .top_shop li .top_handmade_catch .text1 {
   font-size: 1.43rem;
   text-align: center;
   line-height: 2.1;
   margin-top: 0.9em;
 }
-
 @media screen and (max-width: 960px) {
-  .top_about li .top_handmade_catch .text1,
-  .top_handmade li .top_handmade_catch .text1,
-  .top_gift li .top_handmade_catch .text1,
-  .top_shop li .top_handmade_catch .text1 {
+  .top_about li .top_handmade_catch .text1, .top_handmade li .top_handmade_catch .text1, .top_gift li .top_handmade_catch .text1, .top_shop li .top_handmade_catch .text1 {
     font-size: 1.24rem;
     line-height: 1.9;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .top_about li .top_handmade_catch .text1,
-  .top_handmade li .top_handmade_catch .text1,
-  .top_gift li .top_handmade_catch .text1,
-  .top_shop li .top_handmade_catch .text1 {
+  .top_about li .top_handmade_catch .text1, .top_handmade li .top_handmade_catch .text1, .top_gift li .top_handmade_catch .text1, .top_shop li .top_handmade_catch .text1 {
     font-size: 1.24rem;
     line-height: 2.1;
     margin-bottom: 2.5em;
   }
 }
-
 .top_about li:first-child {
   order: 2;
 }
-
-.top_gift li,
-.top_shop li {
+.top_gift li, .top_shop li {
   height: 32vw !important;
 }
-
 @media screen and (max-width: 600px) {
-  .top_gift li,
-  .top_shop li {
+  .top_gift li, .top_shop li {
     height: inherit !important;
   }
 }
-
 .top_gift li:first-child {
   order: 2;
 }
-
 @media screen and (max-width: 600px) {
   .top_gift .top_gift_catch {
     padding: 1.7em;
   }
 }
-
 .top_gift .top_gift_catch h3 {
   font-size: 2.4rem;
   color: #000;
@@ -1720,46 +1431,39 @@ header .fix-navi-pc .fix-navi-logo {
   line-height: 2.1;
   margin-top: 7.5vw;
 }
-
 @media screen and (max-width: 960px) {
   .top_gift .top_gift_catch h3 {
     font-size: 2.2rem;
     margin-top: 1.6vw;
   }
 }
-
 @media screen and (max-width: 600px) {
   .top_gift .top_gift_catch h3 {
     font-size: 1.9rem;
   }
 }
-
 .top_gift .top_gift_catch p {
   font-size: 1.5rem;
   text-align: center;
   line-height: 2.1;
   margin-top: 1.5em;
 }
-
 @media screen and (max-width: 960px) {
   .top_gift .top_gift_catch p {
     font-size: 1.24rem;
     line-height: 1.9;
   }
 }
-
 @media screen and (max-width: 600px) {
   .top_gift .top_gift_catch p {
     margin-bottom: 2em;
   }
 }
-
 @media screen and (max-width: 600px) {
   .top_shop .top_shop_catch {
     padding: 2em;
   }
 }
-
 .top_shop .top_shop_catch h3 {
   font-size: 2.3rem;
   color: #000;
@@ -1768,170 +1472,150 @@ header .fix-navi-pc .fix-navi-logo {
   line-height: 1.9;
   margin-top: 6vw;
 }
-
 @media screen and (max-width: 960px) {
   .top_shop .top_shop_catch h3 {
     font-size: 2.2rem;
     margin-top: 1.6vw;
   }
 }
-
 @media screen and (max-width: 600px) {
   .top_shop .top_shop_catch h3 {
     font-size: 1.75rem;
   }
 }
-
 .top_shop .top_shop_catch p {
   font-size: 1.42rem;
   text-align: center;
   line-height: 2.1;
   margin-top: 2em;
 }
-
 @media screen and (max-width: 960px) {
   .top_shop .top_shop_catch p {
     font-size: 1.24rem;
     line-height: 1.9;
   }
 }
-
 .top_men_women {
   display: flex;
 }
-
 @media screen and (max-width: 600px) {
   .top_men_women {
     display: block;
   }
 }
-
 .top_men_women li {
   position: relative;
   text-align: center;
 }
-
 @media screen and (max-width: 600px) {
   .top_men_women li {
     width: 100%;
     height: 280px;
   }
 }
-
 .top_men_women li a:hover .black {
   opacity: 0.14;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .top_men_women li .top_men_women_text {
   position: absolute;
   width: 100%;
   z-index: 1;
 }
-
 .top_men_women li .top_men_women_text img {
   height: 25px;
   margin-top: 12.8vw;
 }
-
 @media screen and (max-width: 600px) {
   .top_men_women li .top_men_women_text img {
     height: 23px;
     margin-top: 27.5vw;
   }
 }
-
 .top_men_women li .top_men_women_text p {
   margin-top: 1.1em;
   font-size: 1.4rem;
   color: #fff;
   letter-spacing: 0.13em;
 }
-
 @media screen and (max-width: 600px) {
   .top_men_women li .top_men_women_text p {
     margin-top: 0.8em;
     font-size: 1.3rem;
   }
 }
-
 .top_men_women li .black {
   position: absolute;
   background: #000;
   opacity: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 @media screen and (max-width: 600px) {
   .top_men_women li .black {
     opacity: 0.05;
   }
 }
-
 .top_men_women li .top_men_women_bg {
   width: 100%;
 }
-
 @media screen and (max-width: 600px) {
   .top_men_women li .top_men_women_bg {
     height: 280px;
     object-fit: cover;
   }
 }
-
 .blog_date_category {
   font-size: 1.4rem;
   letter-spacing: 0.05em;
   padding: 1em 2em 0em 2em;
 }
-
 .blog_date_category .date {
-  color: #BBB;
+  color: #bbb;
 }
-
 .blog_date_category .category {
   color: #a32413;
 }
-
 .news {
   font-size: 1.45rem;
   width: 80%;
   margin: 0 auto;
   border-top: dotted 1px #ccc;
 }
-
 @media screen and (max-width: 600px) {
   .news {
     width: 89%;
     font-size: 1.3rem;
   }
 }
-
 .news li a {
   padding: 0.7em;
   border-bottom: dotted 1px #ccc;
   display: flex;
   color: #333;
 }
-
 @media screen and (max-width: 600px) {
   .news li a {
     display: inherit;
   }
 }
-
 .news li a:hover {
   text-decoration: underline;
 }
-
 .news li a div:first-child {
   margin-left: 1em;
   width: 7.5em;
-  color: #BBB;
+  color: #bbb;
 }
-
 @media screen and (max-width: 600px) {
   .news li a div:first-child {
     margin-left: 0;
@@ -1940,34 +1624,28 @@ header .fix-navi-pc .fix-navi-logo {
     display: inline;
   }
 }
-
 .news li a div:nth-child(2) {
   width: 12em;
 }
-
 @media screen and (max-width: 600px) {
   .news li a div:nth-child(2) {
     font-size: 1.1rem;
     display: inline;
   }
 }
-
 .news li a div br {
   display: none;
 }
-
 .news li a div .category {
   color: #a32413;
 }
-
 /* 商品一覧（カスタム投稿）
------------------------------------------ */
+ ----------------------------------------- */
 .thumbnail_set ul {
   display: flex;
   justify-content: space-between;
   flex-flow: wrap;
 }
-
 .thumbnail_set ul li {
   width: 32%;
   margin-bottom: 2.9em;
@@ -1975,70 +1653,56 @@ header .fix-navi-pc .fix-navi-logo {
   line-height: 1.4;
   /*word-wrap:break-word; 後でとる */
 }
-
 .thumbnail_set ul li:nth-child(3n+2):last-child {
   margin-left: auto;
   margin-right: 34%;
 }
-
 .thumbnail_set ul li .thumbnail img {
   width: 100%;
 }
-
 .thumbnail_set ul li .brand {
   font-size: 1.3rem;
   margin: 1em 0.5em 0 0.5em;
 }
-
 .thumbnail_set ul li h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0.4em 0 0.4em;
 }
-
 .thumbnail_set ul li h3 span {
   font-size: 1.4rem;
   font-weight: normal;
 }
-
 .thumbnail_set ul li .spec {
   font-size: 1.2rem;
   margin: 0.5em 0.5em 0 0.5em;
 }
-
 .thumbnail_set ul li .spec span {
   margin-right: 0.7em;
 }
-
 .thumbnail_set ul li .price {
   font-size: 1.3rem;
   margin: 0.6em 0.5em 0 0.5em;
 }
-
 .thumbnail_set ul li a {
   color: #333;
 }
-
 .thumbnail_set ul li a:hover {
   color: #888;
 }
-
 .thumbnail_set ul li a:hover img {
   opacity: 0.7;
 }
-
 .thumbnail_set2 ul {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
 }
-
 @media screen and (max-width: 600px) {
   .thumbnail_set2 ul {
     justify-content: space-between;
   }
 }
-
 .thumbnail_set2 ul li {
   width: 24%;
   font-size: 1.3rem;
@@ -2046,7 +1710,6 @@ header .fix-navi-pc .fix-navi-logo {
   padding: 0 1.3em;
   margin-bottom: 2.5em;
 }
-
 @media screen and (max-width: 600px) {
   .thumbnail_set2 ul li {
     width: 47.5%;
@@ -2054,29 +1717,24 @@ header .fix-navi-pc .fix-navi-logo {
     margin-bottom: 1.5em;
   }
 }
-
 .thumbnail_set2 ul li .thumbnail img {
   width: 100%;
 }
-
 .thumbnail_set2 ul li .brand {
   font-size: 1.3rem;
   margin: 1em 0.5em 0 0.5em;
 }
-
 @media screen and (max-width: 600px) {
   .thumbnail_set2 ul li .brand {
     font-size: 1.1rem;
     margin: 0.5em 0.5em 0 0.5em;
   }
 }
-
 .thumbnail_set2 ul li h3 {
   font-size: 1.5rem !important;
   font-weight: bold !important;
   margin: 0 0.4em 0 0.4em !important;
 }
-
 @media screen and (max-width: 600px) {
   .thumbnail_set2 ul li h3 {
     font-size: 1.3rem !important;
@@ -2084,68 +1742,65 @@ header .fix-navi-pc .fix-navi-logo {
     line-height: 1.5;
   }
 }
-
 .thumbnail_set2 ul li h3 span {
   font-size: 1.4rem;
   font-weight: normal;
 }
-
 .thumbnail_set2 ul li .spec {
   font-size: 1.2rem;
   margin: 0.5em 0.5em 0 0.5em;
 }
-
 @media screen and (max-width: 600px) {
   .thumbnail_set2 ul li .spec {
     font-size: 1.1rem;
     margin: 1.2em 0.5em 0 0.5em;
   }
 }
-
 .thumbnail_set2 ul li .spec span {
   margin-right: 0.7em;
 }
-
 .thumbnail_set2 ul li .price {
   font-size: 1.3rem;
   margin: 0.6em 0.5em 0 0.5em;
 }
-
+@media screen and (max-width: 600px) {
+}
 .thumbnail_set2 ul li a {
   color: #333;
 }
-
 .thumbnail_set2 ul li a:hover {
   color: #888;
 }
-
 .thumbnail_set2 ul li a:hover img {
   opacity: 0.7;
 }
-
 ul.product_list {
   text-align: left;
 }
-
 ul.product_list li {
   font-size: 1.3rem;
   display: block;
   margin: 0 auto 3em auto;
   width: 85%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 ul.product_list li:hover {
   background: #f7f7f7;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 ul.product_list li .thumbnail {
   width: 37%;
   float: left;
   padding: 0 3.3em 0 0;
 }
-
 @media screen and (max-width: 600px) {
   ul.product_list li .thumbnail {
     width: 100%;
@@ -2153,17 +1808,14 @@ ul.product_list li .thumbnail {
     padding: 0 0 0 0;
   }
 }
-
 ul.product_list li .thumbnail img {
   width: 100%;
 }
-
 ul.product_list li .text {
   width: 63%;
   float: right;
   padding: 2.4em 2em 0 0;
 }
-
 @media screen and (max-width: 600px) {
   ul.product_list li .text {
     width: 100%;
@@ -2171,65 +1823,54 @@ ul.product_list li .text {
     padding: 1.7em 0 0 0;
   }
 }
-
 ul.product_list li .text .lead {
   font-size: 1.45rem;
   margin-bottom: 2em;
   line-height: 1.9;
 }
-
 @media screen and (max-width: 600px) {
   ul.product_list li .text .lead {
     font-size: 1.35rem;
     margin-bottom: 1.5em;
   }
 }
-
 ul.product_list li .text h3 {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.42rem;
   margin-bottom: 0.1em;
   font-weight: bold;
 }
-
 @media screen and (max-width: 600px) {
   ul.product_list li .text h3 {
     font-size: 1.38rem;
   }
 }
-
 ul.product_list li .text .spec {
   font-size: 1.3rem;
   margin-bottom: 0.5em;
 }
-
 @media screen and (max-width: 600px) {
   ul.product_list li .text .spec {
     font-size: 1.15rem;
   }
 }
-
 ul.product_list li .text .price {
   font-size: 1.55rem;
   font-weight: bold;
 }
-
 @media screen and (max-width: 600px) {
   ul.product_list li .text .price {
     font-size: 1.45rem;
   }
 }
-
 ul.product_list li a {
   color: #333;
 }
-
 ul.product_list li a:hover {
   color: #000;
 }
-
 /* 固定ページ共通
------------------------------------------ */
+ ----------------------------------------- */
 .local_menu {
   padding: 1em 0;
   text-align: center;
@@ -2238,31 +1879,26 @@ ul.product_list li a:hover {
   display: flex;
   justify-content: center;
 }
-
 @media screen and (max-width: 960px) {
   .local_menu {
     padding: 1em 0.3em;
     flex-wrap: wrap;
   }
 }
-
 @media screen and (max-width: 600px) {
   .local_menu {
     padding: 0;
   }
 }
-
 .local_menu li {
   margin: 0 0.4em;
   line-height: 1.3;
 }
-
 @media screen and (max-width: 960px) {
   .local_menu li {
     margin: 0 0.2em;
   }
 }
-
 @media screen and (max-width: 600px) {
   .local_menu li {
     margin: 0;
@@ -2274,21 +1910,18 @@ ul.product_list li a:hover {
     border-right: none;
   }
 }
-
 .local_menu li a {
   font-size: 1.27rem;
   color: #333;
   font-weight: bold;
   letter-spacing: 0.12em;
 }
-
 @media screen and (max-width: 960px) {
   .local_menu li a {
     font-size: 1.2rem;
     letter-spacing: 0.08em;
   }
 }
-
 @media screen and (max-width: 600px) {
   .local_menu li a {
     letter-spacing: 0.12em;
@@ -2298,33 +1931,27 @@ ul.product_list li a:hover {
     font-weight: normal;
   }
 }
-
 .local_menu li a:hover {
   color: #888;
 }
-
 .local_menu li:after {
   content: "/";
   margin-left: 0.8em;
   color: #ddd;
 }
-
 @media screen and (max-width: 960px) {
   .local_menu li:after {
     margin-left: 0.4em;
   }
 }
-
 @media screen and (max-width: 600px) {
   .local_menu li:after {
     content: none;
   }
 }
-
 .local_menu li:last-child:after {
   content: none;
 }
-
 .section_title2 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   line-height: 1.9;
@@ -2337,60 +1964,48 @@ ul.product_list li a:hover {
   font-weight: bold;
   text-align: center;
 }
-
 .thumbnail_set3 ul {
   display: flex;
   justify-content: center;
 }
-
 .thumbnail_set3 ul li {
   width: 22%;
   font-size: 1.3rem;
   line-height: 1.4;
   margin: 0 1.5em;
 }
-
 .thumbnail_set3 ul li .thumbnail img {
   width: 100%;
 }
-
 .thumbnail_set3 ul li .titile {
   font-size: 1.4rem !important;
   font-weight: bold !important;
   margin: 0.8em 0.4em 0 0.4em !important;
 }
-
 .thumbnail_set3 ul li .titile span {
   font-size: 1.3rem;
   font-weight: normal;
 }
-
 .thumbnail_set3 ul li .spec {
   font-size: 1.2rem;
   margin: 0.5em 0.5em 0 0.5em;
 }
-
 .thumbnail_set3 ul li .spec span {
   margin-right: 0.7em;
 }
-
 .thumbnail_set3 ul li .price {
   font-size: 1.3rem;
   margin: 0.6em 0.5em 0 0.5em;
 }
-
 .thumbnail_set3 ul li a {
   color: #333;
 }
-
 .thumbnail_set3 ul li a:hover {
   color: #888;
 }
-
 .thumbnail_set3 ul li a:hover img {
   opacity: 0.7;
 }
-
 h3.section_title1 {
   font-size: 1.5rem !important;
   letter-spacing: 0.3em !important;
@@ -2401,61 +2016,50 @@ h3.section_title1 {
   font-weight: bold !important;
   text-align: center;
 }
-
 /* MEN WOMEN のトップ
------------------------------------------ */
+ ----------------------------------------- */
 .top_section2 {
   font-size: 1vw;
   padding: 3.8em 5em 4.5em 5em;
 }
-
 @media screen and (max-width: 600px) {
   .top_section2 {
     font-size: 1.4rem;
     padding: 2em 1.5em 1em 1.5em;
   }
 }
-
 .men_women_top {
   padding-bottom: 5em;
 }
-
 .men_women_top .men_women_top_header a {
   display: block;
   height: 530px;
 }
-
 .men_women_top .margin1 {
   margin-bottom: 3em;
 }
-
 .men_women_top h2.men_women_title {
   margin: 1em 0 0.9em 0;
   line-height: 1.3;
   letter-spacing: 0.1em;
 }
-
 .men_women_top h2.men_women_section_title {
   font-size: 3.2rem;
   line-height: 1;
 }
-
 @media screen and (max-width: 600px) {
   .men_women_top h2.men_women_section_title {
     font-size: 2.6rem;
   }
 }
-
 .men_women_top h2.men_women_section_title .sub {
   color: #ba984a;
 }
-
 @media screen and (max-width: 600px) {
   .men_women_top h2.men_women_section_title .sub {
     font-size: 1.2rem;
   }
 }
-
 .men_women_top h2.men_women_series_cat_tit {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 1.65rem;
@@ -2465,20 +2069,17 @@ h3.section_title1 {
   font-weight: bold;
   line-height: 1.4;
 }
-
 @media screen and (max-width: 600px) {
   .men_women_top h2.men_women_series_cat_tit {
     font-size: 1.43rem;
     margin-top: 2.5em;
   }
 }
-
 .men_women_top h2.men_women_series_cat_tit span {
   position: relative;
   display: inline-block;
   padding: 0 0.9em;
 }
-
 .men_women_top h2.men_women_series_cat_tit span::before {
   position: absolute;
   content: '';
@@ -2489,7 +2090,6 @@ h3.section_title1 {
   border: solid 1px #333;
   border-left: none;
 }
-
 .men_women_top h2.men_women_series_cat_tit span::after {
   position: absolute;
   content: '';
@@ -2500,16 +2100,17 @@ h3.section_title1 {
   border: solid 1px #333;
   border-right: none;
 }
-
 .big_banner_top li {
   position: relative;
 }
-
 .big_banner_top li a:hover .black {
   opacity: 0.25;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .big_banner_top li a .text {
   position: absolute;
   text-align: center;
@@ -2519,58 +2120,49 @@ h3.section_title1 {
   z-index: 999;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .text {
     margin-top: 11em;
     padding: 0 2em;
   }
 }
-
 .big_banner_top li a .text h3 {
   font-size: 4.1rem;
   line-height: 1.4;
   font-weight: normal;
   letter-spacing: 0.13em;
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .text h3 {
     font-size: 3.2rem;
   }
 }
-
 .big_banner_top li a .text .ruby {
   letter-spacing: 0.12em;
   font-size: 1.38rem;
   line-height: 1.1;
   letter-spacing: 0.08em;
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .text .ruby {
     font-size: 1rem;
   }
 }
-
 .big_banner_top li a .text .catch {
   margin-top: 1.6em;
   font-size: 1.45rem;
   line-height: 1.9;
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .text .catch {
     font-size: 1.32rem;
   }
 }
-
 .big_banner_top li a .text .arrow {
   position: relative;
   margin: 1.9em auto 0 auto;
   width: 33px;
 }
-
 .big_banner_top li a .text .arrow:before {
   position: absolute;
   top: 0;
@@ -2583,16 +2175,15 @@ h3.section_title1 {
   width: 33px;
   height: 33px;
   border: 2px solid #fff;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .text .arrow:before {
     width: 27px;
     height: 27px;
   }
 }
-
 .big_banner_top li a .text .arrow:after {
   position: absolute;
   top: 0;
@@ -2605,15 +2196,14 @@ h3.section_title1 {
   height: 7px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .text .arrow:after {
     left: 8px;
   }
 }
-
 .big_banner_top li a .bg img {
   width: 100%;
   height: 530px;
@@ -2621,71 +2211,65 @@ h3.section_title1 {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .big_banner_top li a .black {
   background: #000;
   position: absolute;
   width: 100%;
   height: 530px;
   opacity: 0.13;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 @media screen and (max-width: 600px) {
   .big_banner_top li a .black {
     opacity: 0.3;
   }
 }
-
 .series_list2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 @media screen and (max-width: 600px) {
   .series_list2 {
     display: block;
   }
 }
-
 .series_list2 li {
   width: 31%;
-  background: #ffffff;
+  background: #fff;
   padding-bottom: 2.2em;
   margin-right: 1.8em;
   text-align: center;
 }
-
 .series_list2 li:last-child {
   margin-right: 0;
 }
-
 @media screen and (max-width: 600px) {
   .series_list2 li {
     width: 100%;
     margin-bottom: 1.8em;
   }
 }
-
 .series_list2 li img {
   width: 100%;
   height: 13vw;
+  -o-object-fit: cover;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 @media screen and (max-width: 600px) {
   .series_list2 li img {
     height: 40vw;
   }
 }
-
 .series_list2 li .blog_date_category {
   font-size: 1.2rem;
 }
-
 .series_list2 li h3 {
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   margin-top: 1.4em;
@@ -2693,13 +2277,11 @@ h3.section_title1 {
   letter-spacing: 0.14em;
   line-height: 1.2;
 }
-
 @media screen and (max-width: 600px) {
   .series_list2 li h3 {
     margin-top: 1.2em;
   }
 }
-
 .series_list2 li .ruby {
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   margin-top: 0.7em;
@@ -2707,78 +2289,64 @@ h3.section_title1 {
   letter-spacing: 0.15em;
   line-height: 1;
 }
-
 @media screen and (max-width: 600px) {
   .series_list2 li .ruby {
     font-size: 1rem;
   }
 }
-
 .series_list2 li .catch {
   margin-top: 2em;
   padding: 0 1em;
   font-size: 1.3rem;
   letter-spacing: 0.15em;
 }
-
 @media screen and (max-width: 600px) {
   .series_list2 li .catch {
     font-size: 1.2rem;
   }
 }
-
 .series_list2 li a {
   color: #333;
 }
-
 .series_list2 li a:hover {
   text-decoration: underline;
 }
-
 /* シリーズ一覧
------------------------------------------ */
+ ----------------------------------------- */
 .handmade_logo {
   padding-top: 22px;
   text-align: center;
   border-top: 1px solid #eaeaea;
 }
-
 .handmade_logo img {
   width: 118px;
 }
-
 .series_category_list {
   margin: 24px 0 16px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .series_category_list li {
   margin: 0 0.5em 0 0.5em;
 }
-
 .series_category_list li a {
   font-size: 1.3rem;
   color: #333;
   font-weight: bold;
   letter-spacing: 0.2em;
 }
-
 .series_category_list li a:hover {
   color: #888;
 }
-
 .series_category_list li:after {
   content: "/";
   margin-left: 1em;
   color: #ddd;
 }
-
 .series_category_list li:last-child:after {
   content: none;
 }
-
 .series_cat_title {
   font-size: 1.7rem;
   margin-top: 1.7em;
@@ -2786,20 +2354,20 @@ h3.section_title1 {
   line-height: 1.1;
   letter-spacing: 0.2em;
 }
-
 .big_banner {
   margin-bottom: 3em;
 }
-
 .big_banner li {
   position: relative;
 }
-
 .big_banner li a:hover .black {
   opacity: 0.25;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .big_banner li a .text {
   position: absolute;
   text-align: center;
@@ -2809,33 +2377,28 @@ h3.section_title1 {
   z-index: 999;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
 .big_banner li a .text h3 {
   font-size: 4.1rem;
   line-height: 1.4;
   font-weight: normal;
   letter-spacing: 0.13em;
 }
-
 .big_banner li a .text .ruby {
   letter-spacing: 0.12em;
   font-size: 1.38rem;
   line-height: 1.1;
   letter-spacing: 0.08em;
 }
-
 .big_banner li a .text .catch {
   margin-top: 1.6em;
   font-size: 1.45rem;
   line-height: 1.9;
 }
-
 .big_banner li a .text .arrow {
   position: relative;
   margin: 1.9em auto 0 auto;
   width: 33px;
 }
-
 .big_banner li a .text .arrow:before {
   position: absolute;
   top: 0;
@@ -2848,9 +2411,9 @@ h3.section_title1 {
   width: 33px;
   height: 33px;
   border: 2px solid #fff;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-
 .big_banner li a .text .arrow:after {
   position: absolute;
   top: 0;
@@ -2863,295 +2426,220 @@ h3.section_title1 {
   height: 7px;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 .big_banner li a .bg img {
   height: 500px;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .big_banner li a .black {
   background: #000;
   position: absolute;
   width: 100%;
   height: 500px;
   opacity: 0.13;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .big_banner li a .bg img {
   height: 500px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
   object-position: 50% 25%;
   /* 横% 縦% */
 }
-
 .big_banner li a .black {
   background: #000;
   position: absolute;
   width: 100%;
   height: 500px;
   opacity: 0.13;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .h2-sub {
   color: #ba984a;
   text-align: center;
   font-size: 1.5rem;
   margin-top: 1em;
 }
-
 @media screen and (max-width: 600px) {
   .h2-sub {
     font-size: 1.2rem;
   }
 }
-
 /* 商品ページ（シリーズ）
------------------------------------------ */
-.series h3,
-.page_default h3 {
+ ----------------------------------------- */
+.series h3, .page_default h3 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2rem;
   margin-bottom: 1.8em;
   letter-spacing: 0.2em;
   line-height: 1.9;
 }
-
 @media screen and (max-width: 600px) {
-  .series h3,
-  .page_default h3 {
+  .series h3, .page_default h3 {
     font-size: 1.85rem;
     margin-bottom: 1.5em;
   }
 }
-
-.series h4,
-.page_default h4 {
+.series h4, .page_default h4 {
   font-size: 1.85rem;
   margin-bottom: 1.1em;
   letter-spacing: 0.2em;
 }
-
-.series h5,
-.page_default h5 {
+.series h5, .page_default h5 {
   font-size: 1.63rem;
   margin-bottom: 1em;
   letter-spacing: 0.27em;
   font-weight: bold;
 }
-
-.series p,
-.page_default p {
+.series p, .page_default p {
   font-size: 1.4rem;
   letter-spacing: 0.15em;
   line-height: 2.2;
 }
-
 @media screen and (max-width: 600px) {
-  .series p,
-  .page_default p {
+  .series p, .page_default p {
     font-size: 1.3rem;
     line-height: 2.2;
   }
 }
-
-.series .margin1,
-.page_default .margin1 {
+.series .margin1, .page_default .margin1 {
   margin-bottom: 6em;
 }
-
 @media screen and (max-width: 600px) {
-  .series .margin1,
-  .page_default .margin1 {
+  .series .margin1, .page_default .margin1 {
     margin-bottom: 2.7em;
   }
 }
-
-.series .margin2,
-.page_default .margin2 {
+.series .margin2, .page_default .margin2 {
   margin-bottom: 3em;
 }
-
 @media screen and (max-width: 600px) {
-  .series .margin2,
-  .page_default .margin2 {
+  .series .margin2, .page_default .margin2 {
     margin-bottom: 2em;
   }
 }
-
-.series .left,
-.page_default .left {
+.series .left, .page_default .left {
   float: left;
 }
-
-.series .right,
-.page_default .right {
+.series .right, .page_default .right {
   float: right;
 }
-
-.series .max,
-.page_default .max {
+.series .max, .page_default .max {
   width: 100%;
 }
-
 @media screen and (max-width: 600px) {
-  .series .max,
-  .page_default .max {
+  .series .max, .page_default .max {
     margin: 0 -1.8em;
     width: 100vw;
   }
 }
-
-.series .max img,
-.page_default .max img {
+.series .max img, .page_default .max img {
   width: 100%;
 }
-
-.series .col2,
-.page_default .col2 {
+.series .col2, .page_default .col2 {
   display: flex;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 600px) {
-  .series .col2,
-  .page_default .col2 {
+  .series .col2, .page_default .col2 {
     display: block;
   }
 }
-
-.series .col2 div.left_col,
-.page_default .col2 div.left_col {
+.series .col2 div.left_col, .page_default .col2 div.left_col {
   order: 1;
 }
-
-.series .col2 div.right_col,
-.page_default .col2 div.right_col {
+.series .col2 div.right_col, .page_default .col2 div.right_col {
   order: 2;
 }
-
-.series .col2 div,
-.page_default .col2 div {
+.series .col2 div, .page_default .col2 div {
   width: 46%;
 }
-
 @media screen and (max-width: 600px) {
-  .series .col2 div,
-  .page_default .col2 div {
+  .series .col2 div, .page_default .col2 div {
     width: 100%;
     margin-bottom: 2em;
     text-align: justify;
   }
 }
-
-.series .col2 img,
-.page_default .col2 img {
+.series .col2 img, .page_default .col2 img {
   max-width: 100%;
 }
-
 @media screen and (max-width: 600px) {
-  .series .col2 img,
-  .page_default .col2 img {
+  .series .col2 img, .page_default .col2 img {
     width: 100%;
     margin-bottom: 2.5em;
   }
 }
-
-.series .col4,
-.page_default .col4 {
+.series .col4, .page_default .col4 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 @media screen and (max-width: 600px) {
-  .series .col4,
-  .page_default .col4 {
+  .series .col4, .page_default .col4 {
     display: block;
   }
 }
-
-.series .col4 div,
-.page_default .col4 div {
+.series .col4 div, .page_default .col4 div {
   width: 22%;
   margin: 0 1% 1.2% 1%;
 }
-
 @media screen and (max-width: 600px) {
-  .series .col4 div,
-  .page_default .col4 div {
+  .series .col4 div, .page_default .col4 div {
     width: 100%;
     margin-bottom: 2em;
     text-align: justify;
   }
 }
-
-.series .col4 img,
-.page_default .col4 img {
+.series .col4 img, .page_default .col4 img {
   width: 100%;
   max-width: 100%;
 }
-
 @media screen and (max-width: 600px) {
-  .series .col4 img,
-  .page_default .col4 img {
+  .series .col4 img, .page_default .col4 img {
     width: 100%;
     margin-bottom: 2.5em;
   }
 }
-
-.series .text_center,
-.page_default .text_center {
+.series .text_center, .page_default .text_center {
   width: 620px;
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
 }
-
 @media screen and (max-width: 600px) {
-  .series .text_center,
-  .page_default .text_center {
+  .series .text_center, .page_default .text_center {
     width: 100%;
   }
 }
-
-.series .caption_right,
-.series .caption_left,
-.series .caption_center,
-.page_default .caption_right,
-.page_default .caption_left,
-.page_default .caption_center {
+.series .caption_right, .page_default .caption_right, .series .caption_left, .page_default .caption_left, .series .caption_center, .page_default .caption_center {
   margin-top: 0.4em;
   font-size: 1.25rem;
 }
-
-.series .caption_right,
-.page_default .caption_right {
+.series .caption_right, .page_default .caption_right {
   text-align: right;
 }
-
-.series .caption_left,
-.page_default .caption_left {
+.series .caption_left, .page_default .caption_left {
   text-align: left;
 }
-
-.series .caption_center,
-.page_default .caption_center {
+.series .caption_center, .page_default .caption_center {
   text-align: center;
 }
-
 .page_default {
   padding-top: 2em;
 }
-
 .page_default h2 {
   font-size: 2.7rem;
   margin-bottom: 2.5em;
@@ -3159,7 +2647,6 @@ h3.section_title1 {
   letter-spacing: 0.15em;
   padding-left: 0;
 }
-
 .page_default h4 {
   font-size: 1.6rem;
   letter-spacing: 0.2em;
@@ -3167,19 +2654,16 @@ h3.section_title1 {
   font-weight: bold;
   margin: 3em 0 1em 0;
 }
-
 @media screen and (max-width: 600px) {
   .page_default h4 {
     font-size: 1.45rem;
   }
 }
-
 .series_header {
   margin-top: 24px;
   margin-bottom: 3em;
   position: relative;
 }
-
 .series_header .text {
   position: absolute;
   text-align: center;
@@ -3189,28 +2673,23 @@ h3.section_title1 {
   z-index: 9;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
-.series_header .text h3,
-.series_header .text .yahoo_h3 {
+.series_header .text h3, .series_header .text .yahoo_h3 {
   font-size: 4.7rem;
   line-height: 1.4;
   font-weight: normal;
   letter-spacing: 0.13em;
 }
-
 .series_header .text .ruby {
   letter-spacing: 0.12em;
   font-size: 1.38rem;
   line-height: 1.1;
   letter-spacing: 0.08em;
 }
-
 .series_header .text .catch {
   margin-top: 2em;
   font-size: 1.7rem;
   line-height: 2;
 }
-
 .series_header .bg img {
   width: 100%;
   height: 580px;
@@ -3218,7 +2697,6 @@ h3.section_title1 {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .series_header .black {
   background: #000;
   position: absolute;
@@ -3226,58 +2704,55 @@ h3.section_title1 {
   height: 580px;
   opacity: 0.1;
 }
-
 .wrap_series_list {
   font-size: 1vw;
   padding: 3.3em 5em 4em 5em;
   margin-bottom: 2em;
 }
-
 h3.series_list_title {
   font-size: 1.8rem;
   text-align: center;
   letter-spacing: 0.2em;
   margin: 0;
 }
-
 .series_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 660px) {
   .series_list {
     display: block;
   }
 }
-
 .series_list li {
   width: 31%;
-  background: #ffffff;
+  background: #fff;
   margin-top: 3.3em;
   padding-bottom: 2.2em;
   text-align: center;
 }
-
 @media screen and (max-width: 660px) {
   .series_list li {
     width: 100%;
   }
 }
-
 .series_list li img {
   width: 100%;
   height: 13vw;
+  -o-object-fit: cover;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .series_list li .blog_date_category {
   font-size: 1.2rem;
 }
-
 .series_list li h3 {
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   margin-top: 1.4em;
@@ -3285,7 +2760,6 @@ h3.series_list_title {
   letter-spacing: 0.14em;
   line-height: 1.2;
 }
-
 .series_list li .ruby {
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   margin-top: 0.7em;
@@ -3293,66 +2767,54 @@ h3.series_list_title {
   letter-spacing: 0.15em;
   line-height: 1;
 }
-
 .series_list li .catch {
   margin-top: 2em;
   padding: 0 1em;
   font-size: 1.3rem;
   letter-spacing: 0.15em;
 }
-
 .series_list li a {
   color: #333;
 }
-
 .series_list li a:hover {
   text-decoration: underline;
 }
-
 .series_list::after {
   /* 最後の行を左寄せ */
   content: "";
   display: block;
   width: 31%;
 }
-
 /* ABOUT　GIFT　SHOP　傘辞典
------------------------------------------ */
+ ----------------------------------------- */
 .about {
   padding-bottom: 5em;
 }
-
 .about .margin1 {
   margin-bottom: 7em;
 }
-
 @media screen and (max-width: 600px) {
   .about .margin1 {
     margin-bottom: 4.2em;
   }
 }
-
 .about .margin2 {
   margin-bottom: 3.5em;
 }
-
 @media screen and (max-width: 600px) {
   .about .margin2 {
     margin-bottom: 2em;
   }
 }
-
 .about .page_header {
   position: relative;
   margin-bottom: 3em;
 }
-
 @media screen and (max-width: 600px) {
   .about .page_header {
     margin-bottom: 1.5em;
   }
 }
-
 .about .page_header h2 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   position: absolute;
@@ -3364,14 +2826,12 @@ h3.series_list_title {
   font-size: 2.8rem;
   letter-spacing: 0.48em;
 }
-
 @media screen and (max-width: 600px) {
   .about .page_header h2 {
     font-size: 2.3rem;
     margin-top: 5.4em;
   }
 }
-
 .about .page_header .black {
   position: absolute;
   background: #000;
@@ -3379,13 +2839,11 @@ h3.series_list_title {
   width: 100%;
   height: 100%;
 }
-
 @media screen and (max-width: 600px) {
   .about .page_header .black {
     opacity: 0.15;
   }
 }
-
 .about .page_header img {
   width: 100%;
   height: 280px;
@@ -3393,7 +2851,6 @@ h3.series_list_title {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .about h4 {
   font-size: 1.6rem;
   letter-spacing: 0.2em;
@@ -3401,13 +2858,15 @@ h3.series_list_title {
   font-weight: bold;
   margin: 3em 0 1em 0;
 }
-
+@media screen and (max-width: 960px) {
+}
 @media screen and (max-width: 600px) {
   .about h4 {
     font-size: 1.45rem;
   }
 }
-
+@media screen and (max-width: 480px) {
+}
 .about h3 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2.3rem;
@@ -3416,75 +2875,62 @@ h3.series_list_title {
   line-height: 2.3;
   margin-bottom: 1.9em;
 }
-
 @media screen and (max-width: 960px) {
   .about h3 {
     font-size: 2.2rem;
   }
 }
-
 @media screen and (max-width: 600px) {
   .about h3 {
     font-size: 1.9rem;
     margin-bottom: 1.6em;
   }
 }
-
 @media screen and (max-width: 480px) {
   .about h3 {
     font-size: 1.8rem;
     letter-spacing: 0.13em;
   }
 }
-
 .about p {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   line-height: 2.2;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 960px) {
   .about p {
     font-size: 1.4rem;
   }
 }
-
 @media screen and (max-width: 600px) {
   .about p {
     font-size: 1.3rem;
   }
 }
-
 .about .col2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 @media screen and (max-width: 600px) {
   .about .col2 {
     display: block;
   }
 }
-
 .about .col2 div {
   width: 49%;
 }
-
 @media screen and (max-width: 600px) {
   .about .col2 div {
     width: 100%;
   }
 }
-
 .about .col2 img {
   max-width: 100%;
 }
-
 .about img.left {
   float: left;
 }
-
 @media screen and (max-width: 600px) {
   .about img.left {
     float: none;
@@ -3492,38 +2938,31 @@ h3.series_list_title {
     width: 100%;
   }
 }
-
 .about img.right {
   float: right;
 }
-
 @media screen and (max-width: 600px) {
   .about img.right {
     float: none;
     margin-bottom: 3em;
   }
 }
-
 @media screen and (max-width: 600px) {
   .about .center {
     text-align: left;
   }
 }
-
 .about .caption {
   font-size: 1.3rem;
 }
-
 @media screen and (max-width: 600px) {
   .about .caption {
     font-size: 1.25rem;
   }
 }
-
 .about .lead1 {
   font-size: 1.7rem;
 }
-
 .history-list li {
   width: 800px;
   margin: 0 auto 2.4em auto;
@@ -3531,43 +2970,36 @@ h3.series_list_title {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 @media screen and (max-width: 960px) {
   .history-list li {
     display: block;
     width: 100%;
   }
 }
-
 .history-list li p.year {
   width: 23%;
   font-weight: bold;
 }
-
 @media screen and (max-width: 960px) {
   .history-list li p.year {
     width: 100%;
     margin-bottom: 0.4em;
   }
 }
-
 .history-list li p.text {
   width: 77%;
   text-align: justify;
 }
-
 @media screen and (max-width: 960px) {
   .history-list li p.text {
     width: 100%;
   }
 }
-
 /* Daily Use Umbrella
------------------------------------------ */
+ ----------------------------------------- */
 .du_top_header {
   position: relative;
 }
-
 .du_top_header .text {
   position: absolute;
   text-align: center;
@@ -3576,18 +3008,15 @@ h3.series_list_title {
   margin-top: 9.8em;
   z-index: 9;
 }
-
 .du_top_header .text .logo {
   margin-bottom: 2em;
 }
-
 .du_top_header .text h3 {
   font-size: 2.3rem;
   line-height: 1.9;
   font-weight: normal;
   letter-spacing: 0.13em;
 }
-
 .du_top_header .bg img {
   width: 100%;
   height: 580px;
@@ -3595,7 +3024,6 @@ h3.series_list_title {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .du_top_header .black {
   background: #000;
   position: absolute;
@@ -3603,19 +3031,16 @@ h3.series_list_title {
   height: 580px;
   opacity: 0.15;
 }
-
 .du_top_lead {
   font-size: 1.45rem;
   line-height: 2.2;
   color: #000;
   margin-bottom: 2.7em;
 }
-
 .du_online_shops {
   text-align: center;
   margin-bottom: 0.8em;
 }
-
 .du_online_shops a {
   font-size: 1.35rem;
   background: #333;
@@ -3624,166 +3049,124 @@ h3.series_list_title {
   padding: 0.7em 1.1em;
   margin: 0.4em;
 }
-
 .du_online_shops a:hover {
   background: #666;
 }
-
 .wrap_du_top_series_list {
   font-size: 1vw;
   padding: 3.3em 5em 4em 5em;
 }
-
-.du_top_series_list,
-.du_top_series_list_s {
+.du_top_series_list, .du_top_series_list_s {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1127px;
   margin: 2em auto 0;
 }
-
 @media screen and (max-width: 600px) {
-  .du_top_series_list,
-  .du_top_series_list_s {
+  .du_top_series_list, .du_top_series_list_s {
     display: block;
   }
 }
-
 @media screen and (max-width: 1280px) {
-  .du_top_series_list,
-  .du_top_series_list_s {
+  .du_top_series_list, .du_top_series_list_s {
     width: 87%;
   }
 }
-
-.du_top_series_list li,
-.du_top_series_list_s li {
+.du_top_series_list li, .du_top_series_list_s li {
   width: 48.7%;
-  background: #ffffff;
+  background: #fff;
   margin-bottom: 3.3em;
   text-align: center;
 }
-
 @media screen and (max-width: 600px) {
-  .du_top_series_list li,
-  .du_top_series_list_s li {
+  .du_top_series_list li, .du_top_series_list_s li {
     width: 100%;
   }
 }
-
-.du_top_series_list li a,
-.du_top_series_list_s li a {
+.du_top_series_list li a, .du_top_series_list_s li a {
   color: #333;
   display: block;
 }
-
-.du_top_series_list li a:hover,
-.du_top_series_list_s li a:hover {
+.du_top_series_list li a:hover, .du_top_series_list_s li a:hover {
   color: #777;
 }
-
-.du_top_series_list li a:hover img,
-.du_top_series_list_s li a:hover img {
+.du_top_series_list li a:hover img, .du_top_series_list_s li a:hover img {
   opacity: 0.9;
 }
-
-.du_top_series_list li a .text,
-.du_top_series_list_s li a .text {
+.du_top_series_list li a .text, .du_top_series_list_s li a .text {
   padding: 2.3em 1em 2.5em 1em;
 }
-
-.du_top_series_list li a .text h3,
-.du_top_series_list_s li a .text h3 {
+.du_top_series_list li a .text h3, .du_top_series_list_s li a .text h3 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2.4rem;
   line-height: 1.7;
   letter-spacing: 0.02em;
 }
-
 @media screen and (max-width: 600px) {
-  .du_top_series_list li a .text h3,
-  .du_top_series_list_s li a .text h3 {
+  .du_top_series_list li a .text h3, .du_top_series_list_s li a .text h3 {
     font-size: 2rem;
   }
 }
-
-.du_top_series_list li a .text .tags,
-.du_top_series_list_s li a .text .tags {
+.du_top_series_list li a .text .tags, .du_top_series_list_s li a .text .tags {
   margin-top: 1.1em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.du_top_series_list li a .text .tags span,
-.du_top_series_list_s li a .text .tags span {
+.du_top_series_list li a .text .tags span, .du_top_series_list_s li a .text .tags span {
   border: 1px solid #ddd;
   padding: 0.5em 1em;
   margin: 0.5em 0.25em;
   border-radius: 1.5em;
   font-size: 1.2rem;
 }
-
 @media screen and (max-width: 600px) {
-  .du_top_series_list li a .text .tags span,
-  .du_top_series_list_s li a .text .tags span {
+  .du_top_series_list li a .text .tags span, .du_top_series_list_s li a .text .tags span {
     font-size: 1.1rem;
   }
 }
-
-.du_top_series_list li img,
-.du_top_series_list_s li img {
+.du_top_series_list li img, .du_top_series_list_s li img {
   width: 100%;
   height: 27vw;
+  -o-object-fit: cover;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 @media screen and (max-width: 600px) {
-  .du_top_series_list li img,
-  .du_top_series_list_s li img {
+  .du_top_series_list li img, .du_top_series_list_s li img {
     height: 35vw;
   }
 }
-
 .du_top_series_list_s {
   margin: 0 auto;
 }
-
 .du_top_series_list_s li {
   width: 31.5% !important;
 }
-
 @media screen and (max-width: 600px) {
   .du_top_series_list_s li {
     width: 100% !important;
   }
 }
-
 .du_top_series_list_s li img {
   height: 14vw !important;
 }
-
 @media screen and (max-width: 600px) {
   .du_top_series_list_s li img {
     height: 30vw !important;
   }
 }
-
 .du_top_series_list_s li .text {
   padding: 1.6em 1em 1.5em 1em !important;
 }
-
 .du_top_series_list_s li .text h3 {
   font-size: 1.75rem !important;
 }
-
 .du_top_series_list_s li .text .tags {
   margin-top: 0.8em;
 }
-
 .du_top_series_list_s li .text .tags span {
   padding: 0 0.5em;
   margin: 0.5em 0.25em;
@@ -3791,18 +3174,15 @@ h3.series_list_title {
   font-size: 1.1rem !important;
   line-height: 1.6;
 }
-
 .du_header {
   margin-bottom: 2em;
 }
-
 .du_header .du_header_logo {
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
   padding: 17px 0;
   text-align: center;
 }
-
 .du_header h1 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2.6rem;
@@ -3811,14 +3191,12 @@ h3.series_list_title {
   text-align: center;
   margin-top: 1.8em;
 }
-
 .du_header .tags {
   margin-top: 1.3em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .du_header .tags a {
   border: 1px solid #ddd;
   padding: 0.5em 1em;
@@ -3826,14 +3204,20 @@ h3.series_list_title {
   border-radius: 1.5em;
   font-size: 1.2rem;
   color: #333;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .du_header .tags a:hover {
   background: #eee;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .daily_use .series h3 {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.9rem;
@@ -3842,13 +3226,11 @@ h3.series_list_title {
   letter-spacing: 0.07em;
   font-weight: bold;
 }
-
 .daily_use .series p {
   font-size: 1.45rem;
   letter-spacing: 0.08em;
   line-height: 2.1;
 }
-
 .daily_use .series h3.section_title1 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 1.8rem;
@@ -3859,128 +3241,105 @@ h3.series_list_title {
   margin-bottom: 4em;
   font-weight: normal;
 }
-
 .daily_use .series .product_list .lead {
   margin-bottom: 1.6em;
 }
-
 .daily_use .series .product_list h3 {
   font-size: 1.4rem;
   margin-bottom: 0;
 }
-
 .daily_use .series .product_list .size {
   line-height: 1.4;
   font-size: 2rem;
   margin-bottom: 0.3em;
   font-weight: bold;
 }
-
 .daily_use .series .product_list .price {
   font-weight: normal;
   font-size: 1.8rem;
 }
-
 .du_banner {
   border: 1px solid #ddd;
   width: 780px;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 600px) {
   .du_banner {
     width: 89%;
     margin-top: 1em;
   }
 }
-
 .du_banner a {
   display: block;
   color: #333;
 }
-
 .du_banner a:hover {
   opacity: 0.87;
 }
-
 .du_banner .logo {
   float: left;
   text-align: center;
   width: 365px;
 }
-
 @media screen and (max-width: 600px) {
   .du_banner .logo {
     width: 100%;
     padding-bottom: 1.6em;
   }
 }
-
 .du_banner .logo img {
   margin-top: 38px;
 }
-
 @media screen and (max-width: 600px) {
   .du_banner .logo img {
     margin-top: 34px;
     width: 132px;
   }
 }
-
 .du_banner .logo .catch {
   text-align: center;
   font-size: 1.34rem;
   margin-top: 27px;
 }
-
 @media screen and (max-width: 600px) {
   .du_banner .logo .catch {
     margin-top: 25px;
     font-size: 1.26rem;
   }
 }
-
 .du_banner .photo {
   float: right;
   width: 413px;
 }
-
 @media screen and (max-width: 600px) {
   .du_banner .photo {
     width: 100%;
   }
 }
-
 .wrap_du_yahoo_top_lead {
   font-size: 1vw;
   padding: 3.3em 5em 3.3em 5em;
 }
-
 .wrap_du_yahoo_top_series_list {
   font-size: 1vw;
   padding: 3.7em 5em 1em 5em;
 }
-
 .du_yahoo_header {
   font-size: 1.3rem;
   padding: 0.8em 1.2em;
 }
-
 .du_yahoo_header .yahoo_logo {
   float: left;
   margin-right: 1.2em;
 }
-
 .du_yahoo_header h1.yahoo_shopname {
   font-size: 1.3rem;
 }
-
 .du_yahoo_header h1.yahoo_shopname .free_shipping {
   border: 1px solid #999;
   padding: 0.4em 0.5em;
   font-weight: bold;
 }
-
 .yahoo_top_nav {
   font-size: 1.33rem;
   background: #333;
@@ -3988,18 +3347,15 @@ h3.series_list_title {
   justify-content: flex-end;
   padding: 0 1.2em;
 }
-
 .yahoo_top_nav li a {
   color: #fff;
   padding: 0.7em 0.9em;
   background: #333;
   display: block;
 }
-
 .yahoo_top_nav li a:hover {
   background: #666;
 }
-
 .yahoo_section_title {
   text-align: center;
   font-size: 1.32rem;
@@ -4007,25 +3363,21 @@ h3.series_list_title {
   letter-spacing: 0.1em;
   margin-bottom: 1.4em;
 }
-
 .yahoo_section_title span.en {
   font-size: 2.75rem;
   display: block;
   letter-spacing: 0.15em;
   line-height: 1.4;
 }
-
 .yahoo_du_big_tags {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 3em;
 }
-
 .yahoo_du_big_tags li {
   margin: 0 0.36em 1em 0.36em;
 }
-
 .yahoo_du_big_tags li a {
   font-size: 1.48rem;
   letter-spacing: 0.15em;
@@ -4036,47 +3388,39 @@ h3.series_list_title {
   border-radius: 1.5em;
   display: block;
 }
-
 .yahoo_du_big_tags li a:hover {
   color: #222;
   background: #ddd;
 }
-
 .yahoo_top_popular ul {
   background: #ccc;
   padding: 25px;
   display: flex;
   justify-content: center;
 }
-
 .yahoo_top_popular ul li {
   margin: 0 13px;
   background: #fff;
 }
-
 .yahoo_top_popular ul li a:hover {
   opacity: 0.8;
 }
-
 /* ブログ
------------------------------------------ */
+ ----------------------------------------- */
 .blog {
   width: 1050px;
   margin: 3.3em auto 0 auto;
   padding-bottom: 5em;
 }
-
 @media screen and (max-width: 960px) {
   .blog {
     width: auto;
   }
 }
-
 .blog .content {
   width: 74%;
   float: left;
 }
-
 @media screen and (max-width: 960px) {
   .blog .content {
     width: 87%;
@@ -4084,12 +3428,10 @@ h3.series_list_title {
     margin: 4em auto 0 auto;
   }
 }
-
 .blog .menu {
   width: 18%;
   float: right;
 }
-
 @media screen and (max-width: 960px) {
   .blog .menu {
     width: 87%;
@@ -4099,58 +3441,47 @@ h3.series_list_title {
     border-top: 1px solid #ddd;
   }
 }
-
 .blog .menu .blog_category_list_title {
   color: #ccc;
   margin-bottom: 1em;
   font-size: 1.5rem;
 }
-
 .blog .menu .category_list {
   margin-top: 0.7em;
 }
-
 .blog .menu .category_list li {
   margin-bottom: 0.5em;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 960px) {
   .blog .menu .category_list li {
     font-size: 1.3rem;
   }
 }
-
 .blog .menu .category_list li a {
   color: #333;
   text-decoration: none;
   padding-bottom: 1px;
 }
-
 .blog .menu .category_list li a:hover {
   border-bottom: 1px solid #333;
 }
-
 .blog .date {
   font-size: 1.3rem;
   margin-bottom: 1.3em;
   padding-left: 0.2em;
 }
-
 .blog .date .category {
   margin-left: 1.5em;
 }
-
 .blog .date .category a {
   color: #333;
   border-bottom: 1px solid #333;
   padding-bottom: 1px;
 }
-
 .blog .date .category a:hover {
   border-bottom: none;
 }
-
 .blog h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5em;
@@ -4158,14 +3489,12 @@ h3.series_list_title {
   letter-spacing: 0.1em;
   line-height: 1.77;
 }
-
 @media screen and (max-width: 600px) {
   .blog h1 {
     font-size: 2rem;
     margin-bottom: 1.5em;
   }
 }
-
 .blog h3 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2rem;
@@ -4173,105 +3502,85 @@ h3.series_list_title {
   letter-spacing: 0.2em;
   line-height: 1.9;
 }
-
 @media screen and (max-width: 600px) {
   .blog h3 {
     font-size: 1.85rem;
     margin-bottom: 1.5em;
   }
 }
-
 .blog h4 {
   font-size: 1.85rem;
   margin-bottom: 1.1em;
   letter-spacing: 0.2em;
 }
-
 .blog p {
   font-size: 1.55rem;
   letter-spacing: 0.12em;
   line-height: 2.2;
   margin-bottom: 2em;
 }
-
 @media screen and (max-width: 600px) {
   .blog p {
     font-size: 1.3rem;
     line-height: 2.1;
   }
 }
-
 .blog img {
   width: 100%;
   margin-bottom: 2em;
 }
-
 .blog .margin1 {
   margin-bottom: 6em;
 }
-
 @media screen and (max-width: 600px) {
   .blog .margin1 {
     margin-bottom: 2.7em;
   }
 }
-
 .blog .margin2 {
   margin-bottom: 3em;
 }
-
 @media screen and (max-width: 600px) {
   .blog .margin2 {
     margin-bottom: 2em;
   }
 }
-
 .blog .left {
   float: left;
 }
-
 .blog .right {
   float: right;
 }
-
 .blog .max {
   width: 100%;
 }
-
 @media screen and (max-width: 600px) {
   .blog .max {
     margin: 0 -1.8em;
     width: 100vw;
   }
 }
-
 .blog .max img {
   width: 100%;
 }
-
 .blog .col2 {
   display: flex;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 600px) {
   .blog .col2 {
     display: block;
   }
 }
-
 .blog .col2 div.left_col {
   order: 1;
 }
-
 .blog .col2 div.right_col {
   order: 2;
 }
-
 .blog .col2 div {
   width: 46%;
 }
-
 @media screen and (max-width: 600px) {
   .blog .col2 div {
     width: 100%;
@@ -4279,261 +3588,211 @@ h3.series_list_title {
     text-align: justify;
   }
 }
-
 .blog .col2 img {
   max-width: 100%;
 }
-
 @media screen and (max-width: 600px) {
   .blog .col2 img {
     width: 100%;
     margin-bottom: 2.5em;
   }
 }
-
-.blog .caption_right,
-.blog .caption_left,
-.blog .caption_center {
+.blog .caption_right, .blog .caption_left, .blog .caption_center {
   margin-top: 0.4em;
   font-size: 1.25rem;
 }
-
 .blog .caption_right {
   text-align: right;
 }
-
 .blog .caption_left {
   text-align: left;
 }
-
 .blog .caption_center {
   text-align: center;
 }
-
 .prev_next {
   font-size: 1.4rem;
   margin-top: 6em;
   line-height: 1.9;
 }
-
 .prev_next .prev {
   float: left;
   width: 49%;
 }
-
 .prev_next .next {
   float: right;
   width: 35%;
 }
-
 .prev_next .title {
   font-size: 1.3rem;
   margin-bottom: 1.2em;
   text-decoration: underline;
 }
-
 .prev_next a {
   color: #333;
 }
-
 .prev_next a:hover {
   text-decoration: underline;
 }
-
 h2.blog_section_title {
   font-size: 3.2rem;
 }
-
 @media screen and (max-width: 600px) {
   h2.blog_section_title {
     font-size: 2.6rem;
   }
 }
-
 h2.blog_section_title .sub {
   color: #ba984a;
 }
-
 @media screen and (max-width: 600px) {
   h2.blog_section_title .sub {
     font-size: 1.2rem;
   }
 }
-
 .blog_category h2.blog_category_title {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 2.2rem;
   padding-top: 2.5em;
   margin-bottom: 2.5em;
 }
-
 .blog_category .blog_category_list_title {
   color: #ccc;
   margin-bottom: 1em;
   font-size: 1.5rem;
   margin-top: 3em;
 }
-
 .blog_category .category_list {
   margin-top: 0.7em;
   padding-bottom: 3.5em;
   display: flex;
   flex-wrap: wrap;
 }
-
 .blog_category .category_list li {
   margin-bottom: 0.5em;
   margin-right: 2em;
   font-size: 1.5rem;
 }
-
 @media screen and (max-width: 960px) {
   .blog_category .category_list li {
     font-size: 1.3rem;
   }
 }
-
 .blog_category .category_list li a {
   color: #333;
   text-decoration: none;
   padding-bottom: 1px;
 }
-
 .blog_category .category_list li a:hover {
   border-bottom: 1px solid #333;
 }
-
 /* SHOP
------------------------------------------ */
+ ----------------------------------------- */
 .shop_info {
   display: flex;
   padding: 2em 0 0.8em 0;
 }
-
 @media screen and (max-width: 600px) {
   .shop_info {
     display: inherit;
   }
 }
-
 .shop_info > div {
   width: 33.33%;
   background: #fff;
   padding: 3.7em 0 3.7em 5em;
 }
-
 @media screen and (max-width: 600px) {
   .shop_info > div {
     width: 100%;
     padding: 0 2em 1em 2em;
   }
 }
-
 .shop_info > div:nth-child(1) {
   padding: 3.7em 0 3.7em 6em;
 }
-
 @media screen and (max-width: 600px) {
   .shop_info > div:nth-child(1) {
     padding: 2.5em 2em 1em 2em;
   }
 }
-
 .shop_info > div:nth-child(3) {
   padding: 3.7em 0 3.7em 0;
 }
-
 @media screen and (max-width: 600px) {
   .shop_info > div:nth-child(3) {
     padding: 1em 0 1em 0;
   }
 }
-
 .shop_info > div h2 {
   text-align: left;
 }
-
 @media screen and (max-width: 600px) {
   .shop_info > div h2 {
     text-align: center;
   }
 }
-
 .shop_info > div h4 {
   font-size: 1.57rem;
   font-weight: bold;
   margin-bottom: 1.5em;
 }
-
 .shop_info > div p {
   font-size: 1.35rem;
   margin-bottom: 1.5em;
 }
-
 @media screen and (max-width: 600px) {
   .shop_info > div p {
     font-size: 1.3rem;
   }
 }
-
 .event_info {
   display: flex;
   padding: 0 0 2em 0;
 }
-
 @media screen and (max-width: 600px) {
   .event_info {
     display: inherit;
   }
 }
-
 .event_info h2 {
   margin-bottom: 0;
   padding-bottom: 1.5em;
 }
-
 .event_info > div {
   background: #fff;
 }
-
 .event_info > div:nth-child(1) {
   width: 25%;
   padding: 3.7em 0 2em 6em;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div:nth-child(1) {
     width: 100%;
     padding: 3em 2em 0 2em;
   }
 }
-
 .event_info > div:nth-child(2) {
   width: 75%;
   padding: 3.7em 6em 2em 0;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div:nth-child(2) {
     width: 100%;
     padding: 0 2em 3em 2em;
   }
 }
-
 .event_info > div h2 {
   text-align: left;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div h2 {
     text-align: center;
   }
 }
-
 .event_info > div .event_info_table {
   border-top: dotted 1px #ddd;
 }
-
 .event_info > div .event_info_table li a {
   display: flex;
   border-bottom: dotted 1px #ddd;
@@ -4541,77 +3800,63 @@ h2.blog_section_title .sub {
   font-size: 1.4rem;
   color: #333;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div .event_info_table li a {
     display: inherit;
     font-size: 1.3rem;
   }
 }
-
 .event_info > div .event_info_table li a div:nth-child(1) {
   width: 23%;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div .event_info_table li a div:nth-child(1) {
     width: 100%;
   }
 }
-
 .event_info > div .event_info_table li a div:nth-child(2) {
   width: 29%;
   color: #a32413;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div .event_info_table li a div:nth-child(2) {
     width: 100%;
   }
 }
-
 .event_info > div .event_info_table li:last-child {
   display: none;
 }
-
 .event_info > div .bottom_link {
   text-align: right;
   margin-top: 1em;
 }
-
 @media screen and (max-width: 600px) {
   .event_info > div .bottom_link a {
     font-size: 1.3rem;
   }
 }
-
 ul.event_info_table li::first-child {
   display: inherit;
 }
-
 .shop_direction {
   margin-top: 0.7em;
 }
-
 @media screen and (max-width: 600px) {
   .shop_direction {
     padding: 0 1em;
   }
 }
-
 .shop_direction span {
   font-size: 1.3rem;
   margin: 0 0.1em;
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   line-height: 3.5em;
 }
-
 @media screen and (max-width: 600px) {
   .shop_direction span {
     font-size: 1.2rem;
   }
 }
-
 .shop_direction span a {
   color: #333;
   border: 1px solid #ddd;
@@ -4619,121 +3864,97 @@ ul.event_info_table li::first-child {
   border-radius: 1.5em;
   white-space: nowrap;
 }
-
 .shop_direction span a:hover {
   background: #f6f6f6;
 }
-
 @media screen and (max-width: 600px) {
   .pc_calender {
     display: none;
   }
 }
-
 .sp_calender {
   display: none;
 }
-
 @media screen and (max-width: 600px) {
   .sp_calender {
     display: block;
   }
 }
-
 .xo-event-calendar {
   width: 90%;
   font-size: 1.4rem !important;
 }
-
 @media screen and (max-width: 600px) {
   .xo-event-calendar {
     width: 100%;
   }
 }
-
 .xo-event-calendar td, .xo-event-calendar th {
   font-size: 1.3rem !important;
   font-weight: normal !important;
 }
-
-.xo-event-calendar .today,
-.xo-event-calendar .saturday,
-.xo-event-calendar .sunday {
+.xo-event-calendar .today, .xo-event-calendar .saturday, .xo-event-calendar .sunday {
   color: #333 !important;
 }
-
 .calendar-caption {
   font-size: 1.4rem !important;
 }
-
 /* 傘辞典
------------------------------------------ */
+ ----------------------------------------- */
 .encyclopedia_list1 {
   padding-top: 2em;
 }
-
 .encyclopedia_list1 h3 {
   font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.7rem;
   margin-bottom: 0.5em;
 }
-
 /* ブランドバナー
------------------------------------------ */
+ ----------------------------------------- */
 .brand_big_banner {
   margin-top: 2em;
   padding: 2.2em 5vw 4em 5vw;
   border-top: #f1f1f1 9px solid;
 }
-
 .brand_big_banner ul {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 600px) {
   .brand_big_banner ul {
     display: block;
   }
 }
-
 .brand_big_banner ul li {
   width: 48%;
   border: 1px #ddd solid;
 }
-
 @media screen and (max-width: 600px) {
   .brand_big_banner ul li {
     width: 100%;
     margin-bottom: 2em;
   }
 }
-
 .brand_big_banner ul li a {
   display: block;
   color: #333;
 }
-
 .brand_big_banner ul li a:hover {
   opacity: 0.85;
 }
-
 .brand_big_banner ul li a .img_pc {
   width: 50%;
   float: left;
 }
-
 .brand_big_banner ul li a .img_pc img {
   width: 100%;
 }
-
 @media screen and (max-width: 600px) {
   .brand_big_banner ul li a .img_pc {
     display: none;
   }
 }
-
 .brand_big_banner ul li a .logo_catch {
   width: 50%;
   float: left;
@@ -4741,28 +3962,23 @@ ul.event_info_table li::first-child {
   font-size: 0.9vw;
   line-height: 2.1;
 }
-
 .brand_big_banner ul li a .logo_catch img {
   margin: 3.9vw 0 2.2vw 0;
 }
-
 @media screen and (max-width: 600px) {
   .brand_big_banner ul li a .logo_catch img {
     margin: 2em 0 1.5em 0;
   }
 }
-
 @media screen and (max-width: 600px) {
   .brand_big_banner ul li a .logo_catch {
     width: 100%;
     font-size: 1.25rem;
   }
 }
-
 .brand_big_banner ul li a .img_sp {
   display: none;
 }
-
 @media screen and (max-width: 600px) {
   .brand_big_banner ul li a .img_sp {
     display: block;
@@ -4772,39 +3988,33 @@ ul.event_info_table li::first-child {
     margin-top: 1.5em;
   }
 }
-
 /* フッター
------------------------------------------ */
+ ----------------------------------------- */
 footer {
   margin: 0 auto;
   padding: 3em 3em 3em 3em;
 }
-
 @media screen and (max-width: 600px) {
   footer {
     padding: 0 1.7em 3em 1.7em;
   }
 }
-
 .footer_navi {
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
   margin: 0 auto;
 }
-
 @media screen and (max-width: 600px) {
   .footer_navi {
     display: inherit;
   }
 }
-
 .footer_navi .footer_logos {
   width: 29%;
   text-align: center;
   border-right: 1px solid #ddd;
 }
-
 @media screen and (max-width: 600px) {
   .footer_navi .footer_logos {
     width: 100%;
@@ -4812,38 +4022,35 @@ footer {
     margin-bottom: 4.5em;
   }
 }
-
 .footer_navi .footer_logos .komiyashoten_logo {
   margin-top: 8em;
 }
-
+@media screen and (max-width: 600px) {
+}
 .footer_navi .footer_logos .sns_icon {
   display: flex;
   justify-content: center;
 }
-
 .footer_navi .footer_logos .sns_icon li {
   margin: 2.8em 0.8em 0 0.8em;
   width: 30px;
 }
-
+@media screen and (max-width: 600px) {
+}
 .footer_navi .wrap_footer_navi_list {
   width: 68%;
   display: flex;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 600px) {
   .footer_navi .wrap_footer_navi_list {
     width: 100%;
     flex-wrap: wrap;
   }
 }
-
 .footer_navi .footer_navi_list {
   width: 22%;
 }
-
 @media screen and (max-width: 600px) {
   .footer_navi .footer_navi_list {
     width: 47%;
@@ -4852,68 +4059,55 @@ footer {
     margin-bottom: 1.2em;
   }
 }
-
 .footer_navi .footer_navi_list li {
   margin-bottom: 0.4em;
 }
-
 .footer_navi .footer_navi_list li a {
   color: #333;
 }
-
 .footer_navi .footer_navi_list li a:hover {
   color: #777;
 }
-
 .footer_navi .footer_navi_list .title {
   font-weight: bold;
   font-size: 1.4rem;
 }
-
 .footer_navi .footer_navi_list .line {
   margin-top: 1.2em;
   padding-top: 1.2em;
   border-top: 1px solid #ddd;
 }
-
 @media screen and (max-width: 960px) {
   .instagram_feed .sbi_item {
     width: 33.33% !important;
     height: 33.33vw;
   }
 }
-
 .instagram ul {
   display: flex;
   flex-wrap: wrap;
 }
-
 .instagram ul li {
   width: 20%;
 }
-
 @media screen and (max-width: 960px) {
   .instagram ul li {
     width: 50%;
   }
 }
-
 .instagram ul li a {
   display: block;
   height: 20vw;
   position: relative;
 }
-
 @media screen and (max-width: 960px) {
   .instagram ul li a {
     height: 50vw;
   }
 }
-
 .instagram ul li a:hover > .overlay {
   opacity: 0.2;
 }
-
 .instagram ul li a .overlay {
   content: ' ';
   position: absolute;
@@ -4924,7 +4118,6 @@ footer {
   background: #fff;
   opacity: 0;
 }
-
 .instagram ul li a img {
   width: 100%;
   height: 100%;
@@ -4932,7 +4125,6 @@ footer {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .copyright {
   margin-top: 3em;
   padding-top: 3em;
@@ -4940,35 +4132,30 @@ footer {
   text-align: center;
   border-top: 1px solid #ddd;
 }
-
 @media screen and (max-width: 600px) {
   .copyright {
     font-size: 1.1rem;
   }
 }
-
 /* clearfix
------------------------------------------ */
+ ----------------------------------------- */
 .clear:after {
   content: " ";
   display: block;
   clear: both;
 }
-
 /* フォーム
------------------------------------------ */
+ ----------------------------------------- */
 textarea {
   border: 1px solid #ddd;
   padding: 1em;
   width: 100%;
 }
-
 .wpcf7-text {
   border: 1px solid #ddd;
   padding: 1em;
   width: 100%;
 }
-
 .wpcf7-submit {
   padding: 0.7em 1em;
   font-size: 1.7rem;
@@ -4976,17 +4163,14 @@ textarea {
   background: #dbac52;
   color: #fff;
 }
-
 .wpcf7-submit:hover {
   background: #e5b353;
 }
-
 .wpcf7 .zip input {
   width: 13em;
 }
-
 /* 楽天
------------------------------------------ */
+ ----------------------------------------- */
 .rakuten_footer {
   margin: 0 auto;
   font-size: 1.3rem;
@@ -4994,84 +4178,70 @@ textarea {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 @media screen and (max-width: 600px) {
   .rakuten_footer {
     width: 100%;
     padding-top: 3em;
   }
 }
-
 .rakuten_footer li {
   margin-bottom: 2.3em;
   width: 46%;
 }
-
 @media screen and (max-width: 600px) {
   .rakuten_footer li {
     width: 100%;
   }
 }
-
 .rakuten_footer li h3 {
   font-weight: bold;
   font-size: 1.6rem;
   margin-bottom: 0.3em;
 }
-
 .rakuten_footer li p {
   text-align: justify;
   margin-bottom: 0;
   font-size: 1.3rem;
   line-height: 1.9;
 }
-
 /*
-p, td, th {
-	font-size: 15.5px;
-	margin-bottom: 0.5em;
-	word-break: normal !important;
-	word-wrap: break-word;
-}
-*/
+ p, td, th {
+ font-size: 15.5px;
+ margin-bottom: 0.5em;
+ word-break: normal !important;
+ word-wrap: break-word;
+ }
+ */
 .sp_page {
   padding: 1.2em;
 }
-
 /*
-div, p {
-	box-sizing: border-box;
-}
-*/
+ div, p {
+ box-sizing: border-box;
+ }
+ */
 .product_page .danraku1 {
   width: 558px;
   margin: 4em auto 0 auto;
 }
-
 .sp_page .product_page .danraku1 {
   width: 100%;
   margin: 3em auto 0 auto;
   padding: 0;
 }
-
 .product_page .danraku1 .honbun1 {
   line-height: 1.77;
 }
-
 .sp_page .product_page .danraku1 .honbun1 {
   line-height: 1.7;
 }
-
-.product_page .gazou1,
-.product_info .gazou1 {
+.product_page .gazou1, .product_info .gazou1 {
   text-align: center;
   margin: 3em auto 0 auto;
 }
-
 .sp_page .product_page .gazou1 {
   margin: 2.5em auto 0 auto;
 }
-
 .product_page .gazou1 .caption-big1 {
   font-size: 22px;
   line-height: 1.4;
@@ -5080,11 +4250,9 @@ div, p {
   margin-top: 0.3em;
   color: #2376c9;
 }
-
 .sp_page .product_page .gazou1 .caption-big1 {
   font-size: 15.5px;
 }
-
 .product_page .midashi1 {
   font-weight: bold;
   font-size: 31px;
@@ -5092,80 +4260,64 @@ div, p {
   color: #2376c9;
   margin-bottom: 15px;
 }
-
 .sp_page .product_page .midashi1 {
   font-size: 22px;
   line-height: 1.55 !important;
   margin-bottom: 0.6em;
 }
-
 .seo-taisaku {
   font-size: 12px;
-  color: #666666;
+  color: #666;
   text-align: left;
   line-height: 1.8;
 }
-
 .common-sale {
   display: none;
   text-align: center;
   margin-bottom: 30px !important;
 }
-
 .common-sale img {
   width: 450px;
 }
-
 .sp_page .product_page .common-sale img {
   width: 100% !important;
 }
-
 .sp_page .product_page .komiyashoten {
   background: #fbf5ea;
   padding: 2em 1.5em;
   margin: 2em 0;
 }
-
 .sp_page .product_page .kanren .honbun1 {
   font-size: 13px;
   color: #666;
 }
-
 .product_info {
   width: 500px;
   line-height: 1.8;
 }
-
-.product_info td,
-.product_info th {
+.product_info td, .product_info th {
   line-height: 1.5;
   font-size: 13px !important;
   padding: 0.5em;
 }
-
 /* 楽天、ヤフー商品ページ
------------------------------------------ */
+ ----------------------------------------- */
 #risFil .risfHeadPart {
   height: auto;
 }
-
 #risFil .risfHeadPart .risfHeadCheck {
   width: 170px;
 }
-
 .rakuten_pc_hanbai_setsumei {
   width: 970px;
 }
-
-.rakuten_pc_hanbai_setsumei h3,
-.rakuten_pc_hanbai_setsumei .yahoo_h3 {
+.rakuten_pc_hanbai_setsumei h3, .rakuten_pc_hanbai_setsumei .yahoo_h3 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2rem;
   margin-bottom: 1.8em;
   letter-spacing: 0.2em;
   line-height: 1.9;
 }
-
 .sp_page h3 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   font-size: 2rem;
@@ -5173,198 +4325,184 @@ div, p {
   letter-spacing: 0.2em;
   line-height: 1.9;
 }
-
 /*
-h4 {
-	font-size: 1.85rem;
-	margin-bottom: 1.1em;
-	letter-spacing: 0.2em;
-}
-h5 {
-	font-size: 1.63rem;
-	margin-bottom: 1em;
-	letter-spacing: 0.27em;
-	font-weight: bold;
-}
-p {
-	font-size: 1.4rem;
-	letter-spacing: 0.15em;
-	line-height: 2.2;
-	margin-bottom: 2em;
-}
-.margin1 {
-	margin-bottom: 6em;
-}
-.margin2 {
-	margin-bottom: 3em;
-}
-.left {
-	float: left;
-}
-.right {
-	float: right;
-}
-.max {
-	width: 100%;
-	img {
-		width: 100%;
-	}
-}
-.col2 {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-
-}
-.col2 div.left_col {
-	order:1;
-}
-.col2 div.right_col {
-	order:2;
-}
-.col2 div {
-	width: 46%;
-}
-.col2 img {
-	max-width: 100%;
-}
-
-.col4 {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-.col4 div {
-	width: 22%;
-	margin: 0 1% 1.2% 1%;
-}
-.col4 img {
-	width: 100%;
-	max-width: 100%;
-}
-.text_center {
-	width: 620px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: justify;
-}
-.caption_right,
-.caption_left,
-.caption_center{
-	margin-top: 0.4em;
-	font-size: 1.25rem;
-}
-.caption_right{
-	text-align: right;
-}
-.caption_left{
-	text-align: left;
-}
-.caption_center{
-	text-align: center;
-}
-
-
-.series_header {
-	margin-top: 24px;
-	margin-bottom: 3em;
-	position: relative;
-}
-.series_header .text {
-	position: absolute;
-	text-align: center;
-	width: 970px;
-	color: #fff;
-	margin-top: 10.7em;
-	z-index: 9;
-	font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-}
-.sp_page_header .series_header .text {
-	width: 100%;
-}
-.series_header h3 {
-	font-size: 4.7rem;
-	line-height: 1.4;
-	font-weight: normal;
-	letter-spacing: 0.13em;
-}
-.series_header .ruby {
-	letter-spacing: 0.12em;
-	font-size: 1.38rem;
-	line-height: 1.1;
-	letter-spacing: 0.08em;
-}
-.series_header .catch {
-	margin-top: 2em;
-	font-size: 1.7rem;
-	line-height: 2;
-}
-.series_header .bg img {
-	width: 970px;
-	height: 580px;
-	object-fit: cover;
-	font-family: 'object-fit: cover;';
-}
-.sp_page_header .series_header .bg img {
-	width: 100%;
-}
-.series_header .black {
-	background: #000;
-	position: absolute;
-	width: 970px;
-	height: 580px;
-	opacity: 0.1;
-}
-.sp_page_header .series_header .black {
-	width: 100%;
-}
-.series_header .individual_product {
-	margin-top: 2em;
-}
-.series_header .individual_product span {
-	background: #fff;
-	color: #333;
-	padding: 0.9em 1.1em;
-	font-size: 1.35rem;
-}
-
-*/
+ h4 {
+ font-size: 1.85rem;
+ margin-bottom: 1.1em;
+ letter-spacing: 0.2em;
+ }
+ h5 {
+ font-size: 1.63rem;
+ margin-bottom: 1em;
+ letter-spacing: 0.27em;
+ font-weight: bold;
+ }
+ p {
+ font-size: 1.4rem;
+ letter-spacing: 0.15em;
+ line-height: 2.2;
+ margin-bottom: 2em;
+ }
+ .margin1 {
+ margin-bottom: 6em;
+ }
+ .margin2 {
+ margin-bottom: 3em;
+ }
+ .left {
+ float: left;
+ }
+ .right {
+ float: right;
+ }
+ .max {
+ width: 100%;
+ img {
+ width: 100%;
+ }
+ }
+ .col2 {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ }
+ .col2 div.left_col {
+ order:1;
+ }
+ .col2 div.right_col {
+ order:2;
+ }
+ .col2 div {
+ width: 46%;
+ }
+ .col2 img {
+ max-width: 100%;
+ }
+ .col4 {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ }
+ .col4 div {
+ width: 22%;
+ margin: 0 1% 1.2% 1%;
+ }
+ .col4 img {
+ width: 100%;
+ max-width: 100%;
+ }
+ .text_center {
+ width: 620px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: justify;
+ }
+ .caption_right,
+ .caption_left,
+ .caption_center{
+ margin-top: 0.4em;
+ font-size: 1.25rem;
+ }
+ .caption_right{
+ text-align: right;
+ }
+ .caption_left{
+ text-align: left;
+ }
+ .caption_center{
+ text-align: center;
+ }
+ .series_header {
+ margin-top: 24px;
+ margin-bottom: 3em;
+ position: relative;
+ }
+ .series_header .text {
+ position: absolute;
+ text-align: center;
+ width: 970px;
+ color: #fff;
+ margin-top: 10.7em;
+ z-index: 9;
+ font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+ }
+ .sp_page_header .series_header .text {
+ width: 100%;
+ }
+ .series_header h3 {
+ font-size: 4.7rem;
+ line-height: 1.4;
+ font-weight: normal;
+ letter-spacing: 0.13em;
+ }
+ .series_header .ruby {
+ letter-spacing: 0.12em;
+ font-size: 1.38rem;
+ line-height: 1.1;
+ letter-spacing: 0.08em;
+ }
+ .series_header .catch {
+ margin-top: 2em;
+ font-size: 1.7rem;
+ line-height: 2;
+ }
+ .series_header .bg img {
+ width: 970px;
+ height: 580px;
+ object-fit: cover;
+ font-family: 'object-fit: cover;';
+ }
+ .sp_page_header .series_header .bg img {
+ width: 100%;
+ }
+ .series_header .black {
+ background: #000;
+ position: absolute;
+ width: 970px;
+ height: 580px;
+ opacity: 0.1;
+ }
+ .sp_page_header .series_header .black {
+ width: 100%;
+ }
+ .series_header .individual_product {
+ margin-top: 2em;
+ }
+ .series_header .individual_product span {
+ background: #fff;
+ color: #333;
+ padding: 0.9em 1.1em;
+ font-size: 1.35rem;
+ }
+ */
 /* ヤフー商品ページ 上書き
------------------------------------------ */
-body#shpBody,
-body#shpBody h2 {
+ ----------------------------------------- */
+body#shpBody, body#shpBody h2 {
   font-family: unset;
 }
-
 h2.elHeading {
   margin-top: 5px !important;
   font-size: 15.5px !important;
 }
-
 .mdItemInfoTitle {
   margin-bottom: 30px !important;
 }
-
 .mdItemInfoTitle h2 {
   font-size: 18px !important;
   font-weight: normal !important;
   color: #333 !important;
   line-height: 1.5 !important;
 }
-
 .mdItemInfoTitle ul {
   margin-top: 15px !important;
 }
-
 .mdItemInfoStoreBadge {
   margin-bottom: 50px !important;
 }
-
 .mdItemInfoLead p {
   font-size: 13px !important;
   line-height: 1.9 !important;
 }
-
 .mdItemInfoCatch p.lead {
   font-size: 12px !important;
   line-height: 1.6 !important;
@@ -5372,11 +4510,9 @@ h2.elHeading {
   letter-spacing: 0.05em !important;
   margin-bottom: 10px !important;
 }
-
 .mdItemInfoCatch p.lead strong {
   font-weight: normal;
 }
-
 .mdItemInfoComment P.comment {
   font-size: 15px !important;
   font-weight: normal !important;
@@ -5386,47 +4522,38 @@ h2.elHeading {
   margin-top: 15px !important;
   margin-bottom: 20px !important;
 }
-
 .mdItemPriceC p {
   letter-spacing: 0 !important;
 }
-
 .mdItemCategory {
   display: none;
 }
-
 .gdColumnLeft {
   width: 550px !important;
 }
-
 /* 使ってる？
------------------------------------------ */
+ ----------------------------------------- */
 .category-list li {
   float: left;
   margin-right: 1em;
 }
-
 .blog_list1 {
   margin-bottom: 3em;
   display: flex;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list1 {
     display: block;
   }
 }
-
 .blog_list1 li {
   width: 50%;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list1 li {
     width: 100%;
   }
 }
-
 .blog_list1 li img {
   width: 100%;
   height: 28vw;
@@ -5434,49 +4561,40 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .blog_list1 li h3 {
   padding: 0.7em 1.2em;
   font-size: 2rem;
 }
-
 .blog_list1 li a {
   color: #333;
 }
-
 .blog_list1 li a:hover {
   text-decoration: underline;
 }
-
 .pickup {
   font-size: 1vw;
   padding: 5em 5em 5em 5em;
 }
-
 @media screen and (max-width: 600px) {
   .pickup {
     padding: 5em 0 5em 0;
   }
 }
-
 .blog_list2 {
   margin-bottom: 5em;
   display: flex;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2 {
     margin-bottom: 3em;
     display: block;
   }
 }
-
 .blog_list2 li {
   width: 47.5%;
-  background: #ffffff;
+  background: #fff;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2 li {
     width: 91%;
@@ -5484,7 +4602,6 @@ h2.elHeading {
     font-size: 1.4rem;
   }
 }
-
 .blog_list2 li img {
   width: 100%;
   height: 22vw;
@@ -5492,60 +4609,49 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2 li img {
     height: 42vw;
   }
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2 li .blog_date_category {
     font-size: 1.17rem;
   }
 }
-
 .blog_list2 li h3 {
   padding: 0.7em 1.4em 1.2em 1.4em;
   font-size: 1.8rem;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2 li h3 {
     font-size: 1.4rem;
   }
 }
-
 .blog_list2 li h3 br {
   display: none;
 }
-
 .blog_list2 li a {
   color: #333;
 }
-
 .blog_list2 li a:hover {
   text-decoration: underline;
 }
-
 .blog_list2_3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2_3 {
     display: block;
   }
 }
-
 .blog_list2_3 li {
   width: 31%;
-  background: #ffffff;
+  background: #fff;
   margin-bottom: 5em;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2_3 li {
     width: 85%;
@@ -5553,7 +4659,6 @@ h2.elHeading {
     margin-bottom: 20px;
   }
 }
-
 .blog_list2_3 li img {
   width: 100%;
   height: 13vw;
@@ -5561,79 +4666,64 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2_3 li img {
     height: 32vw;
   }
 }
-
 .blog_list2_3 li .blog_date_category {
   font-size: 1.2rem;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2_3 li .blog_date_category {
     font-size: 1.15rem;
   }
 }
-
 .blog_list2_3 li h3 {
   padding: 0.5em 1.5em 1.2em 1.5em;
   font-size: 1.5rem;
   line-height: 1.8;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list2_3 li h3 {
     font-size: 1.3rem;
   }
 }
-
 .blog_list2_3 li h3 br {
   display: none;
 }
-
 .blog_list2_3 li a {
   color: #333;
 }
-
 .blog_list2_3 li a:hover {
   text-decoration: underline;
 }
-
 .blog_list2_3 li br {
   display: none;
 }
-
 .blog_list2_3::after {
   content: "";
   display: block;
   width: 30%;
 }
-
 .blog_list3 {
   margin-bottom: 3em;
   display: flex;
   justify-content: space-around;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list3 {
     display: block;
   }
 }
-
 .blog_list3 li {
   width: 45%;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list3 li {
     width: 100%;
   }
 }
-
 .blog_list3 li img {
   width: 100%;
   height: 24vw;
@@ -5641,42 +4731,34 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .blog_list3 li h3 {
   padding: 0.6em 0em;
   font-size: 1.8rem;
 }
-
 .blog_list3 li a {
   color: #333;
 }
-
 .blog_list3 li a:hover {
   text-decoration: underline;
 }
-
 .blog_list3_3 {
   margin-bottom: 3em;
   display: flex;
   justify-content: space-around;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list3_3 {
     display: block;
   }
 }
-
 .blog_list3_3 li {
   width: 28.3%;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list3_3 li {
     width: 100%;
   }
 }
-
 .blog_list3_3 li img {
   width: 100%;
   height: 15vw;
@@ -5684,42 +4766,34 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .blog_list3_3 li h3 {
   padding: 0.6em 0em;
   font-size: 1.6rem;
 }
-
 .blog_list3_3 li a {
   color: #333;
 }
-
 .blog_list3_3 li a:hover {
   text-decoration: underline;
 }
-
 .blog_list4 {
   margin-bottom: 3em;
   display: flex;
   justify-content: space-around;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list4 {
     display: block;
   }
 }
-
 .blog_list4 li {
   width: 43%;
 }
-
 @media screen and (max-width: 600px) {
   .blog_list4 li {
     width: 100%;
   }
 }
-
 .blog_list4 li img {
   width: 100%;
   height: 27vw;
@@ -5727,76 +4801,61 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .blog_list4 li h3 {
   padding: 0.6em 0em;
   font-size: 1.8rem;
 }
-
 .blog_list4 li a {
   color: #333;
 }
-
 .blog_list4 li a:hover {
   text-decoration: underline;
 }
-
 .menus {
   display: flex;
 }
-
 @media screen and (max-width: 960px) {
   .menus {
     display: block;
   }
 }
-
 .menus li {
   margin-bottom: 3em;
   margin-right: 3em;
 }
-
 @media screen and (max-width: 960px) {
   .menus li {
     margin-right: 0;
   }
 }
-
 .menus li:last-child {
   margin-right: 0;
 }
-
 .menus li h3 {
   text-align: center;
 }
-
 .menus li p {
   font-size: 1.4rem;
   text-align: justify;
 }
-
 .two_cubes {
   display: flex;
 }
-
 @media screen and (max-width: 600px) {
   .two_cubes {
     display: block;
   }
 }
-
 .two_cubes li {
   width: 50%;
   height: 50vw;
 }
-
 @media screen and (max-width: 600px) {
   .two_cubes li {
     width: 100%;
     height: 100vw;
   }
 }
-
 .two_cubes li img {
   width: 100%;
   height: 100%;
@@ -5804,84 +4863,69 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .two_cubes li.text {
   padding: 6.5vw;
 }
-
 @media screen and (max-width: 600px) {
   .two_cubes li.text {
     padding: 13vw;
     /* pcの2倍 */
   }
 }
-
 .two_cubes li.text h3 {
   font-size: 2vw;
   line-height: 1.35;
 }
-
 @media screen and (max-width: 600px) {
   .two_cubes li.text h3 {
     font-size: 7.2vw;
     /* pcの2倍 */
   }
 }
-
 .two_cubes li.text p {
   margin-top: 1.5em;
   font-size: 1.3vw;
 }
-
 @media screen and (max-width: 960px) {
   .two_cubes li.text p {
     font-size: 1.4rem;
     /* タブレット用だけ最小サイズ */
   }
 }
-
 @media screen and (max-width: 600px) {
   .two_cubes li.text p {
     font-size: 3vw;
     /* pcの2倍 */
   }
 }
-
 .four_cubes {
   margin-bottom: 3em;
 }
-
 .four_cubes ul {
   display: flex;
   flex-wrap: wrap;
 }
-
 .four_cubes ul li {
   width: 25%;
 }
-
 @media screen and (max-width: 960px) {
   .four_cubes ul li {
     width: 50%;
   }
 }
-
 .four_cubes ul li a {
   display: block;
   height: 25vw;
   position: relative;
 }
-
 @media screen and (max-width: 960px) {
   .four_cubes ul li a {
     height: 50vw;
   }
 }
-
 .four_cubes ul li a:hover > .overlay {
   opacity: 0.2;
 }
-
 .four_cubes ul li a .overlay {
   content: ' ';
   position: absolute;
@@ -5892,7 +4936,6 @@ h2.elHeading {
   background: #fff;
   opacity: 0;
 }
-
 .four_cubes ul li a img {
   width: 100%;
   height: 100%;
@@ -5900,37 +4943,33 @@ h2.elHeading {
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-
 .infobox1 {
   background: #eee;
   margin-bottom: 3em;
   padding: 1em 1.7em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
 }
-
 .infobox1 h3 {
   font-size: 2.4rem;
   margin-bottom: 0.1em;
   font-weight: bold;
 }
-
 .table1 {
   border-bottom: dashed 1px #ccc;
   margin-bottom: 3em;
 }
-
 .table1 li {
   border-top: dashed 1px #ccc;
   padding-top: 1em;
   margin-bottom: 1em;
 }
-
 .table1 li .left {
   width: 35%;
   float: left;
   font-weight: bold;
 }
-
 @media screen and (max-width: 960px) {
   .table1 li .left {
     float: none;
@@ -5938,19 +4977,16 @@ h2.elHeading {
     margin-bottom: 0.2em;
   }
 }
-
 .table1 li .right {
   width: 63%;
   float: right;
 }
-
 @media screen and (max-width: 960px) {
   .table1 li .right {
     float: none;
     width: 100%;
   }
 }
-
 .form_button {
   border-style: none;
   padding: 0.7em;
@@ -5963,64 +4999,52 @@ h2.elHeading {
   border-radius: 8px;
   -webkit-appearance: none;
 }
-
 .form_button:hover {
   background: #b0b918;
   cursor: pointer;
 }
-
 @media screen and (max-width: 960px) {
   .form_button {
     width: 100%;
   }
 }
-
 .backtotop {
   text-align: center;
 }
-
 /* hg作成ショートコード用デザイン */
 .custom_get_taxonomy {
   width: 30%;
   margin-bottom: 0.5em;
 }
-
 @media screen and (max-width: 600px) {
   .custom_get_taxonomy {
     width: 85%;
     margin: 0 auto 0.5em;
   }
 }
-
 .custom_get_taxonomy * {
   color: #333;
 }
-
 .custom_get_taxonomy .brand {
   font-size: 1.3rem;
 }
-
 .custom_get_taxonomy .spec {
   font-size: 1.2rem;
 }
-
 .custom_get_taxonomy .price {
   font-size: 1.3rem;
   margin-top: 0.6em;
 }
-
 .custom_get_taxonomy img {
   margin-bottom: 0.5em;
 }
-
 .custom_get_taxonomy h3 {
   font-size: 1.4rem;
   margin-bottom: 0.5em;
   font-family: "Quicksand", "游ゴシック体", "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-
 /* まとめページ
------------------------------------------ */
+ ----------------------------------------- */
 #summary_header {
   width: 100%;
   height: 600px;
@@ -6029,7 +5053,6 @@ h2.elHeading {
   justify-content: center;
   align-items: center;
 }
-
 #summary_header:after {
   content: "";
   display: block;
@@ -6039,9 +5062,8 @@ h2.elHeading {
   top: 0;
   left: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, .2);
 }
-
 #summary_header img {
   position: absolute;
   width: 100%;
@@ -6049,68 +5071,55 @@ h2.elHeading {
   object-fit: cover;
   z-index: 1;
 }
-
 #summary_header .summary_titles {
   position: relative;
   z-index: 2;
 }
-
 #summary_header .summary_titles * {
   color: #fff;
   text-align: center;
 }
-
 #summary_header .summary_titles .category {
   margin-bottom: 20px;
 }
-
 #summary_header .summary_titles .category a {
   text-decoration: underline;
   font-size: 12px;
 }
-
 #summary_header .summary_titles h1 {
   font-size: 35px;
-  font-family: "Noto Serif JP", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
 #summary_header .summary_titles h1 span {
   padding-top: 10px;
   display: block;
   font-size: 18px;
 }
-
 .content.summary {
   width: 100%;
   float: static;
 }
-
 @media screen and (max-width: 960px) {
   .content.summary {
     width: 87%;
   }
 }
-
 .content.summary > h1 {
   text-align: center;
-  font-family: "Noto Serif JP", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-
 .content.summary h1, .content.summary h2, .content.summary h3, .content.summary h4 {
   text-align: center;
 }
-
 .content.summary p {
   width: 70%;
   margin: 1em auto;
 }
-
 @media screen and (max-width: 960px) {
   .content.summary p {
     width: 90%;
   }
 }
-
 .content .inpage_linkbox {
   width: 70%;
   margin: 20px auto;
@@ -6118,13 +5127,11 @@ h2.elHeading {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 @media screen and (max-width: 960px) {
   .content .inpage_linkbox {
     width: 90%;
   }
 }
-
 .content .inpage_linkbox a {
   width: calc(50% - 10px);
   flex-basis: calc(50% - 10px);
@@ -6133,17 +5140,16 @@ h2.elHeading {
   padding: 15px;
   text-align: center;
   margin-bottom: 20px;
+  color: #333;
   position: relative;
   font-size: 13px;
 }
-
 @media screen and (max-width: 960px) {
   .content .inpage_linkbox a {
     width: 100%;
     flex-basis: 100%;
   }
 }
-
 .content .inpage_linkbox a:after {
   content: '';
   display: block;
@@ -6158,52 +5164,43 @@ h2.elHeading {
   right: 0;
   margin: auto;
 }
-
 .swiper-container {
   width: 85%;
   margin: 20px auto;
 }
-
 .swiper-container .swiper-pagination {
   bottom: 0 !important;
 }
-
 .product_box {
   display: flex;
   width: 85%;
   margin: 40px auto;
   position: relative;
 }
-
 @media screen and (max-width: 960px) {
   .product_box {
     flex-wrap: wrap;
   }
 }
-
 .product_box .product_thumbnail {
   flex-basis: 30%;
   width: 30%;
 }
-
 @media screen and (max-width: 960px) {
   .product_box .product_thumbnail {
     flex-basis: 100%;
     width: 100%;
   }
 }
-
 .product_box .product_thumbnail img {
   margin-bottom: 0;
 }
-
 .product_box .product_content {
   flex-basis: 70%;
   width: 70%;
   box-sizing: border-box;
   padding: 2em;
 }
-
 @media screen and (max-width: 960px) {
   .product_box .product_content {
     flex-basis: 100%;
@@ -6211,36 +5208,40 @@ h2.elHeading {
     padding: 1em;
   }
 }
-
 .product_box .product_content p {
   margin: 0;
   width: 100%;
 }
-
 .product_box .product_content .product_brand {
   display: none;
 }
-
 .product_box .product_content .product_lead {
-  line-height: 1.5em;
-  margin-bottom: 15px;
+  font-size: 1.45rem;
+  margin-bottom: 2em;
+  line-height: 1.9;
 }
-
 .product_box .product_content .product_title {
   font-weight: bold;
   line-height: 1.25em;
-}
-
-.product_box .product_content .product_price {
+  text-align: left;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.42rem;
+  margin-bottom: 0.1em;
   font-weight: bold;
 }
-
+.product_box .product_content .product_kind {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+}
+.product_box .product_content .product_price {
+  font-weight: bold;
+  font-size: 1.55rem;
+}
 .product_box:hover .links {
   opacity: 1;
 }
-
 .product_box .links {
-  transition: .6s;
+  transition: 0.6s;
   opacity: 0;
   display: flex;
   position: absolute;
@@ -6248,52 +5249,162 @@ h2.elHeading {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, .4);
   justify-content: center;
   align-items: center;
 }
-
 @media screen and (max-width: 960px) {
   .product_box .links {
     flex-direction: column;
   }
 }
-
 .product_box .links .product_button {
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 10px;
   display: inline-block;
   font-size: 13px;
   font-weight: bold;
-  padding: .85em 1.5em;
+  padding: 0.85em 1.5em;
   background: #fff;
   text-align: center;
   color: #000;
   margin: 0 10px;
   width: 180px;
 }
-
 .product_box .links .product_button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
-
 @media screen and (max-width: 960px) {
   .product_box .links .product_button {
     margin: 10px 0;
   }
 }
-
 .products_box {
   display: flex;
   flex-wrap: wrap;
   width: 85%;
   margin: 40px auto;
+  justify-content: center;
 }
-
+@media screen and (max-width: 960px) {
+  .products_box {
+    width: 100%;
+  }
+}
+.products_box.product_col0 {
+  display: none;
+}
+.products_box.product_col3 {
+  justify-content: space-between;
+}
+.products_box.product_col3 .product_box {
+  margin: auto 0;
+  flex-basis: calc(100% / 3 - 7px);
+  width: calc(100% / 3 - 7px);
+}
+.products_box.product_col3 .product_box:nth-of-type(2n) {
+  margin-left: 5px;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col3 .product_box:nth-of-type(2n) {
+    margin: 0;
+  }
+}
+.products_box.product_col3 .product_box:nth-of-type(3n) {
+  margin-right: 0;
+  margin-left: 5px;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col3 .product_box:nth-of-type(3n) {
+    margin: 0;
+  }
+}
+.products_box.product_col4 {
+  justify-content: space-between;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col4 {
+    justify-content: space-between;
+  }
+}
+.products_box.product_col4 .product_box {
+  margin: auto 0;
+  flex-basis: calc(100% / 4 - 5px);
+  width: calc(100% / 4 - 5px);
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col4 .product_box {
+    flex-basis: calc(100% / 2 - 6px);
+    width: calc(100% / 2 - 6px);
+  }
+}
+.products_box.product_col4 .product_box:nth-of-type(2n) {
+  margin-left: 0;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col4 .product_box:nth-of-type(2n) {
+    margin: 0;
+  }
+}
+.products_box.product_col4 .product_box:nth-of-type(3n) {
+  margin-right: 0;
+  margin-left: 0;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col4 .product_box:nth-of-type(3n) {
+    margin: 0;
+  }
+}
+.products_box.product_col4 .product_box .product_title {
+  margin-bottom: 0.5em;
+}
+.products_box.product_col4 .product_box .product_kind {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col4 .links .product_button {
+    width: 90%;
+    font-size: 1.15rem;
+    padding: 0.85em 1em;
+  }
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col5 {
+    justify-content: space-between;
+  }
+}
+.products_box.product_col5 .product_box {
+  flex-basis: calc(100% / 5 - 7px);
+  width: calc(100% / 5 - 7px);
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col5 .product_box {
+    flex-basis: calc(100% / 2 - 6px);
+    width: calc(100% / 2 - 6px);
+  }
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col5 .product_box .product_title, .products_box.product_col5 .product_box .product_kind {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col5 .product_box .product_price {
+    font-size: 1.5rem;
+  }
+}
+.products_box.product_col5 .product_box .links .product_button {
+  width: 145px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 960px) {
+  .products_box.product_col5 .product_box .links .product_button {
+    width: 90%;
+  }
+}
 .products_box br {
   display: none;
 }
-
 .products_box .product_box {
   display: block;
   flex-basis: calc(100% / 3 - 7px);
@@ -6301,7 +5412,6 @@ h2.elHeading {
   margin: 0;
   margin-right: 5px;
 }
-
 @media screen and (max-width: 960px) {
   .products_box .product_box {
     flex-basis: 100%;
@@ -6309,57 +5419,31 @@ h2.elHeading {
     margin: 10px 0 !important;
   }
 }
-
-.products_box .product_box:nth-of-type(2n) {
-  margin-left: 5px;
-}
-
-@media screen and (max-width: 960px) {
-  .products_box .product_box:nth-of-type(2n) {
-    margin: 0;
-  }
-}
-
-.products_box .product_box:nth-of-type(3n) {
-  margin-right: 0;
-  margin-left: 5px;
-}
-
-@media screen and (max-width: 960px) {
-  .products_box .product_box:nth-of-type(3n) {
-    margin: 0;
-  }
-}
-
 .products_box .product_box .product_thumbnail {
   width: 100%;
 }
-
 .products_box .product_box .product_content {
   width: 100%;
-  padding: .5em;
+  padding: 0.5em;
 }
-
+.products_box .product_box .product_content .product_title {
+  text-align: left;
+}
 .products_box .product_box .product_content .product_brand {
   display: block;
 }
-
 .products_box .product_box .product_content .product_lead {
   display: none;
 }
-
 .products_box .links {
   flex-direction: column;
 }
-
 .products_box .links .product_button {
   margin: 10px 0;
 }
-
 .swiper-pagination-bullet {
   width: 11px !important;
   height: 11px !important;
   opacity: 1;
   background: rgba(0, 0, 0, 0.2);
 }
-/*# sourceMappingURL=style.css.map */
