@@ -5100,7 +5100,12 @@ h2.elHeading {
 			margin: auto 0;
 			flex-basis: calc(100% / 3 - 7px);
 			width: calc(100% / 3 - 7px);
-			
+
+			@include mq() {
+				flex-basis: calc(100% / 2 - 6px);
+				width: calc(100% / 2 - 6px);
+			}
+		
 			&:nth-of-type(2n){
 				margin-left: 5px;
 	
@@ -5114,6 +5119,15 @@ h2.elHeading {
 	
 				@include mq() {
 					margin: 0;
+				}
+			}
+		}
+		.links{
+			.product_button{
+				@include mq() {
+					width: 90%;
+					font-size: 1.1rem;
+					padding: 0.85em 1em;
 				}
 			}
 		}
@@ -5162,7 +5176,7 @@ h2.elHeading {
 			.product_button{
 				@include mq() {
 					width: 90%;
-					font-size: 1.15rem;
+					font-size: 1.1rem;
 					padding: 0.85em 1em;
 				}
 			}
@@ -5204,6 +5218,8 @@ h2.elHeading {
 
 					@include mq() {
 						width: 90%;
+						font-size: 1.1rem;
+						padding: 0.85em 1em;
 					}
 				}
 			}
