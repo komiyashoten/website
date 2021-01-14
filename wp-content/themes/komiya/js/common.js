@@ -9,9 +9,19 @@ $(window).on('load',function(){
         return false;
     });
 
-    var maxHeight = 0;
-    $(".product_box").each(function(){
-        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    makeHeightSame(".products_box .product_box");
+    $(window).resize(function(){
+        makeHeightSame(".products_box .product_box")
     });
-    $(".product_box").height(maxHeight);
 });
+
+function makeHeightSame( element ){
+    if( $(window).width() > 500 ){
+        var maxHeight = 0;
+        $(element).each(function(){
+            if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+        });
+        $(element).height(maxHeight);    
+    }
+
+}
