@@ -9,4 +9,9 @@ $(window).on('load',function(){
         return false;
     });
 
+    var maxHeight = 0;
+    $(".product_box").each(function(){
+        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+    $(".product_box").height(maxHeight);
 });

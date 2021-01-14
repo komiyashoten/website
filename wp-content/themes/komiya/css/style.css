@@ -5285,6 +5285,7 @@ h2.elHeading {
   width: 85%;
   margin: 40px auto;
   justify-content: center;
+  align-items: flex-start;
 }
 @media screen and (max-width: 960px) {
   .products_box {

@@ -5084,6 +5084,7 @@ h2.elHeading {
 	width: 85%;
 	margin: 40px auto;
 	justify-content: center;
+	align-items: flex-start;
 
 	@include mq() {
 		width: 100%;
