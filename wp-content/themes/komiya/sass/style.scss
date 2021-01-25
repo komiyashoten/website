@@ -4913,6 +4913,10 @@ h2.elHeading {
 			@include mq() {
 				width: 100%;
 			}
+
+			p{
+				width: 100%;
+			}
 		}
 
 		&>h1{
