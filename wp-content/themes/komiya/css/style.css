@@ -5087,13 +5087,15 @@ h2.elHeading {
   font-size: 12px;
 }
 #summary_header .summary_titles h1 {
-  font-size: 50px;
+  font-size: 45px;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  letter-spacing: 0.1em;
 }
 #summary_header .summary_titles h1 span {
   padding-top: 10px;
   display: block;
   font-size: 18px;
+  letter-spacing: 0.01em;
 }
 .blog.summary {
   width: 100%;

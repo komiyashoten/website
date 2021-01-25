@@ -4869,13 +4869,15 @@ h2.elHeading {
 			}
 		}
 		h1{
-			font-size: 50px;
+			font-size: 45px;
 			font-family: _font('mincho');
+			letter-spacing: .1em;
 			
 			span{
 				padding-top: 10px;
 				display: block;
 				font-size: 18px;
+				letter-spacing: .01em;
 			}
 		}
 	}
