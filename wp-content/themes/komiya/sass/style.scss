@@ -4919,7 +4919,7 @@ h2.elHeading {
 			text-align: center;
 			font-family: _font('mincho');
 		}
-		h1,h2,h3,h4{
+		h1,h2{
 			text-align: center;
 		}
 
@@ -4931,6 +4931,17 @@ h2.elHeading {
 				width: 90%;
 			}
 		}
+
+		.text_center {
+			width: 620px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: justify;
+			@include mq(md) {
+				width: 100%;
+			}
+		}
+	
 	}
 
 	.inpage_linkbox{

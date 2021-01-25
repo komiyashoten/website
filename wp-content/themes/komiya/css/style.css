@@ -5128,7 +5128,7 @@ h2.elHeading {
   text-align: center;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-.content.summary h1, .content.summary h2, .content.summary h3, .content.summary h4 {
+.content.summary h1, .content.summary h2 {
   text-align: center;
 }
 .content.summary p {
@@ -5138,6 +5138,17 @@ h2.elHeading {
 @media screen and (max-width: 960px) {
   .content.summary p {
     width: 90%;
+  }
+}
+.content.summary .text_center {
+  width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+@media screen and (max-width: 600px) {
+  .content.summary .text_center {
+    width: 100%;
   }
 }
 .content .inpage_linkbox {
