@@ -4937,6 +4937,11 @@ h2.elHeading {
 			margin-left: auto;
 			margin-right: auto;
 			text-align: justify;
+
+			p{
+				width: 100%;
+			}
+			
 			@include mq(md) {
 				width: 100%;
 			}

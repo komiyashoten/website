@@ -5146,6 +5146,9 @@ h2.elHeading {
   margin-right: auto;
   text-align: justify;
 }
+.content.summary .text_center p {
+  width: 100%;
+}
 @media screen and (max-width: 600px) {
   .content.summary .text_center {
     width: 100%;
