@@ -4897,6 +4897,22 @@ h2.elHeading {
 			width: 87%;
 		}
 
+		hr{
+			border: none;
+			border-bottom: solid 1px #ddd;
+			margin: 2em 0;
+		}
+
+		.col2{
+			width: 1050px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@include mq() {
+				width: 100%;
+			}
+		}
+
 		&>h1{
 			text-align: center;
 			font-family: _font('mincho');
