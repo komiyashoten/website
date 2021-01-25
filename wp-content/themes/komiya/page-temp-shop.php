@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: SHOP
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>

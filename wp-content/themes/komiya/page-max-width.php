@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: 横幅いっぱい
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>

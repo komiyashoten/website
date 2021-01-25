@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: 小宮商店デフォルト
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>

@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: シリーズ（Daily Use）
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>

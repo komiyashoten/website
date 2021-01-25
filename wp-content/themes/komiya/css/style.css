@@ -5095,6 +5095,9 @@ h2.elHeading {
   display: block;
   font-size: 18px;
 }
+.blog.summary {
+  width: 100%;
+}
 .content.summary {
   width: 100%;
   float: static;
@@ -5112,7 +5115,7 @@ h2.elHeading {
   text-align: center;
 }
 .content.summary p {
-  width: 70%;
+  width: 1050px;
   margin: 1em auto;
 }
 @media screen and (max-width: 960px) {

@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: GIFT
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>

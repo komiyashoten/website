@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: シリーズのカテゴリー
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>

@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: まとめページ
-Template Post Type: post
+Template Post Type: post, page
 */
 ?>
 <?php get_header('blog'); ?>
@@ -15,7 +15,7 @@ Template Post Type: post
 			</h1>
 		</div>
 	</section>
-	<section class="blog clear">
+	<section class="blog clear summary">
 		<div class="content summary">
 			<h1><?php the_title(); ?></h1>
 			<p><?php the_content(); ?></p>			

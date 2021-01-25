@@ -4881,6 +4881,12 @@ h2.elHeading {
 	}
 }
 
+.blog{
+	&.summary{
+		width: 100%;
+	}
+}
+
 .content{
 
 	&.summary{
@@ -4900,7 +4906,7 @@ h2.elHeading {
 		}
 
 		p{
-			width: 70%;
+			width: 1050px;
 			margin: 1em auto;
 
 			@include mq() {

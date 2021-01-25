@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: 佐久間作成のテンプレート
+Template Post Type: post, page
 */
 ?>
 <?php

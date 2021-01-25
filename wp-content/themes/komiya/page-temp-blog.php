@@ -1,6 +1,7 @@
 <?php
 /*
 Template Name: BLOG
+Template Post Type: post, page
 */
 ?>
 <?php get_header(); ?>
