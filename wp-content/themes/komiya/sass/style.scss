@@ -4899,10 +4899,26 @@ h2.elHeading {
 			width: 87%;
 		}
 
+		&>section{
+			width: 1050px;
+			margin: auto;
+		}
+
+		.center{
+			*{
+				text-align: center;
+			}
+		}
+
 		hr{
+			width: 1050px;
 			border: none;
 			border-bottom: solid 1px #ddd;
-			margin: 2em 0;
+			margin: 2em auto;
+		}
+
+		.margin2{
+			margin-bottom: 3em;
 		}
 
 		.col2{
@@ -4930,6 +4946,9 @@ h2.elHeading {
 		p{
 			width: 1050px;
 			margin: 1em auto;
+			font-size: 1.4rem;
+			letter-spacing: 0.15em;
+			line-height: 2.2;
 
 			@include mq() {
 				width: 90%;
@@ -5012,6 +5031,7 @@ h2.elHeading {
 	display: flex;
 	width: 85%;
 	margin: 40px auto;
+	margin-top: 20px;
 	position: relative;
 	@include mq() {
 		flex-wrap: wrap;
@@ -5225,7 +5245,7 @@ h2.elHeading {
 				}
 			}
 		}
-}
+	}
 
 	&.product_col5{
 
