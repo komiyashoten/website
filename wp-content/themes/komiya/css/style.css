@@ -5222,6 +5222,18 @@ h2.elHeading {
 .swiper-container .swiper-pagination {
   bottom: 0 !important;
 }
+.img_center {
+  margin: auto;
+}
+.img_center.large {
+  width: 1050px;
+}
+.img_center.medium {
+  width: 820px;
+}
+.img_center.small {
+  width: 560px;
+}
 .product_box {
   display: flex;
   width: 85%;

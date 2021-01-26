@@ -5027,6 +5027,19 @@ h2.elHeading {
 	}
 }
 
+.img_center{
+	margin: auto;
+	&.large{
+		width: 1050px;
+	}
+	&.medium{
+		width: 820px;
+	}
+	&.small{
+		width: 560px;
+	}
+}
+
 .product_box{
 	display: flex;
 	width: 85%;
