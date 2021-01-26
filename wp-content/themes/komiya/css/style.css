@@ -5396,7 +5396,7 @@ h2.elHeading {
 .products_box.product_col2 .product_box {
   flex-basis: calc(100% / 4 - 5px);
   width: calc(100% / 4 - 5px);
-  margin-right: 65px;
+  margin-right: 40px;
 }
 .products_box.product_col2 .product_box:nth-of-type(2n) {
   margin-right: 0;
@@ -5413,7 +5413,7 @@ h2.elHeading {
   margin: auto 0;
   flex-basis: calc(100% / 4 - 5px);
   width: calc(100% / 4 - 5px);
-  margin-right: 65px;
+  margin-right: 40px;
 }
 @media screen and (max-width: 960px) {
   .products_box.product_col3 .product_box {
