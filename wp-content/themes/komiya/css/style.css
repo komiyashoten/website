@@ -5330,6 +5330,7 @@ h2.elHeading {
 .product_box .product_content .product_kind {
   font-size: 1.3rem;
   margin-bottom: 0.5em;
+  line-height: 1.8;
 }
 .product_box .product_content .product_price {
   font-weight: bold;
