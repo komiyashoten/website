@@ -5137,7 +5137,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 960px) {
   .content.summary .col2 {
-    width: 100%;
+    width: 87%;
   }
 }
 .content.summary .col2 p {
