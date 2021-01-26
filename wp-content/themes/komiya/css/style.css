@@ -5536,6 +5536,7 @@ h2.elHeading {
 }
 .products_box .product_box:nth-of-type(2n) {
   margin-left: 0;
+  margin-right: 0;
 }
 @media screen and (max-width: 960px) {
   .products_box .product_box:nth-of-type(2n) {

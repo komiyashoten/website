@@ -5208,7 +5208,7 @@ h2.elHeading {
 			flex-basis: calc(100% / 4 - 5px);
 			width: calc(100% / 4 - 5px);
 			margin-right: 65px;
-			
+
 			@include mq() {
 				flex-basis: calc(100% / 2 - 6px);
 				width: calc(100% / 2 - 6px);
@@ -5353,6 +5353,7 @@ h2.elHeading {
 
 		&:nth-of-type(2n){
 			margin-left: 0;
+			margin-right: 0;
 
 			@include mq() {
 				margin-right: 0;
