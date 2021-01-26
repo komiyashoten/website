@@ -5224,15 +5224,15 @@ h2.elHeading {
 }
 .img_center_large {
   margin: auto;
-  width: 1050px;
+  width: 1050px !important;
 }
 .img_center_medium {
   margin: auto;
-  width: 820px;
+  width: 820px !important;
 }
 .img_center_small {
   margin: auto;
-  width: 560px;
+  width: 560px !important;
 }
 .product_box {
   display: flex;
