@@ -5152,6 +5152,11 @@ h2.elHeading {
   text-align: center;
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
+@media screen and (max-width: 960px) {
+  .content.summary > h1 {
+    width: 87%;
+  }
+}
 .content.summary h1, .content.summary h2 {
   text-align: center;
 }

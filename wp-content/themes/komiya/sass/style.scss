@@ -4946,6 +4946,10 @@ h2.elHeading {
 		&>h1{
 			text-align: center;
 			font-family: _font('mincho');
+
+			@include mq() {
+				width: 87%;
+			}
 		}
 		h1,h2{
 			text-align: center;
