@@ -5381,7 +5381,7 @@ h2.elHeading {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
-  margin: 40px auto;
+  margin: 20px auto;
   justify-content: center;
   align-items: flex-start;
 }
