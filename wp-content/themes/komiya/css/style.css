@@ -5595,3 +5595,7 @@ h2.elHeading {
   opacity: 1;
   background: rgba(0, 0, 0, 0.2);
 }
+.searchandfilter li {
+  padding-right: 0 !important;
+  display: block !important;
+}
