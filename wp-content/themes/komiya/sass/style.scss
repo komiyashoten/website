@@ -4919,6 +4919,10 @@ h2.elHeading {
 			border: none;
 			border-bottom: solid 1px #ddd;
 			margin: 2em auto;
+
+			@include mq() {
+				width: 87%;
+			}
 		}
 
 		.margin2{

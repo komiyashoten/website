@@ -5127,6 +5127,11 @@ h2.elHeading {
   border-bottom: solid 1px #ddd;
   margin: 2em auto;
 }
+@media screen and (max-width: 960px) {
+  .content.summary hr {
+    width: 87%;
+  }
+}
 .content.summary .margin2 {
   margin-bottom: 3em;
 }
