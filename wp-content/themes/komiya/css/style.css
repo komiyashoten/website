@@ -5163,6 +5163,7 @@ h2.elHeading {
 }
 .content.summary h3.product_name {
   font-size: 3.2rem;
+  margin-bottom: 1.5em;
 }
 .content.summary p {
   width: 100%;
