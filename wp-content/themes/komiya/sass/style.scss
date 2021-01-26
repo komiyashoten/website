@@ -5201,6 +5201,23 @@ h2.elHeading {
 		display: none;
 	}
 
+	&.product_col2{
+		.product_box{
+			flex-basis: calc(100% / 4 - 5px);
+			width: calc(100% / 4 - 5px);
+			margin-right: 65px;
+			
+			&:nth-of-type(2n){
+				margin-right: 0;
+	
+				@include mq() {
+					margin: 0;
+				}
+			}
+		}
+		
+	}
+
 	&.product_col3{
 		justify-content: center;
 		.product_box{
@@ -5353,7 +5370,6 @@ h2.elHeading {
 
 		&:nth-of-type(2n){
 			margin-left: 0;
-			margin-right: 0;
 
 			@include mq() {
 				margin-right: 0;
