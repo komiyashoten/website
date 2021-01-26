@@ -5599,3 +5599,6 @@ h2.elHeading {
   padding-right: 0 !important;
   display: block !important;
 }
+.searchandfilter li .cat-item > label {
+  background: #fff !important;
+}

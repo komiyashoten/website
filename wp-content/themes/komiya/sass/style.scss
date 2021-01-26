@@ -5429,4 +5429,10 @@ h2.elHeading {
 .searchandfilter li{
 	padding-right: 0 !important;
 	display: block !important;
+
+	.cat-item{
+		&>label{
+			background: #fff !important;
+		}
+	}
 }
