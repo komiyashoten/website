@@ -5040,7 +5040,7 @@ h2.elHeading {
 	margin: auto;
 	width: 1050px !important;
 	@include mq() {
-		width: 100%;
+		width: 100% !important;
 	}
 }
 
@@ -5048,7 +5048,7 @@ h2.elHeading {
 	margin: auto;
 	width: 820px !important;
 	@include mq() {
-		width: 80%;
+		width: 80% !important;
 	}
 }
 
@@ -5056,7 +5056,7 @@ h2.elHeading {
 	margin: auto;
 	width: 560px !important;
 	@include mq() {
-		width: 60%;
+		width: 60% !important;
 	}
 }
 

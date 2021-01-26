@@ -5236,7 +5236,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 960px) {
   .img_center_large {
-    width: 100%;
+    width: 100% !important;
   }
 }
 .img_center_medium {
@@ -5245,7 +5245,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 960px) {
   .img_center_medium {
-    width: 80%;
+    width: 80% !important;
   }
 }
 .img_center_small {
@@ -5254,7 +5254,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 960px) {
   .img_center_small {
-    width: 60%;
+    width: 60% !important;
   }
 }
 .product_box {
