@@ -6,40 +6,34 @@
 
 <div class="top_main">
 	<ul class="big_main_slide bxslider">
-		<li><a href="/komiyashoten-women/wabana/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch026.png" alt="一面に咲く、和の華やかな花柄" class="left_top"></div>
+		<li><a href="/valentinegift2021/">
+				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch031.png" alt="" class="center"></div>
 				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_020c.jpg" alt="甲州織 ほぐし織 日本製の傘 小宮商店"></div>
+				<div class="bg"><img src="/wp-content/themes/komiya/img/top_021b.jpg" alt=""></div>
 			</a>
 		</li>
-		<li><a href="/adametrope/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch025.png" alt="アダムエロペ　小宮商店" class="center"></div>
+		<li><a href="/three/">
+				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch028.png" alt="" class="left_top"></div>
 				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_019.jpg" alt="アダムエロペ　傘"></div>
+				<div class="bg"><img src="/wp-content/themes/komiya/img/top_022.jpg" alt=""></div>
 			</a>
 		</li>
-		<li><a href="https://www.komiyakasa.jp/newkawazudot/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch023.png" alt="天然素材のかわず張り傘" class="right_top"></div>
+		<li><a href="/komiyashoten-men/forest/">
+				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch029.png" alt="" class="left_top"></div>
 				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_017.jpg" alt="日傘 晴雨兼用傘 日本製 小宮商店"></div>
+				<div class="bg"><img src="/wp-content/themes/komiya/img/top_023.jpg" alt=""></div>
 			</a>
 		</li>
-		<li><a href="/komiyashoten-men/urashima-men/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch021.png" alt="シックなデザインが魅力的な『裏縞』。甲州織の奥深い発色の先染め生地と傘職人による丁寧な手しごとが上品な大人の装いを引き立てます。" class="left_top"></div>
+		<li><a href="/komiyashoten-men/miratoray-men/">
+				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch030.png" alt="" class="right_top"></div>
 				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_015.jpg" alt="傘 日本製 甲州織 小宮商店"></div>
+				<div class="bg"><img src="/wp-content/themes/komiya/img/top_009.jpg" alt=""></div>
 			</a>
 		</li>
 		<li><a href="/about/how-its-made/">
 				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch003.png" alt="職人の手作り傘ならではの奥深く細やかな仕事ぶり、クラフトマンシップをどうぞご覧ください。" class="right_top"> </div>
 				<div class="black">&nbsp;</div>
 				<div class="bg"><img src="/wp-content/themes/komiya/img/top_main003.jpg" alt="洋傘職人 小宮商店"></div>
-			</a>
-		</li>
-		<li><a href="/komiyashoten-women/kago/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch018.png" alt="伝統技法による柔らかい手染め" class="left_top"></div>
-				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_main011.jpg" alt="籠染めの晴雨兼用傘"></div>
 			</a>
 		</li>
 	</ul>
