@@ -4896,7 +4896,7 @@ h2.elHeading {
 		float: static;
 
 		@include mq() {
-			width: 87%;
+			width: 100%;
 		}
 
 		&>section{
@@ -4904,7 +4904,7 @@ h2.elHeading {
 			margin: auto;
 
 			@include mq() {
-				width: 100%;
+				width: 87%;
 			}
 		}
 
@@ -4975,7 +4975,7 @@ h2.elHeading {
 			}
 			
 			@include mq(md) {
-				width: 100%;
+				width: 87%;
 			}
 		}
 	

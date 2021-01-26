@@ -5106,7 +5106,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 960px) {
   .content.summary {
-    width: 87%;
+    width: 100%;
   }
 }
 .content.summary > section {
@@ -5115,7 +5115,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 960px) {
   .content.summary > section {
-    width: 100%;
+    width: 87%;
   }
 }
 .content.summary .center * {
@@ -5176,7 +5176,7 @@ h2.elHeading {
 }
 @media screen and (max-width: 600px) {
   .content.summary .text_center {
-    width: 100%;
+    width: 87%;
   }
 }
 .content .inpage_linkbox {
