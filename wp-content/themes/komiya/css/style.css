@@ -5234,13 +5234,28 @@ h2.elHeading {
   margin: auto;
   width: 1050px !important;
 }
+@media screen and (max-width: 960px) {
+  .img_center_large {
+    width: 100%;
+  }
+}
 .img_center_medium {
   margin: auto;
   width: 820px !important;
 }
+@media screen and (max-width: 960px) {
+  .img_center_medium {
+    width: 80%;
+  }
+}
 .img_center_small {
   margin: auto;
   width: 560px !important;
+}
+@media screen and (max-width: 960px) {
+  .img_center_small {
+    width: 60%;
+  }
 }
 .product_box {
   display: flex;

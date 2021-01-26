@@ -5039,16 +5039,25 @@ h2.elHeading {
 .img_center_large{
 	margin: auto;
 	width: 1050px !important;
+	@include mq() {
+		width: 100%;
+	}
 }
 
 .img_center_medium{
 	margin: auto;
 	width: 820px !important;
+	@include mq() {
+		width: 80%;
+	}
 }
 
 .img_center_small{
 	margin: auto;
 	width: 560px !important;
+	@include mq() {
+		width: 60%;
+	}
 }
 
 
