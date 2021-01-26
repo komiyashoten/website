@@ -5027,18 +5027,21 @@ h2.elHeading {
 	}
 }
 
-.img_center{
+.img_center_large{
 	margin: auto;
-	&.large{
-		width: 1050px;
-	}
-	&.medium{
-		width: 820px;
-	}
-	&.small{
-		width: 560px;
-	}
+	width: 1050px;
 }
+
+.img_center_medium{
+	margin: auto;
+	width: 820px;
+}
+
+.img_center_small{
+	margin: auto;
+	width: 560px;
+}
+
 
 .product_box{
 	display: flex;
