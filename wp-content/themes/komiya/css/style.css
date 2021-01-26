@@ -5113,6 +5113,11 @@ h2.elHeading {
   width: 1050px;
   margin: auto;
 }
+@media screen and (max-width: 960px) {
+  .content.summary > section {
+    width: 100%;
+  }
+}
 .content.summary .center * {
   text-align: center;
 }

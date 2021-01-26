@@ -4902,6 +4902,10 @@ h2.elHeading {
 		&>section{
 			width: 1050px;
 			margin: auto;
+
+			@include mq() {
+				width: 100%;
+			}
 		}
 
 		.center{
