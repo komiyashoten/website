@@ -5202,10 +5202,18 @@ h2.elHeading {
 	}
 
 	&.product_col2{
+		@include mq() {
+			justify-content: space-between;
+		}
 		.product_box{
 			flex-basis: calc(100% / 4 - 5px);
 			width: calc(100% / 4 - 5px);
 			margin-right: 40px;
+
+			@include mq() {
+				flex-basis: calc(100% / 2 - 6px);
+				width: calc(100% / 2 - 6px);
+			}
 
 			&:nth-of-type(2n){
 				margin-right: 0;
@@ -5220,6 +5228,11 @@ h2.elHeading {
 
 	&.product_col3{
 		justify-content: center;
+
+		@include mq() {
+			justify-content: space-between;
+		}
+
 		.product_box{
 			margin: auto 0;
 			flex-basis: calc(100% / 4 - 5px);
@@ -5360,7 +5373,6 @@ h2.elHeading {
 		flex-basis: calc(100% / 4 - 7px);
 		width: calc(100% / 4 - 7px);
 		margin: 0;
-		margin-right: 65px;
 
 		@include mq() {
 			flex-basis: 100%;
@@ -5370,10 +5382,6 @@ h2.elHeading {
 
 		&:nth-of-type(2n){
 			margin-left: 0;
-
-			@include mq() {
-				margin-right: 0;
-			}
 		}
 
 
