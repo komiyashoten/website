@@ -5145,6 +5145,9 @@ h2.elHeading {
 .content.summary h1, .content.summary h2 {
   text-align: center;
 }
+.content.summary h3.product_name {
+  font-size: 3.2rem;
+}
 .content.summary p {
   width: 100%;
   margin: 1em auto;

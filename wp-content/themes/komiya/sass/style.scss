@@ -4942,6 +4942,11 @@ h2.elHeading {
 		h1,h2{
 			text-align: center;
 		}
+		h3{
+			&.product_name{
+				font-size: 3.2rem;
+			}
+		}
 
 		p{
 			width: 100%;
