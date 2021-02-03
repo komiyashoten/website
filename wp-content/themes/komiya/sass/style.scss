@@ -14,7 +14,6 @@ $breakpoints: (
   }
 }
 
-
 /* リセット
 ----------------------------------------- */
 html,body,h1,h2,h3,h4,h5,h6,p,div,
@@ -38,6 +37,7 @@ ul,ol,li {
 	list-style: none;
 }
 *, *:before, *:after {
+	max-width:100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
          -o-box-sizing: border-box;
@@ -222,7 +222,6 @@ h1,h2,h3,h4,h5,p,div,span,li {
 		width:auto;
 	}
 }
-
 
 /* 使い回しコンポーネント
 ----------------------------------------- */
@@ -662,7 +661,6 @@ h3.banner_title {
 		}
 	}
 }
-
 
 /* ヘッダー
 ----------------------------------------- */
@@ -1182,7 +1180,6 @@ header .fix-navi-pc .fix-navi-logo{
 .search_nav {
 	font-size: 1.2rem;
 }
-
 
 /* トップページ
 ----------------------------------------- */
@@ -1968,9 +1965,6 @@ h3.section_title1 {
 	text-align: center;
 }
 
-
-
-
 /* MEN WOMEN のトップ
 ----------------------------------------- */
 .top_section2 {
@@ -2241,9 +2235,6 @@ h3.section_title1 {
 	text-decoration: underline;
 }
 
-
-
-
 /* シリーズ一覧
 ----------------------------------------- */
 .handmade_logo {
@@ -2411,8 +2402,6 @@ h3.section_title1 {
 	}
 }
 
-
-
 /* 商品ページ（シリーズ）
 ----------------------------------------- */
 .series,
@@ -2575,7 +2564,6 @@ h3.section_title1 {
 	}
 }
 
-
 .series_header {
 	margin-top: 24px;
 	margin-bottom: 3em;
@@ -2692,7 +2680,6 @@ h3.series_list_title {
   content: "";
   display: block;
   width: 31%; }
-
 
 /* ABOUT　GIFT　SHOP　傘辞典
 ----------------------------------------- */
@@ -2870,8 +2857,6 @@ h3.series_list_title {
 			}
 	}
 }
-
-
 
 /* Daily Use Umbrella
 ----------------------------------------- */
@@ -3178,7 +3163,6 @@ h3.series_list_title {
 	}
 }
 
-
 .wrap_du_yahoo_top_lead {
 	font-size: 1vw;
 	padding: 3.3em 5em 3.3em 5em;
@@ -3275,8 +3259,6 @@ h3.series_list_title {
 		  }
 	  }
   }
-
-
 
 /* ブログ
 ----------------------------------------- */
@@ -3722,7 +3704,6 @@ ul.event_info_table li::first-child {
 	font-size: 1.4rem !important;
 }
 
-
 /* 傘辞典
 ----------------------------------------- */
 .encyclopedia_list1 {
@@ -3733,7 +3714,6 @@ ul.event_info_table li::first-child {
 		margin-bottom: 0.5em;
 	}
 }
-
 
 /* ブランドバナー
 ----------------------------------------- */
@@ -3802,7 +3782,6 @@ ul.event_info_table li::first-child {
 		}
 	}
 }
-
 
 /* フッター
 ----------------------------------------- */
@@ -3954,7 +3933,6 @@ footer {
     display:block;
     clear:both;
 }
-
 
 /* フォーム
 ----------------------------------------- */
@@ -4238,7 +4216,6 @@ p {
 	text-align: center;
 }
 
-
 .series_header {
 	margin-top: 24px;
 	margin-bottom: 3em;
@@ -4368,7 +4345,6 @@ h2.elHeading {
 .gdColumnLeft {
 	width: 550px !important;
 }
-
 
 /* 使ってる？
 ----------------------------------------- */
@@ -4584,7 +4560,6 @@ h2.elHeading {
 	}
 }
 
-
 .blog_list4 {
 	margin-bottom: 3em;
 	display: flex;
@@ -4639,7 +4614,6 @@ h2.elHeading {
 		}
 	}
 }
-
 
 .two_cubes {
 	display: flex;
@@ -4821,7 +4795,6 @@ h2.elHeading {
 		font-family: "Quicksand", "游ゴシック体", "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	}
 }
-
 
 /* まとめページ
 ----------------------------------------- */
@@ -5070,7 +5043,6 @@ h2.elHeading {
 	}
 }
 
-
 .product_box{
 	display: flex;
 	width: 85%;
@@ -5245,10 +5217,10 @@ h2.elHeading {
 				flex-basis: calc(100% / 2 - 6px);
 				width: calc(100% / 2 - 6px);
 			}
-		
+
 			&:nth-of-type(2n){
 				margin-left: 5px;
-	
+
 				@include mq() {
 					margin: 0;
 				}
@@ -5256,7 +5228,7 @@ h2.elHeading {
 			&:nth-of-type(3n){
 				margin-right: 0;
 				margin-left: 5px;
-	
+
 				@include mq() {
 					margin: 0;
 				}
@@ -5386,7 +5358,6 @@ h2.elHeading {
 			margin-left: 0;
 		}
 
-
 		.product_thumbnail{
 			width: 100%;
 		}
@@ -5416,7 +5387,6 @@ h2.elHeading {
 			margin: 10px 0;
 		}
 	}
-
 }
 
 .swiper-pagination-bullet {
