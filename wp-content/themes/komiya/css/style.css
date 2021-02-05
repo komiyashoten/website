@@ -5432,7 +5432,7 @@ h2.elHeading {
   margin: auto 0;
   flex-basis: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
-  margin-right: 40px;
+  margin-right: 15px;
 }
 @media screen and (max-width: 960px) {
   .products_box.product_col3 .product_box {
