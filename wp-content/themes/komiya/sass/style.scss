@@ -5208,7 +5208,7 @@ h2.elHeading {
 		}
 
 		.product_box{
-			margin: auto 0;
+			margin: 0;
 			flex-basis: calc(100% / 4 - 10px);
 			width: calc(100% / 4 - 10px);
 			margin-right: 15px;
@@ -5219,7 +5219,6 @@ h2.elHeading {
 			}
 
 			&:nth-of-type(2n){
-				margin-left: 15px;
 
 				@include mq() {
 					margin: 0;
@@ -5227,7 +5226,7 @@ h2.elHeading {
 			}
 			&:nth-of-type(3n){
 				margin-right: 0;
-				margin-left: 5px;
+				// margin-left: 5px;
 
 				@include mq() {
 					margin: 0;
