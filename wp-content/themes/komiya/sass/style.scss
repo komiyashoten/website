@@ -5245,13 +5245,13 @@ h2.elHeading {
 	}
 
 	&.product_col4{
-		justify-content: space-between;
+		justify-content: center;
 
 		@include mq() {
 			justify-content: space-between;
 		}
 		.product_box{
-			margin: 0 0;
+			margin: 0 13px;
 			flex-basis: calc(100% / 4 - 10px);
 			width: calc(100% / 4 - 10px);
 
@@ -5260,17 +5260,27 @@ h2.elHeading {
 				width: calc(100% / 2 - 6px);
 			}
 
-			&:nth-of-type(2n){
+			&:first-of-type{
 				margin-left: 0;
+			}
+
+			&:nth-of-type(2n){
 	
 				@include mq() {
 					margin: 0;
 				}
 			}
 			&:nth-of-type(3n){
-				margin-right: 0;
 				margin-left: 0;
-	
+
+				@include mq() {
+					margin: 0;
+				}
+			}
+
+			&:nth-of-type(4n){
+				margin-right: 0;
+
 				@include mq() {
 					margin: 0;
 				}
@@ -5345,6 +5355,7 @@ h2.elHeading {
 		display: block;
 		flex-basis: calc(100% / 4 - 7px);
 		width: calc(100% / 4 - 7px);
+		max-width: 230px;
 		margin: 0;
 
 		@include mq() {
