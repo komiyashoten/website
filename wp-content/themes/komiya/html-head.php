@@ -82,5 +82,5 @@
 </script>
 <?php if ( is_user_logged_in() ) {
 	global $template;
-	echo "このページで使用しているテンプレートファイル：" . basename($template);
+	// echo "このページで使用しているテンプレートファイル：" . basename($template);
 } ?>

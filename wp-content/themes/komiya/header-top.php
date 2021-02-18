@@ -21,14 +21,18 @@ jQuery(function() {
             navi.addClass('fix-navi-pc')
         } else if (here <= naviHeight) {
             navi.removeClass('fix-navi-pc')
+		}
+		if(here == 0){
+            navi.removeClass('fix-navi-pc');
         }
+
     });
 });
 </script>
 <!-- ヘッダーラインバナー -->
 <style type="text/css">
-<!--
-.top_sub_nav {
+
+/* .top_sub_nav {
 	padding-top: 45px;
 }
 .wrap-header-line-banner {
@@ -49,20 +53,17 @@ jQuery(function() {
 .header-line-banner {
 	text-align: center;
 	font-size: 1.3rem;
-}
+} */
 
-
-
-
--->
 </style>
 </head>
-<body onload="initialize();" onclick="checkSelect();">
+<?php $class = get_ks_class(); ?>
+<body onload="initialize();" onclick="checkSelect();" class="<?php echo $class; ?>">
 <header id="backtotop">
 	<!-- <a href="https://www.komiyakasa.jp/clearance202007/" class="wrap-header-line-banner"><div class="header-line-banner">小宮商店 感謝セール開催  |  Thank You Sale 2020.7.10-12</div></a> -->
-    <h1><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten.jpg" alt="小宮商店 KOMIYA SHOTEN" class="logo_komiyashoten"></a></h1>
+    <h1><a href="/"><img src="/wp-content/themes/komiya/img/<?php ks_logo(); ?>" alt="小宮商店 KOMIYA SHOTEN" class="logo_komiyashoten"></a></h1>
 	<div class="navi-pc">
-		<div class="fix-navi-logo"><!-- <a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten2.jpg" alt="小宮商店"></a> --></div>
+		<div class="fix-navi-logo"><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten2.jpg" alt="小宮商店"></a></div>
 		<?php get_template_part('navi'); ?>
 	</div>
 	<div class="navi-sp">

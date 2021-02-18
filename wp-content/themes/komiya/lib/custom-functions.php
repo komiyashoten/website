@@ -43,3 +43,25 @@ function which_shop($val){
         return "yahoo";
     }
 }
+
+function get_ks_class(){
+    global $post;
+    $is_logged_in = is_user_logged_in();
+    if( $is_logged_in ) $is_logged_in = "logged_in";
+	$slug = $post->post_name;
+    if($slug == "men" || $slug == "women"){
+        return "series ".$is_logged_in;
+    }else{
+        return $is_logged_in;
+    }
+}
+
+function ks_logo(){
+    global $post;
+	$slug = $post->post_name;
+    if($slug == "men" || $slug == "women"){
+        echo "logo_komiyashoten_white.png";
+    }else{
+        echo "logo_komiyashoten.jpg";
+    }
+}

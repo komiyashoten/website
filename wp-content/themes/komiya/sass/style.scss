@@ -5163,6 +5163,7 @@ h2.elHeading {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	max-width: 1000px;
 	margin: 20px auto;
 	justify-content: center;
 	align-items: flex-start;
@@ -5280,6 +5281,14 @@ h2.elHeading {
 
 			&:nth-of-type(4n){
 				margin-right: 0;
+
+				@include mq() {
+					margin: 0;
+				}
+			}
+
+			&:nth-of-type(7n){
+				margin-left: 0;
 
 				@include mq() {
 					margin: 0;
@@ -5416,3 +5425,156 @@ h2.elHeading {
 		}
 	}
 }
+
+#wpadminbar{
+	*, *:before, *:after {
+		max-width: initial;
+	}
+}
+
+//men-women top
+
+.logged_in{
+	&.series{
+		header{
+			top: 32px;
+		}
+	}
+}
+
+.series{
+	header{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+		display: flex;
+		align-items: center;
+		padding-top: 20px;
+
+		h1{
+			width: 300px;
+			flex-basis: 300px;
+			height: 25px;
+			padding: 0;
+			padding-left: 50px;
+			box-sizing: border-box;
+
+			a{
+				height: 25px;
+				display: block;
+				margin: 0;
+				padding: 0;
+
+				img{
+					display: block;
+				}
+			}
+		}
+
+		.navi-pc{
+			width: calc(100% - 300px);
+			flex-basis: calc(100% - 300px);
+
+			&>div{
+				&>ul{
+					display: flex;
+					justify-content: flex-end;
+					padding-right: 50px;
+					&>li{
+						&>a{
+							color: #fff;
+						}
+					}
+				}
+			}
+			&.fix-navi-pc{
+				width: 100%;
+				flex-basis: 100%;
+				&>div{
+					&>ul{
+						&>li{
+							&>a{
+								color: #000;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.top_sub_nav{
+			display: none;
+		}
+
+	}
+	$sliderHeight: 700px;
+	.big_banner_top{
+		li{
+			a{
+				height: $sliderHeight;
+				.text{
+					margin-top: 14em;
+
+					h3{
+						margin-bottom: 10px;
+					}
+				}
+
+				.read{
+					margin-top: 20px;
+					color: #000;
+					background: #fff;
+					padding: 5px 20px;
+					display: inline-block;
+					font-size: .9em;
+					font-family: _font('gothic');
+				}
+
+				.black{
+					height: $sliderHeight;
+				}
+
+				.bg{
+					img{
+						height: $sliderHeight;
+					}
+				}
+			}
+		}
+	}
+
+	.bx-wrapper{
+		height: $sliderHeight;
+	}
+
+	.bxslider > li {
+		height: $sliderHeight;
+	}
+	
+	.bxslider > li > img {
+		height: $sliderHeight;
+	}
+
+}
+
+.more{
+	text-align: center;
+
+	a{
+		display: inline-block;
+		padding: 5px 30px;
+		color: #000;
+		background: #f1f1f1;
+		border-radius: 20px;
+	}
+}
+
+.bgcolor1{
+	.more{	
+		a{
+			color: #000;
+			background: #fff;
+		}
+	}}
