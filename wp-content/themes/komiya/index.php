@@ -6,12 +6,6 @@
 
 <div class="top_main">
 	<ul class="big_main_slide bxslider">
-		<li><a href="/valentinegift2021/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch031.png" alt="" class="center"></div>
-				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_021b.jpg" alt=""></div>
-			</a>
-		</li>
 		<li><a href="/three/">
 				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch028.png" alt="" class="left_top"></div>
 				<div class="black">&nbsp;</div>
