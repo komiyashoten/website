@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.accordionbox {
+	border: 7px solid #eee;
+}
+.accordionlist dt{
+    display:block;
+	cursor: pointer;
+}
+.accordionlist > dt .title{
+	float: left;
+	padding: 11px 18px;
+}
+.accordionlist > dd{
+    display:none;
+}
+
+
+.accordion_icon,
+.accordion_icon span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.accordion_icon {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	float: right;
+}
+.accordion_icon span {
+	position: absolute;
+	top: 21px;
+    right: 16px;
+    width: 50%;
+	height: 1px;
+    background-color: #333;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+.accordion_icon span:nth-of-type(1) {
+	transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.accordion_icon span:nth-of-type(2) {
+	transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+/*＋、－切り替え*/
+#accordion1 .accordion_icon.active span:nth-of-type(1) {
+	display:none;
+}
+#accordion1 .accordion_icon.active span:nth-of-type(2) {
+	transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+
+}
+
+
+/* cleatfix */
+.clearfix {zoom:1;}
+.clearfix:after {
+	content : ""    ;
+	display : block ;
+	clear   : both  ;
+}

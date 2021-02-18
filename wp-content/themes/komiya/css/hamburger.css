@@ -1,0 +1,99 @@
+@charset 'UTF-8';
+
+.overlay {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	opacity: 0;
+	transition: opacity .5s;
+}
+.overlay.open {
+	width: 100%;
+	height: 100vh;
+	opacity: 1;
+}
+
+.menu-trigger {
+	display: inline-block;
+	width: 22px;
+	height: 15px;
+	vertical-align: middle;
+	cursor: pointer;
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	z-index: 100;
+	transform: translateX(0);
+	transition: transform .5s;
+}
+.menu-trigger.active {
+	transform: translateX(80vw);
+}
+.menu-trigger span {
+	display: inline-block;
+	box-sizing: border-box;
+	position: absolute;
+	rihgt: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #000;
+}
+.menu-trigger.active span {
+	background-color: #fff;
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+.menu-trigger.active span:nth-of-type(1) {
+	transform: translateY(7px) rotate(-45deg);
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 7px;
+}
+.menu-trigger.active span:nth-of-type(2) {
+	opacity: 0;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+.menu-trigger.active span:nth-of-type(3) {
+	transform: translateY(-7px) rotate(45deg);
+}
+
+
+nav {
+	width: 80vw;
+	height: 100%;
+	padding-top: 2em;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow-y: scroll;
+	z-index: 12;
+	transform: translate(-80vw);
+	transition: all .5s;
+	-webkit-overflow-scrolling: touch; // 慣性スクロールを追加
+}
+nav.open {
+	transform: translateZ(0);
+}
+nav li {
+}
+
+
+html.is-fixed,
+html.is-fixed body {
+    overflow: hidden;
+position: fixed;
+z-index: -1;
+/*下2つで背景を元のサイズのまま表示することができる*/
+width: 100%;
+height: 100%;
+}
