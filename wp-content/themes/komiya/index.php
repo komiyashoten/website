@@ -229,7 +229,10 @@
 		<span class="sp_calender"><?php echo do_shortcode('[xo_event_calendar ID="xo-event-calendar-2" holidays="day-off,20pm"]'); ?></span>
 	</div>
 	<div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d517.753176752213!2d139.78356232171083!3d35.69189605744139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3c3b0398da90035e!2z5bCP5a6u5ZWG5bqX!5e0!3m2!1sja!2sus!4v1613629516492!5m2!1sja!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<!--
 		<div id="map_custmomize" style="width:100%;height:370px;"></div>
+		-->
 		<div class="shop_direction">
 			<span><a href="/shop/higashi-nihombashi/">東日本橋駅からのアクセス</a></span>
 			<span><a href="/shop/bakuro-yokoyama/">馬喰横山からのアクセス</a></span>
