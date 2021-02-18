@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /wp-admin/
-Disallow: /*?
-Disallow: /*.php$
-Disallow: /*.inc$
-Disallow: /product/
-
-Sitemap: https://www.komiyakasa.jp/sitemap.xml
-Sitemap: https://www.komiyakasa.jp/sitemap.xml.gz
