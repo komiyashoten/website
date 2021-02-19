@@ -146,39 +146,118 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 	extract(
 		shortcode_atts(
 			array(
-				'count' => 8,
-				'cat1' => "men",
-				'cat2' => "popular",
-				'col'  => '4',
+				'count'        => 8,
+				'large_cat'    => "men",
+				'size'         => "",
+				'category'     => "",
+				'product_tag'  => "popular",
+				'price'        => "",
+				'ribs'         => "",
+				'column'       => "4",
+				'showcat'      => "false",
+				'whichcat'     => "product_tag",
 			),
 			$atts
 		)
 	);
+	//複数あるかどうか（カンマ区切りで判別）
+	if( strstr($large_cat, ",") ){
+		//複数指定があった場合arrayにする
+		$large_cat = explode(",",$large_cat);
+	}
+	if( strstr($size, ",") ){
+		$size = explode(",",$size);
+	}
+	if( strstr($category, ",") ){
+		$category = explode(",",$category);
+	}
+	if( strstr($product_tag, ",") ){
+		$product_tag = explode(",",$product_tag);
+	}
+	if( strstr($price, ",") ){
+		$price = explode(",",$price);
+	}
+	if( strstr($ribs, ",") ){
+		$ribs = explode(",",$ribs);
+	}
+	$tax_names = array();
 
-	$return = "";
-
+	//パラメーターの調整
 	$args = array(
 		'post_type' =>array(
 			'product'
 		),
 		'posts_per_page' => $count,
-		'tax_query' =>array(
-			'relation' => 'AND', //タクソノミー同士の関係を指定
-			array (
-				'taxonomy' => 'large_cat',
-				'field' => 'slug',
-				'terms' => $cat1,
-				'operator' => 'and'
-			),
-			array (
-				'taxonomy' => 'product_tag',
-				'field' => 'slug',
-				'terms' => $cat2,
-				'operator' => 'and'
-			)
-		)
 	);
-	$return = "<section class='products_box product_col".$col."'>";
+
+	$args['tax_query']['relation'] = "AND";
+
+	if($large_cat){
+		$tax_names["large_cat"] = "large_cat";
+		$args['tax_query'][] = array (
+			'taxonomy' => 'large_cat',
+			'field' => 'slug',
+			'terms' => $large_cat,
+			'operator' => 'and'
+		);
+	}
+	if($size){
+		$tax_names["size"] = "size";
+		$args['tax_query'][] = array (
+			'taxonomy' => 'size',
+			'field' => 'slug',
+			'terms' => $size,
+			'operator' => 'and'
+		);
+	}
+	if($category){
+		$tax_names["category"] = "umbrella_category";
+		$args['tax_query'][] = array (
+			'taxonomy' => 'umbrella_category',
+			'field' => 'slug',
+			'terms' => $category,
+			'operator' => 'and'
+		);
+	}
+	if($product_tag){
+		$tax_names["product_tag"] = "product_tag";
+		$args['tax_query'][] = array (
+			'taxonomy' => 'product_tag',
+			'field' => 'slug',
+			'terms' => $product_tag,
+			'operator' => 'and'
+		);
+	}
+	if($price){
+		$tax_names["price"] = "price";
+		$args['tax_query'][] = array (
+			'taxonomy' => 'price',
+			'field' => 'slug',
+			'terms' => $price,
+			'operator' => 'and'
+		);
+	}
+	if($ribs){
+		$tax_names["ribs"] = "ribs";
+		$args['tax_query'][] = array (
+			'taxonomy' => 'ribs',
+			'field' => 'slug',
+			'terms' => $ribs,
+			'operator' => 'and'
+		);
+	}
+	$return = "";
+	//もしカテゴリ表示がONだったら
+	if( $showcat != "false" ){
+		$return.= "<ul class='product_categories'>";
+		$categories = $$whichcat;
+		foreach($categories as $category){
+			$category_info = get_term_by("slug", $category, $tax_names[$whichcat]);
+			$return.= "<li><a href='#'>".$category_info->name."</a></li>";
+		}
+		$return.= "</ul>";
+	}
+	$return.= "<section class='products_box product_col".$column."'>";
 	$the_query = new WP_Query( $args );
 	if( $the_query->have_posts() ):
 		while ( $the_query->have_posts() ): $the_query->the_post();

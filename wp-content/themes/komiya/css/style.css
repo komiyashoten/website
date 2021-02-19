@@ -5714,7 +5714,21 @@ h2.elHeading {
   background: #f1f1f1;
   border-radius: 20px;
 }
-.bgcolor1 .more a {
+.bgcolor1 .more a, .bgcolor1 .product_categories a {
   color: #000;
   background: #fff;
+}
+.product_categories {
+  display: flex;
+  justify-content: center;
+}
+.product_categories li {
+  margin: 10px 10px;
+}
+.product_categories li a {
+  padding: 5px 20px;
+  display: block;
+  background: #f1f1f1;
+  color: #000;
+  border-radius: 30px;
 }

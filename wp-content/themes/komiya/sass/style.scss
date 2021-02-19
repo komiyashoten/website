@@ -5572,9 +5572,29 @@ h2.elHeading {
 }
 
 .bgcolor1{
-	.more{	
+	.more,.product_categories{	
 		a{
 			color: #000;
 			background: #fff;
 		}
-	}}
+	}
+}
+
+.product_categories{
+	display: flex;
+	justify-content: center;
+
+	li{
+		margin: 10px 10px;
+
+		a{
+			padding: 5px 20px;
+			display: block;
+			background: #f1f1f1;
+			color: #000;
+			border-radius: 30px;
+		}
+	}
+}
+
+
