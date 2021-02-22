@@ -250,7 +250,11 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 	//もしカテゴリ表示がONだったら
 	if( $showcat != "false" ){
 		$return.= "<ul class='product_categories'>";
-		$categories = $$whichcat;
+		if( $$whichcat == "category" ){
+			$categorirs = "umbrella_category";
+		}else{
+			$categories = $$whichcat;
+		}
 		foreach($categories as $category){
 			$category_info = get_term_by("slug", $category, $tax_names[$whichcat]);
 			$return.= "<li><a href='#'>".$category_info->name."</a></li>";
