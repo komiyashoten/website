@@ -160,6 +160,10 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 			$atts
 		)
 	);
+
+	if( $whichcat == "category" ){
+		$whichcat = "umbrella_category";
+	}
 	//複数あるかどうか（カンマ区切りで判別）
 	if( strstr($large_cat, ",") ){
 		//複数指定があった場合arrayにする
@@ -250,11 +254,7 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 	//もしカテゴリ表示がONだったら
 	if( $showcat != "false" ){
 		$return.= "<ul class='product_categories'>";
-		if( $$whichcat == "category" ){
-			$categorirs = "umbrella_category";
-		}else{
-			$categories = $$whichcat;
-		}
+		$categories = $$whichcat;
 		foreach($categories as $category){
 			$category_info = get_term_by("slug", $category, $tax_names[$whichcat]);
 			$return.= "<li><a href='#'>".$category_info->name."</a></li>";

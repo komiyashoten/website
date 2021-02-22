@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: シリーズトップ
+Template Name: MEN/WOMENトップ
 Template Post Type: post, page
 */
 ?>
