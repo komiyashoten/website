@@ -444,7 +444,7 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 	endif;
 	wp_reset_postdata();
 	$return.="</section>";
-	$return.="<p class='more'><a href='#'>MORE</a></p>";
+	$return.="<p class='more'><a href='".get_bloginfo("url")."/large_cat/".$large_cat."/?umbrella_category=".$category."'>MORE</a></p>";
 	return $return;
 }
 add_shortcode('カテゴリ指定商品', 'ks_showProductsByCategory');
