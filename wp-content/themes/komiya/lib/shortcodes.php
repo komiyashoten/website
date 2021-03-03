@@ -583,9 +583,7 @@ function ks_showHeroSlider( $atts, $content = null ) {
 	$ids = explode(",",$ids);
 	//パラメーターの調整
 	$args = array(
-		'post_type' =>array(
-			'page'
-		),
+		'post_type' =>array('page','post'),
 		'posts_per_page' => $count,
 		'orderby'		 => "post__in",
 		'post__in'		 => $ids
