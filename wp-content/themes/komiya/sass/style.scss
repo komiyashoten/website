@@ -897,6 +897,12 @@ header .fix-navi-pc .fix-navi-logo{
 	display: inline;
 }
 
+.logged_in{
+	header .fix-navi-pc{
+		top: 32px;
+	}
+}
+
 
 .breadcrumbs {
 	font-size:1.2rem;
