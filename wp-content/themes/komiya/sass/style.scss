@@ -704,7 +704,7 @@ header {
 			&>ul{
 				&>li{
 					&:hover{
-						border-bottom: solid 3px rgba(255, 255, 255, .93);
+						border-bottom: solid 1px rgba(255, 255, 255, .93);
 
 						&.has_children{
 							background: rgba(255, 255, 255, .93);
