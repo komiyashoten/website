@@ -53,7 +53,7 @@
 		<li><a href="/category/recommend/">おすすめの傘</a><li>
 		<li><a href="/category/how-to-select/">傘の選び方</a><li>
 		<li><a href="/category/how-to-select/men/">メンズ傘の選び方</a><li>
-		<li><a href="/category/how-to-select/women/">ウィメンズ傘の選び方</a><li>
+		<li><a href="/category/how-to-select/women/">レディース傘の選び方</a><li>
 		<li><a href="/category/present/">贈り物・プレゼント</a><li>
 		<li><a href="/category/talk/">傘屋の雑談</a><li>
 		<li><a href="/category/bakurocho/">馬喰町のおすすめ</a><li>

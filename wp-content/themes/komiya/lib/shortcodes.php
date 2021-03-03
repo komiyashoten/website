@@ -468,7 +468,7 @@ function ks_showHowToPosts( $atts, $content = null ) {
 			'post'
 		),
 		'posts_per_page' => $count,
-		'category_name'  => "how-to-select+".$gender,
+		'category_name'  => "how-to-select-".$gender,
 	);
 
 	$return = "";
