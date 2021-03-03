@@ -704,15 +704,16 @@ header {
 			&>ul{
 				&>li{
 					&:hover{
-						background: rgba(255, 255, 255, .93);
-						border-radius: 10px;
+						border-bottom: solid 3px rgba(255, 255, 255, .93);
 
 						&.has_children{
+							background: rgba(255, 255, 255, .93);
 							border-radius: 10px 10px 0 0;
-						}
+							border-bottom: none;
 
-						a{
-							color: #000 !important;
+							a{
+								color: #000 !important;
+							}
 						}
 					}
 				}
