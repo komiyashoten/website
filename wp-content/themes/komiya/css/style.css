@@ -5598,6 +5598,9 @@ h2.elHeading {
 .products_box .product_box .product_thumbnail {
   width: 100%;
 }
+.products_box .product_box .product_thumbnail img {
+  width: 100%;
+}
 .products_box .product_box .product_content {
   width: 100%;
   padding: 0.5em;
