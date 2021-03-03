@@ -5747,9 +5747,6 @@ h2.elHeading {
   max-width: 1100px;
   margin: auto;
 }
-.blog_list2_3.gender_top li, .series_list2.gender_top li {
-  box-shadow: 0 0 8px rgba(0, 0, 0, .075);
-}
 .series_list2.gender_top {
   margin-bottom: 30px;
 }

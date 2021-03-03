@@ -51,7 +51,6 @@
 		<li><a href="/category/shop-blog/">東日本橋ショップより</a><li>
 		<li><a href="/category/making/">小宮商店の傘づくり</a><li>
 		<li><a href="/category/recommend/">おすすめの傘</a><li>
-		<li><a href="/category/how-to-select/">傘の選び方</a><li>
 		<li><a href="/category/how-to-select/men/">メンズ傘の選び方</a><li>
 		<li><a href="/category/how-to-select/women/">レディース傘の選び方</a><li>
 		<li><a href="/category/present/">贈り物・プレゼント</a><li>
