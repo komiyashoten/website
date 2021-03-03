@@ -1,6 +1,6 @@
 <div class="">
 	<ul>
-		<li><a href="/men/">MEN</a>
+		<li class="has_children"><a href="/men/">MEN</a>
 			<div class="dropdown_inner">
 				<h3><a href="/men/">MEN</a></h3>
 				<ul>
@@ -48,7 +48,7 @@
 				</ul>
 			</div>
 		</li>
-		<li><a href="/women/">WOMEN</a>
+		<li class="has_children"><a href="/women/">WOMEN</a>
 			<div class="dropdown_inner">
 				<h3><a href="/women/">WOMEN</a></h3>
 				<ul>

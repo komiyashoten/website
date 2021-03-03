@@ -52,6 +52,8 @@
 		<li><a href="/category/making/">小宮商店の傘づくり</a><li>
 		<li><a href="/category/recommend/">おすすめの傘</a><li>
 		<li><a href="/category/how-to-select/">傘の選び方</a><li>
+		<li><a href="/category/how-to-select/men/">傘の選び方（メンズ）</a><li>
+		<li><a href="/category/how-to-select/women/">傘の選び方（ウィメンズ）</a><li>
 		<li><a href="/category/present/">贈り物・プレゼント</a><li>
 		<li><a href="/category/talk/">傘屋の雑談</a><li>
 		<li><a href="/category/bakurocho/">馬喰町のおすすめ</a><li>

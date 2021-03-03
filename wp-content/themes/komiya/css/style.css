@@ -715,6 +715,16 @@ header .navi-pc {
     display: none;
   }
 }
+header .navi-pc > div > ul > li:hover {
+  background: rgba(255, 255, 255, .93);
+  border-radius: 10px;
+}
+header .navi-pc > div > ul > li:hover.has_children {
+  border-radius: 10px 10px 0 0;
+}
+header .navi-pc > div > ul > li:hover a {
+  color: #000 !important;
+}
 header .navi-pc li {
   display: inline-block;
 }
@@ -5732,4 +5742,14 @@ h2.elHeading {
   color: #000;
   border-radius: 30px;
   font-size: 0.9em;
+}
+.blog_list2_3.gender_top, .series_list2.gender_top {
+  max-width: 1100px;
+  margin: auto;
+}
+.blog_list2_3.gender_top li, .series_list2.gender_top li {
+  box-shadow: 0 0 8px rgba(0, 0, 0, .075);
+}
+.series_list2.gender_top {
+  margin-bottom: 30px;
 }

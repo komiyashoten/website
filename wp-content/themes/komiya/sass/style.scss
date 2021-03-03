@@ -699,6 +699,25 @@ header {
 		@include mq(lg) {
 			display: none;
 		}
+
+		&>div{
+			&>ul{
+				&>li{
+					&:hover{
+						background: rgba(255, 255, 255, .93);
+						border-radius: 10px;
+
+						&.has_children{
+							border-radius: 10px 10px 0 0;
+						}
+
+						a{
+							color: #000 !important;
+						}
+					}
+				}
+			}
+		}
 		li {
 			display:inline-block;
 			a{
@@ -713,6 +732,7 @@ header {
 					justify-content: center;
 				}
 			}
+
 			.dropdown_inner {
 				display: none;
 				position: absolute;
@@ -5595,6 +5615,23 @@ h2.elHeading {
 			border-radius: 30px;
 			font-size: .9em;
 		}
+	}
+}
+
+.blog_list2_3,.series_list2{
+	&.gender_top{
+		max-width: 1100px;	
+		margin: auto;	
+
+		li{
+			box-shadow: 0 0 8px rgba(0, 0, 0, .075);
+		}
+	}
+}
+
+.series_list2{
+	&.gender_top{
+		margin-bottom: 30px;
 	}
 }
 

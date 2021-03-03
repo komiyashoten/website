@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 <section class="blog_category">
 <section class="bgcolor1" style=" font-size: 1vw; padding: 0 5em 0 5em;">
-	<h2 class="blog_category_title"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-	</h2>
+	<h2 class="blog_category_title"><?php $cat = get_category( get_query_var("cat") ); echo $cat->name; ?></h2>
 	<ul class="blog_list2_3">
 	<?php if(have_posts()): while(have_posts()):the_post(); ?>
 		<li><?php if(has_post_thumbnail()): ?>
