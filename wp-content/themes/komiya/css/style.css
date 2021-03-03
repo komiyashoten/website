@@ -764,6 +764,9 @@ header .navi-pc li .dropdown_inner h3 {
   width: 120px;
   font-weight: bold;
 }
+header .navi-pc li .dropdown_inner h3 a {
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
 header .navi-pc li .dropdown_inner ul {
   display: inline-block;
   padding: 0 2.5em;
