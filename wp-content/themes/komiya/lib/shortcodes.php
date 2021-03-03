@@ -316,7 +316,7 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 				'column'	   => 4,
 				'large_cat'    => "men",
 				'category'     => "",
-				'product_tag'  => "popular",
+				'product_tag'  => "",
 			),
 			$atts
 		)
