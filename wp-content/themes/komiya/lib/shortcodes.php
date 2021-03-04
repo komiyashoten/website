@@ -492,7 +492,7 @@ function ks_showHowToPosts( $atts, $content = null ) {
 	endif;
 	wp_reset_postdata();
 	$return.="</ul>";
-	$return.="<p class='more'><a href='".get_bloginfo("url")."/category/how-to-select/".$gender."/'>MORE</a></p>";
+	$return.="<p class='more'><a href='".get_bloginfo("url")."/category/how-to-select-".$gender."/'>MORE</a></p>";
 	return $return;
 }
 add_shortcode('傘の選び方', 'ks_showHowToPosts');
