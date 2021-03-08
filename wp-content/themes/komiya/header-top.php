@@ -63,7 +63,7 @@ jQuery(function() {
 	<!-- <a href="https://www.komiyakasa.jp/clearance202007/" class="wrap-header-line-banner"><div class="header-line-banner">小宮商店 感謝セール開催  |  Thank You Sale 2020.7.10-12</div></a> -->
     <h1><a href="/"><img src="/wp-content/themes/komiya/img/<?php ks_logo(); ?>" alt="小宮商店 KOMIYA SHOTEN" class="logo_komiyashoten"></a></h1>
 	<div class="navi-pc">
-		<div class="fix-navi-logo"><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten2.jpg" alt="小宮商店"></a></div>
+		<div class="fix-navi-logo"><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten_black.png" alt="小宮商店"></a></div>
 		<?php get_template_part('navi'); ?>
 	</div>
 	<div class="navi-sp">
