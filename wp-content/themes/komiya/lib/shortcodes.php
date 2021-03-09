@@ -605,14 +605,16 @@ function ks_showHeroSlider( $atts, $content = null ) {
 			
 			$return.='<li>';
 			$return.='	<a href="'.$permalink.'">';
-			$return.='	<div class="text">';
-			$return.='		<h3>'.get_the_title().'</h3>';
 			if($post_type == "page"){
+				$return.='	<div class="text">';
+				$return.='		<h3>'.get_the_title().'</h3>';
 				$return.='		<div class="ruby">'.post_custom('ルビ').'</div>';
 				$return.='		<div class="catch">'.post_custom('リード').'</div>';
 			}else{
-				$return.='		<div class="ruby">'.get_post_meta(get_the_ID(),'まとめ英語タイトル',true).'</div>';
-				$return.='		<div class="catch">'.get_post_meta(get_the_ID(),'まとめ日本語タイトル',true).'</div>';
+				$return.='	<div class="summary_titles">';
+				$return.='		<div class="category">'.get_the_category(', ').'</div>';
+				$return.='		<h1>'.get_post_meta(get_the_ID(),'まとめ英語タイトル',true);
+				$return.='		<span>'.get_post_meta(get_the_ID(),'まとめ日本語タイトル',true).'</span></h1>';
 			}
 			$return.='		<div class="read">READ</div>';
 			$return.='	</div>';
