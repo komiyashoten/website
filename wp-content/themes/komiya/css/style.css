@@ -2121,6 +2121,34 @@ h3.section_title1 {
 .big_banner_top li {
   position: relative;
 }
+.big_banner_top li .summary .text .ruby {
+  font-size: 42px !important;
+  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 600px) {
+  .big_banner_top li .summary .text .ruby {
+    font-size: 1rem !important;
+  }
+}
+.big_banner_top li .summary .text .catch {
+  padding-top: 10px;
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .big_banner_top li .summary .text .catch {
+    font-size: 1.32rem;
+  }
+}
+.big_banner_top li .summary .text .cats {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
 .big_banner_top li a .cats, .big_banner_top li .summary .cats {
   display: flex;
   justify-content: center;
@@ -2162,34 +2190,6 @@ h3.section_title1 {
     margin-top: 11em;
     padding: 0 2em;
   }
-}
-.big_banner_top li a .text.summary .ruby, .big_banner_top li .summary .text.summary .ruby {
-  font-size: 42px;
-  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
-  letter-spacing: 0.15em;
-  margin-bottom: 15px;
-}
-@media screen and (max-width: 600px) {
-  .big_banner_top li a .text.summary .ruby, .big_banner_top li .summary .text.summary .ruby {
-    font-size: 1rem;
-  }
-}
-.big_banner_top li a .text.summary .catch, .big_banner_top li .summary .text.summary .catch {
-  padding-top: 10px;
-  display: block;
-  font-size: 18px;
-  letter-spacing: 0.03em;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 600px) {
-  .big_banner_top li a .text.summary .catch, .big_banner_top li .summary .text.summary .catch {
-    font-size: 1.32rem;
-  }
-}
-.big_banner_top li a .text.summary .category, .big_banner_top li .summary .text.summary .category {
-  font-size: 1.5rem;
-  text-decoration: underline;
-  margin-bottom: 20px;
 }
 .big_banner_top li a .text h3, .big_banner_top li .summary .text h3 {
   font-size: 4.1rem;

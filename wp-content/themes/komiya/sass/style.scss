@@ -2078,6 +2078,34 @@ h3.section_title1 {
 .big_banner_top {
 	li {
 		position: relative;
+		.summary{
+			.text{
+				.ruby {
+					font-size: 42px !important;
+					font-family: _font('mincho');
+					letter-spacing: .15em;
+					margin-bottom: 15px;
+					@include mq(md) {
+						font-size: 1rem !important;
+					}
+				}
+				.catch {
+					padding-top: 10px;
+					display: block;
+					font-size: 18px;
+					letter-spacing: .03em;
+					margin-bottom: 20px;
+					@include mq(md) {
+						font-size: 1.32rem;
+					}
+				}
+				.cats{
+					font-size: 1.5rem;
+					text-decoration: underline;
+					margin-bottom: 20px;
+				}
+			}
+		}
 		a, .summary {
 			.cats{
 				display: flex;
@@ -2119,33 +2147,6 @@ h3.section_title1 {
 					padding: 0 2em;
 				}
 
-				&.summary{
-					.ruby {
-						font-size: 42px;
-						font-family: _font('mincho');
-						letter-spacing: .15em;
-						margin-bottom: 15px;
-						@include mq(md) {
-							font-size: 1rem;
-						}
-					}
-					.catch {
-						padding-top: 10px;
-						display: block;
-						font-size: 18px;
-						letter-spacing: .03em;
-						margin-bottom: 20px;
-						@include mq(md) {
-							font-size: 1.32rem;
-						}
-					}
-
-					.category{
-						font-size: 1.5rem;
-						text-decoration: underline;
-						margin-bottom: 20px;
-					}
-				}
 				h3 {
 					font-size: 4.1rem;
 					line-height: 1.4;
