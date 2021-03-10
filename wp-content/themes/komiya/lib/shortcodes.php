@@ -602,25 +602,44 @@ function ks_showHeroSlider( $atts, $content = null ) {
 			$permalink = get_permalink($the_query->post->ID);
 			$cat = get_the_category(); $cat = $cat[0];
 			$post_type = get_post_type($the_query->post->ID);
+			$cats = get_the_category();
+			$cat_list = array();
+			// var_dump($cats);
+			foreach($cats as $cat){
+				$cat_list[$cat->cat_ID]["name"] = $cat->cat_name;
+				$cat_list[$cat->cat_ID]["url"] = get_category_link($cat->cat_ID);
+			}
 			
 			$return.='<li>';
-			$return.='	<a href="'.$permalink.'">';
 			if($post_type == "page"){
-				$return.='	<div class="text">';
-				$return.='		<h3>'.get_the_title().'</h3>';
-				$return.='		<div class="ruby">'.post_custom('ルビ').'</div>';
-				$return.='		<div class="catch">'.post_custom('リード').'</div>';
+				$return.='	<a href="'.$permalink.'">';
+				$return.='		<div class="text">';
+				$return.='			<h3>'.get_the_title().'</h3>';
+				$return.='			<div class="ruby">'.post_custom('ルビ').'</div>';
+				$return.='			<div class="catch">'.post_custom('リード').'</div>';
+				$return.='			<div class="read">READ</div>';
+				$return.='		</div>';
+				$return.='		<div class="black">&nbsp;</div>';
+				$return.='		<div class="bg"><img src="'.kmy_get_thumbnail($post->ID).'"></div>';
+				$return.='	</a>';
 			}else{
-				$return.='	<div class="summary_titles">';
-				$return.='		<div class="category">'.get_the_category(', ').'</div>';
-				$return.='		<h1>'.get_post_meta(get_the_ID(),'まとめ英語タイトル',true);
-				$return.='		<span>'.get_post_meta(get_the_ID(),'まとめ日本語タイトル',true).'</span></h1>';
-			}
-			$return.='		<div class="read">READ</div>';
-			$return.='	</div>';
-			$return.='	<div class="black">&nbsp;</div>';
-			$return.='	<div class="bg"><img src="'.kmy_get_thumbnail($post->ID).'"></div>';
-			$return.='</a></li>';
+				$return.='	<div class="summary"><div class="text">';
+				$return.='		<p class="cats">';
+				$cnt = 0;
+				foreach($cat_list as $cat){
+					if($cnt != 0 ){ $return.=", "; }
+					$return.='	<span><a href="'.$cat["url"].'">'.$cat["name"].'</a></span>';
+					$cnt++;
+				}
+				$return.='		</p>';
+				$return.='		<div class="ruby">'.get_post_meta(get_the_ID(),'まとめ英語タイトル',true).'</div>';
+				$return.='		<div class="catch">'.get_post_meta(get_the_ID(),'まとめ日本語タイトル',true).'</div>';
+				$return.='		<div class="read"><a href="'.$permalink.'">READ</a></div>';
+				$return.='	</div>';
+				$return.='	<div class="black">&nbsp;</div>';
+				$return.='	<div class="bg"><img src="'.kmy_get_thumbnail($post->ID).'"></div></div>';
+				}
+			$return.='</li>';
         endwhile;
 	endif;
 	wp_reset_postdata();

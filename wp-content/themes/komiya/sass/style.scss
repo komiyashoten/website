@@ -2078,7 +2078,26 @@ h3.section_title1 {
 .big_banner_top {
 	li {
 		position: relative;
-		a {
+		a, .summary {
+			.cats{
+				display: flex;
+				justify-content: center;
+
+				@include mq(md) {
+					flex-wrap: wrap;
+				}
+				span{
+					padding-left: 1em;
+					display: inline-block;
+					white-space: nowrap;
+
+					a{
+						color: #fff;
+						text-decoration: underline;
+						height: 1.5em;
+					}
+				}
+			}
 			&:hover .black {
 				opacity: 0.25;
 				-webkit-transition: all 0.5s;
@@ -2098,6 +2117,34 @@ h3.section_title1 {
 				@include mq(md) {
 					margin-top: 11em;
 					padding: 0 2em;
+				}
+
+				&.summary{
+					.ruby {
+						font-size: 42px;
+						font-family: _font('mincho');
+						letter-spacing: .15em;
+						margin-bottom: 15px;
+						@include mq(md) {
+							font-size: 1rem;
+						}
+					}
+					.catch {
+						padding-top: 10px;
+						display: block;
+						font-size: 18px;
+						letter-spacing: .03em;
+						margin-bottom: 20px;
+						@include mq(md) {
+							font-size: 1.32rem;
+						}
+					}
+
+					.category{
+						font-size: 1.5rem;
+						text-decoration: underline;
+						margin-bottom: 20px;
+					}
 				}
 				h3 {
 					font-size: 4.1rem;
@@ -5547,7 +5594,7 @@ h2.elHeading {
 	$sliderHeight: 700px;
 	.big_banner_top{
 		li{
-			a{
+			a, .summary{
 				height: $sliderHeight;
 				.text{
 					margin-top: 14em;
@@ -5565,6 +5612,11 @@ h2.elHeading {
 					display: inline-block;
 					font-size: .9em;
 					font-family: _font('gothic');
+
+					a{
+						height: auto;
+						color: #000;
+					}
 				}
 
 				.black{

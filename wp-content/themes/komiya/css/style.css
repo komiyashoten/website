@@ -2121,7 +2121,26 @@ h3.section_title1 {
 .big_banner_top li {
   position: relative;
 }
-.big_banner_top li a:hover .black {
+.big_banner_top li a .cats, .big_banner_top li .summary .cats {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .big_banner_top li a .cats, .big_banner_top li .summary .cats {
+    flex-wrap: wrap;
+  }
+}
+.big_banner_top li a .cats span, .big_banner_top li .summary .cats span {
+  padding-left: 1em;
+  display: inline-block;
+  white-space: nowrap;
+}
+.big_banner_top li a .cats span a, .big_banner_top li .summary .cats span a {
+  color: #fff;
+  text-decoration: underline;
+  height: 1.5em;
+}
+.big_banner_top li a:hover .black, .big_banner_top li .summary:hover .black {
   opacity: 0.25;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -2129,7 +2148,7 @@ h3.section_title1 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.big_banner_top li a .text {
+.big_banner_top li a .text, .big_banner_top li .summary .text {
   position: absolute;
   text-align: center;
   width: 100%;
@@ -2139,49 +2158,77 @@ h3.section_title1 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .text {
+  .big_banner_top li a .text, .big_banner_top li .summary .text {
     margin-top: 11em;
     padding: 0 2em;
   }
 }
-.big_banner_top li a .text h3 {
+.big_banner_top li a .text.summary .ruby, .big_banner_top li .summary .text.summary .ruby {
+  font-size: 42px;
+  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 600px) {
+  .big_banner_top li a .text.summary .ruby, .big_banner_top li .summary .text.summary .ruby {
+    font-size: 1rem;
+  }
+}
+.big_banner_top li a .text.summary .catch, .big_banner_top li .summary .text.summary .catch {
+  padding-top: 10px;
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .big_banner_top li a .text.summary .catch, .big_banner_top li .summary .text.summary .catch {
+    font-size: 1.32rem;
+  }
+}
+.big_banner_top li a .text.summary .category, .big_banner_top li .summary .text.summary .category {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.big_banner_top li a .text h3, .big_banner_top li .summary .text h3 {
   font-size: 4.1rem;
   line-height: 1.4;
   font-weight: normal;
   letter-spacing: 0.13em;
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .text h3 {
+  .big_banner_top li a .text h3, .big_banner_top li .summary .text h3 {
     font-size: 3.2rem;
   }
 }
-.big_banner_top li a .text .ruby {
+.big_banner_top li a .text .ruby, .big_banner_top li .summary .text .ruby {
   letter-spacing: 0.12em;
   font-size: 1.38rem;
   line-height: 1.1;
   letter-spacing: 0.08em;
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .text .ruby {
+  .big_banner_top li a .text .ruby, .big_banner_top li .summary .text .ruby {
     font-size: 1rem;
   }
 }
-.big_banner_top li a .text .catch {
+.big_banner_top li a .text .catch, .big_banner_top li .summary .text .catch {
   margin-top: 1.6em;
   font-size: 1.45rem;
   line-height: 1.9;
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .text .catch {
+  .big_banner_top li a .text .catch, .big_banner_top li .summary .text .catch {
     font-size: 1.32rem;
   }
 }
-.big_banner_top li a .text .arrow {
+.big_banner_top li a .text .arrow, .big_banner_top li .summary .text .arrow {
   position: relative;
   margin: 1.9em auto 0 auto;
   width: 33px;
 }
-.big_banner_top li a .text .arrow:before {
+.big_banner_top li a .text .arrow:before, .big_banner_top li .summary .text .arrow:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2197,12 +2244,12 @@ h3.section_title1 {
   border-radius: 50%;
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .text .arrow:before {
+  .big_banner_top li a .text .arrow:before, .big_banner_top li .summary .text .arrow:before {
     width: 27px;
     height: 27px;
   }
 }
-.big_banner_top li a .text .arrow:after {
+.big_banner_top li a .text .arrow:after, .big_banner_top li .summary .text .arrow:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2218,18 +2265,18 @@ h3.section_title1 {
   transform: rotate(45deg);
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .text .arrow:after {
+  .big_banner_top li a .text .arrow:after, .big_banner_top li .summary .text .arrow:after {
     left: 8px;
   }
 }
-.big_banner_top li a .bg img {
+.big_banner_top li a .bg img, .big_banner_top li .summary .bg img {
   width: 100%;
   height: 530px;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   /* IE対策 */
 }
-.big_banner_top li a .black {
+.big_banner_top li a .black, .big_banner_top li .summary .black {
   background: #000;
   position: absolute;
   width: 100%;
@@ -2242,7 +2289,7 @@ h3.section_title1 {
   transition: all 0.5s;
 }
 @media screen and (max-width: 600px) {
-  .big_banner_top li a .black {
+  .big_banner_top li a .black, .big_banner_top li .summary .black {
     opacity: 0.3;
   }
 }
@@ -5691,16 +5738,16 @@ h2.elHeading {
 .series header .top_sub_nav {
   display: none;
 }
-.series .big_banner_top li a {
+.series .big_banner_top li a, .series .big_banner_top li .summary {
   height: 700px;
 }
-.series .big_banner_top li a .text {
+.series .big_banner_top li a .text, .series .big_banner_top li .summary .text {
   margin-top: 14em;
 }
-.series .big_banner_top li a .text h3 {
+.series .big_banner_top li a .text h3, .series .big_banner_top li .summary .text h3 {
   margin-bottom: 10px;
 }
-.series .big_banner_top li a .read {
+.series .big_banner_top li a .read, .series .big_banner_top li .summary .read {
   margin-top: 20px;
   color: #000;
   background: #fff;
@@ -5709,10 +5756,14 @@ h2.elHeading {
   font-size: 0.9em;
   font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-.series .big_banner_top li a .black {
+.series .big_banner_top li a .read a, .series .big_banner_top li .summary .read a {
+  height: auto;
+  color: #000;
+}
+.series .big_banner_top li a .black, .series .big_banner_top li .summary .black {
   height: 700px;
 }
-.series .big_banner_top li a .bg img {
+.series .big_banner_top li a .bg img, .series .big_banner_top li .summary .bg img {
   height: 700px;
 }
 .series .bx-wrapper {
