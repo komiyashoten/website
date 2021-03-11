@@ -2112,6 +2112,17 @@ h3.section_title1 {
 					text-decoration: underline;
 					margin-bottom: 20px;
 				}
+				.read{
+					padding: 0 !important;
+					a{
+						display: block;
+						color: #000;
+						background: #fff;
+						padding: 5px 20px;
+						display: inline-block;
+						font-size: 0.9em;
+					}
+				}
 			}
 		}
 		a, .summary {
