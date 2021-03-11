@@ -829,6 +829,9 @@ header {
 		height: 50px;
 		padding: 10px 0;
 		text-align: center;
+		img{
+			width: 60% !important;
+		}
 		a {
 			color: #333;
 		}
@@ -2090,6 +2093,7 @@ h3.section_title1 {
 					@include mq(md) {
 						font-size: 42px !important;
 						overflow-wrap:  break-word;
+						line-height: 1.4 !important;
 					}
 				}
 				.catch {
@@ -4847,6 +4851,16 @@ h2.elHeading {
 
 .backtotop {
 	text-align: center;
+}
+#backtotop {
+	h1{
+		.logo_komiyashoten{
+			@include mq() {
+				display: none !important;
+
+			}
+		}
+	}
 }
 
 /* hg作成ショートコード用デザイン */
