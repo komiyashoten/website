@@ -2167,6 +2167,7 @@ h3.section_title1 {
   color: #fff;
   text-decoration: underline;
   height: 1.5em;
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 .big_banner_top li a:hover .black, .big_banner_top li .summary:hover .black {
   opacity: 0.25;

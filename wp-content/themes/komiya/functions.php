@@ -2,6 +2,7 @@
 include('lib/custom-functions.php');
 include('lib/shortcodes.php');
 include('lib/custom-fields.php');
+include('lib/custom-post-type.php');
 
 // ウィジェットエリア
 // サイドバーのウィジェット
