@@ -2092,7 +2092,7 @@ h3.section_title1 {
 				.catch {
 					padding-top: 10px;
 					display: block;
-					font-size: 18px;
+					font-size: 18px !important;
 					letter-spacing: .03em;
 					margin-bottom: 20px;
 					@include mq(md) {
@@ -2100,7 +2100,7 @@ h3.section_title1 {
 					}
 				}
 				.cats{
-					font-size: 1.5rem;
+					font-size: 12px;
 					text-decoration: underline;
 					margin-bottom: 20px;
 				}
