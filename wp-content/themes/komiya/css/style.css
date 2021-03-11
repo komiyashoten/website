@@ -2126,10 +2126,12 @@ h3.section_title1 {
   font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   letter-spacing: 0.15em;
   margin-bottom: 15px;
+  line-height: 1.9 !important;
 }
 @media screen and (max-width: 600px) {
   .big_banner_top li .summary .text .ruby {
-    font-size: 1rem !important;
+    font-size: 42px !important;
+    overflow-wrap: break-word;
   }
 }
 .big_banner_top li .summary .text .catch {
@@ -2137,6 +2139,7 @@ h3.section_title1 {
   display: block;
   font-size: 18px !important;
   letter-spacing: 0.03em;
+  margin-top: 0px !important;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 600px) {
