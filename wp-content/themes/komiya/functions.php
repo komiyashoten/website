@@ -432,3 +432,16 @@ function posts_custom_id_columns($column_name, $id){
 		echo $id;
 	}
 }
+
+add_action('current_screen','hide_permalink');
+function hide_permalink(){
+
+    $current_screen = get_current_screen();
+
+    if(isset($current_screen) && $current_screen->post_type === 'topfeature') {
+
+        $style = '<style>#edit-slug-box {display: none !important; }</style>';
+
+        echo $style;
+    }
+}

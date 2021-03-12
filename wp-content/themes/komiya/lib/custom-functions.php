@@ -1,7 +1,12 @@
 <?php
 
 //該当記事のサムネイル画像を取得する
-function kmy_get_thumbnail( $post_id = '', $opt = '' ){
+function kmy_get_thumbnail( $post_id = '', $opt = '', $replace = '' ){
+    //もしpost_id指定が文字列だった場合、スラッグからidを取得する
+    if( is_string($post_id) ){
+        $get_post_id = get_page_by_path($post_id);
+        $post_id = $get_post_id->ID;
+    }
 	if( !isset($post_id) ) $post_id = get_the_ID();
 	if( !isset($opt) ) $opt = 'full';
 	$thumbnail_id = get_post_thumbnail_id($post_id);
@@ -11,7 +16,12 @@ function kmy_get_thumbnail( $post_id = '', $opt = '' ){
 	$height = $image[2]*0.3;
 	
 	if(!isset($src)){
-		$src = null;
+        if( !$replace ){
+            $src = null;
+        }else{
+            $src = $replace;
+        }
+		
 	}
 	
 	return $src;

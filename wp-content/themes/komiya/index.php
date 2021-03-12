@@ -44,13 +44,13 @@
 			<a href="/komiyashoten-men/"><div class="top_men_women_text"><img src="/wp-content/themes/komiya/img/top_men.png" alt="MEN">
 			<p>小宮商店 メンズ・シリーズ</p></div>
 			<div class="black">&nbsp;</div>
-			<img src="/wp-content/themes/komiya/img/top_005.jpg" class="top_men_women_bg"></a>
+			<img src="<?php echo kmy_get_thumbnail("komiyashoten-men","full","/wp-content/themes/komiya/img/top_005.jpg"); ?>" class="top_men_women_bg"></a>
 		</li>
 		<li>
 			<a href="/komiyashoten-women/"><div class="top_men_women_text"><img src="/wp-content/themes/komiya/img/top_women.png" alt="WOMEN">
 			<p>小宮商店 ウィメンズ・シリーズ</p></div>
 			<div class="black">&nbsp;</div>
-			<img src="/wp-content/themes/komiya/img/top_008.jpg" class="top_men_women_bg"></a>
+			<img src="<?php echo kmy_get_thumbnail("komiyashoten-women","full","/wp-content/themes/komiya/img/top_008.jpg"); ?>" class="top_men_women_bg"></a>
 		</li>
 	</ul>
 </section>

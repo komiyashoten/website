@@ -1537,8 +1537,12 @@ header .fix-navi-pc .fix-navi-logo{
 	li {
 		position: relative;
 		text-align: center;
+		flex-basis: 50%;
+		height: 530px;
+
 		@include mq(md) {
 			width: 100%;
+			flex-basis: 100%;
 			height: 280px;
 		}
 		a:hover .black {
@@ -1552,13 +1556,18 @@ header .fix-navi-pc .fix-navi-logo{
 		.top_men_women_text {
 			position: absolute;
 			width: 100%;
+			height: 80px;
 			z-index: 1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			
 			img {
 				height: 25px;
-				margin-top: 12.8vw;
 				@include mq(md) {
 					height: 23px;
-					margin-top: 27.5vw;
 				}
 			}
 			p {
@@ -1589,6 +1598,8 @@ header .fix-navi-pc .fix-navi-logo{
 		}
 		.top_men_women_bg {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			@include mq(md) {
 				height: 280px;
 				object-fit: cover;
