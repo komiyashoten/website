@@ -649,6 +649,65 @@ function ks_showHeroSlider( $atts, $content = null ) {
 }
 add_shortcode('ヒーロースライダー', 'ks_showHeroSlider');
 
+//TOPスライダー
+//メン・ウィメントップのスライダーの表示
+function ks_showTopSlider( $atts, $content = null ) {
+	extract(
+		shortcode_atts(
+			array(
+				'count'        => -1,
+				'ids'          => "",
+			),
+			$atts
+		)
+	);
+	if( $ids ){
+		$ids = explode(",",$ids);
+		$args = array(
+			'posts_per_page' => $count,
+			'orderby'		 => "post__in",
+			'post__in'		 => $ids
+		);
+	}else{
+		$args = array(
+			'post_type' 	 => "topFeature",
+			'posts_per_page' => $count,
+			'orderby'		 => "date",
+			'order'			 => "DESC",
+		);
+	}
+
+	$return = "<div class='top_main'>";
+	$return.= "<ul class='big_main_slide bxslider'>";
+	$the_query = new WP_Query( $args );
+	if( $the_query->have_posts() ):
+		while ( $the_query->have_posts() ): $the_query->the_post();
+			$post = $the_query->post;
+			$link_id = get_post_meta($post->ID,"link", true);
+			$permalink = get_permalink($link_id);
+			$slider_image_info = wp_get_attachment_image_src( get_post_meta($post->ID,"slider_img", true), 'full' );
+			$slider_image = $slider_image_info[0];
+			$overflow_image_info = wp_get_attachment_image_src( get_post_meta($post->ID,"overflow_img", true), 'full' );
+			$overflow_image = $overflow_image_info[0];
+			// var_dump($cats);
+			$return.='<li>';
+			$return.='<a href="'.$permalink.'">';
+			$return.='	<div class="text"><img src="'.$overflow_image.'" alt="'.get_the_title($link_id).'" class="'.get_post_meta($post->ID,"overflow_position", true).'"></div>';
+			$return.='	<div class="black">&nbsp;</div>';
+			$return.='	<div class="bg"><img src="'.$slider_image.'" alt="'.get_the_title($link_id).'"></div>';
+			$return.='</a>';
+			$return.='</li>';
+        endwhile;
+	endif;
+	wp_reset_postdata();
+	$return.="</ul>";
+	$return.="</div>";
+	return $return;
+}
+add_shortcode('TOPスライダー', 'ks_showTopSlider');
+
+
+
 // シリーズのタグ一覧
 function ks_showSeriesTags( $atts, $content = null ) {
 	extract(

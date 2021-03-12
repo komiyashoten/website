@@ -4,34 +4,10 @@
 
 <section>
 
-<div class="top_main">
-	<ul class="big_main_slide bxslider">
-		<li><a href="/three/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch028.png" alt="" class="left_top"></div>
-				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_022.jpg" alt=""></div>
-			</a>
-		</li>
-		<li><a href="/komiyashoten-men/forest/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch029.png" alt="" class="left_top"></div>
-				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_023.jpg" alt=""></div>
-			</a>
-		</li>
-		<li><a href="/komiyashoten-men/miratoray-men/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch030.png" alt="" class="right_top"></div>
-				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_009.jpg" alt=""></div>
-			</a>
-		</li>
-		<li><a href="/about/how-its-made/">
-				<div class="text"><img src="/wp-content/themes/komiya/img/top_catch003.png" alt="職人の手作り傘ならではの奥深く細やかな仕事ぶり、クラフトマンシップをどうぞご覧ください。" class="right_top"> </div>
-				<div class="black">&nbsp;</div>
-				<div class="bg"><img src="/wp-content/themes/komiya/img/top_main003.jpg" alt="洋傘職人 小宮商店"></div>
-			</a>
-		</li>
-	</ul>
-</div>
+<?php
+	echo do_shortcode("[TOPスライダー]");
+?>
+
 </section>
 <section class="bgcolor1 top_about_handmade">
 	<ul class="top_about">
