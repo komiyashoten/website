@@ -1263,12 +1263,16 @@ header .fix-navi-pc .fix-navi-logo{
 						h2{
 							line-height: 1.5;
 						}
+						.read{
+							text-align: center;
+						}
 					}
 
 					.read{
 						font-size: .9em;
 						padding: .25em;
 						border: solid 1px #fff;
+						display: inline-block;
 					}
 				}
 				img, .overflow_text {
