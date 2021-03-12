@@ -1235,6 +1235,9 @@ header .fix-navi-pc .fix-navi-logo {
 .big_main_slide li a .text .overflow_text.static * {
   text-align: center;
 }
+.big_main_slide li a .text .overflow_text.static h2 {
+  line-height: 1.5;
+}
 .big_main_slide li a .text img, .big_main_slide li a .text .overflow_text {
   width: 450px;
   position: absolute;
