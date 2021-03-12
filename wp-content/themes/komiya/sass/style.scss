@@ -1243,7 +1243,14 @@ header .fix-navi-pc .fix-navi-logo{
 				z-index: 999;
 				@include mq(md) {
 				}
-				img {
+				.overflow_text{
+					height: 250px;
+					&.left_top, &.right_top{
+						-ms-writing-mode: tb-rl;
+						writing-mode: vertical-rl;
+					}
+				}
+				img, .overflow_text {
 					width: 450px;
 					position: absolute;
 					top: 0;
@@ -1251,6 +1258,11 @@ header .fix-navi-pc .fix-navi-logo{
 					right: 0;
 					bottom: 0;
 					margin: auto;
+					color: #fff;
+					font-family: _font('mincho');
+					*{
+						font-family: _font('mincho');
+					}
 					@include mq(md) {
 						padding: 0.7em;
 						top: 135px;

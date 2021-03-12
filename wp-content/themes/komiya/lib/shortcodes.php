@@ -650,7 +650,6 @@ function ks_showHeroSlider( $atts, $content = null ) {
 add_shortcode('ヒーロースライダー', 'ks_showHeroSlider');
 
 //TOPスライダー
-//メン・ウィメントップのスライダーの表示
 function ks_showTopSlider( $atts, $content = null ) {
 	extract(
 		shortcode_atts(
@@ -692,7 +691,13 @@ function ks_showTopSlider( $atts, $content = null ) {
 			// var_dump($cats);
 			$return.='<li>';
 			$return.='<a href="'.$permalink.'">';
-			$return.='	<div class="text"><img src="'.$overflow_image.'" alt="'.get_the_title($link_id).'" class="'.get_post_meta($post->ID,"overflow_position", true).'"></div>';
+			$return.='	<div class="text">';
+			if(get_post_meta($post->ID,"overflow_or_html", true) == "html"){
+				$return.='	<div class="overflow_text '.get_post_meta($post->ID,"overflow_position", true).'">'.get_the_content($post->ID).'</div>';
+			}else{
+				$return.='	<img src="'.$overflow_image.'" alt="'.get_the_title($link_id).'" class="'.get_post_meta($post->ID,"overflow_position", true).'">';
+			}
+			$return.='	</div>';
 			$return.='	<div class="black">&nbsp;</div>';
 			$return.='	<div class="bg"><img src="'.$slider_image.'" alt="'.get_the_title($link_id).'"></div>';
 			$return.='</a>';

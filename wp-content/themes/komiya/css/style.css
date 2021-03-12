@@ -1220,7 +1220,14 @@ header .fix-navi-pc .fix-navi-logo {
 }
 @media screen and (max-width: 600px) {
 }
-.big_main_slide li a .text img {
+.big_main_slide li a .text .overflow_text {
+  height: 250px;
+}
+.big_main_slide li a .text .overflow_text.left_top, .big_main_slide li a .text .overflow_text.right_top {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+.big_main_slide li a .text img, .big_main_slide li a .text .overflow_text {
   width: 450px;
   position: absolute;
   top: 0;
@@ -1228,9 +1235,14 @@ header .fix-navi-pc .fix-navi-logo {
   right: 0;
   bottom: 0;
   margin: auto;
+  color: #fff;
+  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.big_main_slide li a .text img *, .big_main_slide li a .text .overflow_text * {
+  font-family: 'Noto Serif JP', "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 @media screen and (max-width: 600px) {
-  .big_main_slide li a .text img {
+  .big_main_slide li a .text img, .big_main_slide li a .text .overflow_text {
     padding: 0.7em;
     top: 135px;
     left: inherit;
@@ -1238,26 +1250,26 @@ header .fix-navi-pc .fix-navi-logo {
     bottom: inherit;
   }
 }
-.big_main_slide li a .text img.left_top {
+.big_main_slide li a .text img.left_top, .big_main_slide li a .text .overflow_text.left_top {
   top: 53px;
   left: 6.5vw;
   right: inherit;
   bottom: inherit;
 }
 @media screen and (max-width: 600px) {
-  .big_main_slide li a .text img.left_top {
+  .big_main_slide li a .text img.left_top, .big_main_slide li a .text .overflow_text.left_top {
     top: 135px;
     left: inherit;
   }
 }
-.big_main_slide li a .text img.right_top {
+.big_main_slide li a .text img.right_top, .big_main_slide li a .text .overflow_text.right_top {
   top: 53px;
   left: inherit;
   right: 6.5vw;
   bottom: inherit;
 }
 @media screen and (max-width: 600px) {
-  .big_main_slide li a .text img.right_top {
+  .big_main_slide li a .text img.right_top, .big_main_slide li a .text .overflow_text.right_top {
     top: 135px;
     right: inherit;
   }
