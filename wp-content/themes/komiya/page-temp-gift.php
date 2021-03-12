@@ -122,7 +122,7 @@ Template Post Type: post, page
 		</div>
 		<span id="wholesale" style="line-height: 0;">&nbsp;</span>
 		<div class="section_title2">大口ギフトのご依頼も承ります。</div>
-		<section class="margin2 center">
+		<section class="margin1 center">
 			<p>学校の卒業記念、会社の創立記念などの贈り物に<br>
 			オリジナル傘のプレゼントはいかがでしょうか？<br>
 			<br>
@@ -137,6 +137,16 @@ Template Post Type: post, page
 			<br>
 			小ロットから承っておりますので<br>
 			お気軽にご相談くださいませ。</p>
+		</section>
+		<section>
+			<div class="banner5">
+				<a href="/gift/catalog-gift/" class="clear"><img src="https://www.komiyakasa.jp/wp-content/uploads/2021/03/c01.jpg">
+					<div class="text">
+						<div class="catch">贈る方のご希望の色の傘が届く</div>
+						<div class="link">カタログギフト</div>
+					</div>
+				</a>
+			</div>
 		</section>
     </section>
 </section>
