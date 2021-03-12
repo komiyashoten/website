@@ -1253,10 +1253,14 @@ header .fix-navi-pc .fix-navi-logo{
 							text-align: left;
 							line-height: 1.5;
 						}
+						.read{
+							margin-left: 10px;
+						}
 					}
 
 					&.static{
 						height: 300px;
+						text-align: center;
 						*{
 							text-align: center;
 						}
