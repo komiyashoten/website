@@ -1226,6 +1226,7 @@ header .fix-navi-pc .fix-navi-logo {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
   }
 }
 .big_main_slide li a .text .overflow_text.left_top, .big_main_slide li a .text .overflow_text.right_top {
