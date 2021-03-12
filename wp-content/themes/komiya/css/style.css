@@ -1241,6 +1241,16 @@ header .fix-navi-pc .fix-navi-logo {
 .big_main_slide li a .text .overflow_text.left_top .read, .big_main_slide li a .text .overflow_text.right_top .read {
   margin-right: 20px;
 }
+@media screen and (max-width: 600px) {
+  .big_main_slide li a .text .overflow_text.left_top, .big_main_slide li a .text .overflow_text.right_top {
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 600px) {
+  .big_main_slide li a .text .overflow_text {
+    padding: 0;
+  }
+}
 .big_main_slide li a .text .overflow_text.static {
   height: 300px;
   text-align: center;

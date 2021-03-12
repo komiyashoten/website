@@ -1262,6 +1262,12 @@ header .fix-navi-pc .fix-navi-logo{
 						.read{
 							margin-right: 20px;
 						}
+						@include mq(md) {
+							align-items: flex-start;
+						}
+					}
+					@include mq(md) {
+						padding: 0;
 					}
 
 					&.static{
