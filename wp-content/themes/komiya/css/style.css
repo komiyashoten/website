@@ -1221,7 +1221,7 @@ header .fix-navi-pc .fix-navi-logo {
 @media screen and (max-width: 600px) {
 }
 .big_main_slide li a .text .overflow_text {
-  height: 250px;
+  height: 300px;
 }
 .big_main_slide li a .text .overflow_text.left_top, .big_main_slide li a .text .overflow_text.right_top {
   -ms-writing-mode: tb-rl;
