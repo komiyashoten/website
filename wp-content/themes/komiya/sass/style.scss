@@ -1244,7 +1244,12 @@ header .fix-navi-pc .fix-navi-logo{
 				@include mq(md) {
 				}
 				.overflow_text{
-
+					@include mq(md) {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+					}
 					&.left_top, &.right_top{
 						-ms-writing-mode: tb-rl;
 						writing-mode: vertical-rl;
