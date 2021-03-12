@@ -1227,6 +1227,7 @@ header .fix-navi-pc .fix-navi-logo {
 .big_main_slide li a .text .overflow_text.left_top h2, .big_main_slide li a .text .overflow_text.right_top h2 {
   margin-left: 20px;
   text-align: left;
+  line-height: 1.5;
 }
 .big_main_slide li a .text .overflow_text.static {
   height: 300px;
