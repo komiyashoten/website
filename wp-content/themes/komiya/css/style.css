@@ -1238,6 +1238,11 @@ header .fix-navi-pc .fix-navi-logo {
 .big_main_slide li a .text .overflow_text.static h2 {
   line-height: 1.5;
 }
+.big_main_slide li a .text .overflow_text .read {
+  font-size: 0.9em;
+  padding: 0.25em;
+  border: solid 1px #fff;
+}
 .big_main_slide li a .text img, .big_main_slide li a .text .overflow_text {
   width: 450px;
   position: absolute;
