@@ -1227,6 +1227,9 @@ header .fix-navi-pc .fix-navi-logo {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
 }
+.big_main_slide li a .text .overflow_text.left_top h2, .big_main_slide li a .text .overflow_text.right_top h2 {
+  margin-left: 20px;
+}
 .big_main_slide li a .text img, .big_main_slide li a .text .overflow_text {
   width: 450px;
   position: absolute;

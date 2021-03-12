@@ -1248,6 +1248,9 @@ header .fix-navi-pc .fix-navi-logo{
 					&.left_top, &.right_top{
 						-ms-writing-mode: tb-rl;
 						writing-mode: vertical-rl;
+						h2{
+							margin-left: 20px;
+						}
 					}
 				}
 				img, .overflow_text {
