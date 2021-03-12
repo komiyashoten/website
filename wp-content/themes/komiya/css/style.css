@@ -1226,6 +1226,13 @@ header .fix-navi-pc .fix-navi-logo {
 }
 .big_main_slide li a .text .overflow_text.left_top h2, .big_main_slide li a .text .overflow_text.right_top h2 {
   margin-left: 20px;
+  text-align: left;
+}
+.big_main_slide li a .text .overflow_text.static {
+  height: 300px;
+}
+.big_main_slide li a .text .overflow_text.static * {
+  text-align: center;
 }
 .big_main_slide li a .text img, .big_main_slide li a .text .overflow_text {
   width: 450px;

@@ -1250,6 +1250,14 @@ header .fix-navi-pc .fix-navi-logo{
 						writing-mode: vertical-rl;
 						h2{
 							margin-left: 20px;
+							text-align: left;
+						}
+					}
+
+					&.static{
+						height: 300px;
+						*{
+							text-align: center;
 						}
 					}
 				}
