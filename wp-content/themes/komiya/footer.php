@@ -1,7 +1,7 @@
 <!--<section class="center" style="padding: 3em 0;">
 <a href="https://www.komiyakasa.jp/super-sale-201906/" class="only_pc"><img src="https://www.komiyakasa.jp/wp-content/uploads/2020/09/banner-202009-a-1.jpg" width="980"></a>
 <a href="https://www.komiyakasa.jp/super-sale-201906/" class="only_sp" style="padding: 0 25px;"><img src="https://www.komiyakasa.jp/wp-content/uploads/2020/09/banner-202009-b-1.jpg" width="980"></a>
-</section>-->
+</section> test -->
 <section class="instagram_feed clear"><?php echo do_shortcode( '[instagram-feed]' ); ?></section>
 <footer>
 <?php wp_footer(); ?>
