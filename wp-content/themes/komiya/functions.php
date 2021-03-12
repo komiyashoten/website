@@ -445,3 +445,13 @@ function hide_permalink(){
         echo $style;
     }
 }
+
+//管理画面に追加CSSを追加
+function my_admin_style() {
+	echo '<style>
+	.acf-field .acf-input{
+		overflow: hidden;
+	}
+	</style>'.PHP_EOL;
+  }
+  add_action('admin_print_styles', 'my_admin_style');
