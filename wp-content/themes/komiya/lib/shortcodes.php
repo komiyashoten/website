@@ -751,6 +751,56 @@ function ks_showSeriesTags( $atts, $content = null ) {
 add_shortcode('タグ一覧', 'ks_showSeriesTags');
 
 
+// カテゴリのタグ一覧
+function ks_showCategoriesTags( $atts, $content = null ) {
+	extract(
+		shortcode_atts(
+			array(
+				'gender'       => "men",
+				'color'        => "",
+			),
+			$atts
+		)
+	);
+
+	//商品の投稿を全て取得して、genderで指定したカテゴリに属しているlarge_catを有する投稿のカテゴリ名を取得する
+	$args = array(
+		'post_type' 	 => "product",
+		'posts_per_page' => -1,
+	);
+
+	$categories = array();
+
+	$the_query = new WP_Query( $args );
+	if( $the_query->have_posts() ):
+		while ( $the_query->have_posts() ): $the_query->the_post();
+			//投稿のカテゴリを取得
+			$cats = get_the_terms( $the_query->post->ID, 'umbrella_category' );
+			$large_cats = get_the_terms( $the_query->post->ID, 'large_cat' );
+			foreach($large_cats as $large_cat){
+				if( $large_cat->slug == $gender ){
+					foreach($cats as $cat){
+						$categories[$cat->term_id]["slug"] = $cat->slug;
+						$categories[$cat->term_id]["name"] = $cat->name;
+					}
+				}
+			}
+		endwhile;
+
+		$return = '<div class="banner2'.$color.'">';
+		foreach($categories as $category){
+			$return.="<a href='".get_bloginfo("url")."/large_cat/".$gender."/?umbrella_category=".$category["slug"]."'>".$category["name"]."</a>";
+		}
+		$return.= '</div>';
+	endif;
+	wp_reset_postdata();
+	
+
+	return $return;
+}
+add_shortcode('カテゴリタグ一覧', 'ks_showCategoriesTags');
+
+
 // 囲いショートコード - 見出し
 function ks_showTopHeadding( $atts, $content = null ) {
 	// ショートコードを内部で出力
