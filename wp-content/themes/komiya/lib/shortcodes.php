@@ -391,7 +391,7 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 	$return = "";
 
 	if($title){
-		$return.= "<h2 class='men_women_series_cat_tit'><span>".$cat_name."</span></h2>";
+		$return.= "<h2 class='men_women_series_cat_tit'><span>".$title."</span></h2>";
 	}
 	$return.= "<section class='products_box product_col".$column."'>";
 	$the_query = new WP_Query( $args );
