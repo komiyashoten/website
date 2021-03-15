@@ -1254,14 +1254,6 @@ header .fix-navi-pc .fix-navi-logo{
 					&.left_top, &.right_top{
 						-ms-writing-mode: tb-rl;
 						writing-mode: vertical-rl;
-						h2{
-							margin-left: 20px;
-							text-align: left;
-							line-height: 1.5;
-						}
-						.read{
-							margin-right: 20px;
-						}
 						@include mq(md) {
 							align-items: flex-start;
 							padding: 0;
@@ -1273,7 +1265,7 @@ header .fix-navi-pc .fix-navi-logo{
 
 					&.left_top{
 						&>div{
-							margin-top: 5px;
+							margin-top: 10px;
 							margin-right: 50px;
 						}
 						.caption{
@@ -1304,7 +1296,7 @@ header .fix-navi-pc .fix-navi-logo{
 
 					&.right_top{
 						&>div{
-							margin-top: 5px;
+							margin-top: 10px;
 							margin-right: 25px;
 						}
 						.caption{

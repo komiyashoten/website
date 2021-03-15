@@ -1233,14 +1233,6 @@ header .fix-navi-pc .fix-navi-logo {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
 }
-.big_main_slide li a .text .overflow_text.left_top h2, .big_main_slide li a .text .overflow_text.right_top h2 {
-  margin-left: 20px;
-  text-align: left;
-  line-height: 1.5;
-}
-.big_main_slide li a .text .overflow_text.left_top .read, .big_main_slide li a .text .overflow_text.right_top .read {
-  margin-right: 20px;
-}
 @media screen and (max-width: 600px) {
   .big_main_slide li a .text .overflow_text.left_top, .big_main_slide li a .text .overflow_text.right_top {
     align-items: flex-start;
@@ -1253,7 +1245,7 @@ header .fix-navi-pc .fix-navi-logo {
   }
 }
 .big_main_slide li a .text .overflow_text.left_top > div {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-right: 50px;
 }
 .big_main_slide li a .text .overflow_text.left_top .caption {
@@ -1281,7 +1273,7 @@ header .fix-navi-pc .fix-navi-logo {
   padding: 0.8em 0.3em;
 }
 .big_main_slide li a .text .overflow_text.right_top > div {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-right: 25px;
 }
 .big_main_slide li a .text .overflow_text.right_top .caption {
