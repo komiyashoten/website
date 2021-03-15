@@ -1262,6 +1262,52 @@ header .fix-navi-pc .fix-navi-logo {
   letter-spacing: 0.2em;
   margin-left: 1.4em;
 }
+.big_main_slide li a .text .overflow_text.left_top h2 {
+  font-size: 3.65rem;
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  margin: -0.08em 0 0 0.6em;
+}
+.big_main_slide li a .text .overflow_text.left_top p {
+  font-size: 1.5rem;
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 2.2em;
+  letter-spacing: 0.11em;
+  margin-left: 0.3em;
+}
+.big_main_slide li a .text .overflow_text.left_top .read {
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.8em 0.3em;
+}
+.big_main_slide li a .text .overflow_text.right_top > div {
+  margin-top: 5px;
+  margin-right: 25px;
+}
+.big_main_slide li a .text .overflow_text.right_top .caption {
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  margin-left: 1.4em;
+}
+.big_main_slide li a .text .overflow_text.right_top h2 {
+  font-size: 3.65rem;
+  line-height: 1.7;
+  letter-spacing: 0.09em;
+  margin: -0.08em 0 0 0.6em;
+}
+.big_main_slide li a .text .overflow_text.right_top p {
+  font-size: 1.5rem;
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 2.2em;
+  letter-spacing: 0.11em;
+  margin-left: 0.3em;
+}
+.big_main_slide li a .text .overflow_text.right_top .read {
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.8em 0.3em;
+}
 .big_main_slide li a .text .overflow_text.static {
   height: 300px;
   text-align: center;

@@ -699,7 +699,7 @@ function ks_showTopSlider( $atts, $content = null ) {
 			$return.='<a href="'.$permalink.'">';
 			$return.='	<div class="text">';
 			if(get_post_meta($post->ID,"overflow_or_html", true) == "html"){
-				$return.='	<div class="overflow_text '.get_post_meta($post->ID,"overflow_position", true).'">'.get_the_content($post->ID).'</div>';
+				$return.='	<div class="overflow_text '.get_post_meta($post->ID,"overflow_position", true).'"><div>'.get_the_content($post->ID).'</div></div>';
 			}else{
 				$return.='	<img src="'.$overflow_image.'" alt="'.get_the_title($link_id).'" class="'.get_post_meta($post->ID,"overflow_position", true).'">';
 			}
