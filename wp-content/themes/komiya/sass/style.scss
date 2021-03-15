@@ -1254,6 +1254,14 @@ header .fix-navi-pc .fix-navi-logo{
 					&.left_top, &.right_top{
 						-ms-writing-mode: tb-rl;
 						writing-mode: vertical-rl;
+						h2{
+							margin-left: 20px;
+							text-align: left;
+							line-height: 1.5;
+						}
+						.read{
+							margin-right: 20px;
+						}
 						@include mq(md) {
 							align-items: flex-start;
 							padding: 0;
@@ -1264,8 +1272,9 @@ header .fix-navi-pc .fix-navi-logo{
 					}
 
 					&.left_top{
+						top: 58px;
 						&>div{
-							margin-top: 10px;
+							margin-top: 5px;
 							margin-right: 50px;
 						}
 						.caption{
@@ -1295,8 +1304,9 @@ header .fix-navi-pc .fix-navi-logo{
 					}
 
 					&.right_top{
+						top: 58px;
 						&>div{
-							margin-top: 10px;
+							margin-top: 5px;
 							margin-right: 25px;
 						}
 						.caption{
@@ -1367,7 +1377,6 @@ header .fix-navi-pc .fix-navi-logo{
 						bottom: inherit;
 					}
 					&.left_top {
-						top: 53px;
 						left: 6.5vw;
 						right:  inherit;
 						bottom: inherit;
@@ -1377,7 +1386,6 @@ header .fix-navi-pc .fix-navi-logo{
 						}
 					}
 					&.right_top {
-						top: 53px;
 						left: inherit;
 						right: 6.5vw;
 						bottom: inherit;

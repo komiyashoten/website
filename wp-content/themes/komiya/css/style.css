@@ -1233,6 +1233,14 @@ header .fix-navi-pc .fix-navi-logo {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
 }
+.big_main_slide li a .text .overflow_text.left_top h2, .big_main_slide li a .text .overflow_text.right_top h2 {
+  margin-left: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+.big_main_slide li a .text .overflow_text.left_top .read, .big_main_slide li a .text .overflow_text.right_top .read {
+  margin-right: 20px;
+}
 @media screen and (max-width: 600px) {
   .big_main_slide li a .text .overflow_text.left_top, .big_main_slide li a .text .overflow_text.right_top {
     align-items: flex-start;
@@ -1244,8 +1252,11 @@ header .fix-navi-pc .fix-navi-logo {
     padding: 0;
   }
 }
+.big_main_slide li a .text .overflow_text.left_top {
+  top: 58px;
+}
 .big_main_slide li a .text .overflow_text.left_top > div {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 50px;
 }
 .big_main_slide li a .text .overflow_text.left_top .caption {
@@ -1272,8 +1283,11 @@ header .fix-navi-pc .fix-navi-logo {
   font-size: 1.2rem;
   padding: 0.8em 0.3em;
 }
+.big_main_slide li a .text .overflow_text.right_top {
+  top: 58px;
+}
 .big_main_slide li a .text .overflow_text.right_top > div {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 25px;
 }
 .big_main_slide li a .text .overflow_text.right_top .caption {
@@ -1343,7 +1357,6 @@ header .fix-navi-pc .fix-navi-logo {
   }
 }
 .big_main_slide li a .text img.left_top, .big_main_slide li a .text .overflow_text.left_top {
-  top: 53px;
   left: 6.5vw;
   right: inherit;
   bottom: inherit;
@@ -1355,7 +1368,6 @@ header .fix-navi-pc .fix-navi-logo {
   }
 }
 .big_main_slide li a .text img.right_top, .big_main_slide li a .text .overflow_text.right_top {
-  top: 53px;
   left: inherit;
   right: 6.5vw;
   bottom: inherit;
