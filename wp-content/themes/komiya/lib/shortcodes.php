@@ -445,7 +445,12 @@ function ks_showProductsByCategory( $atts, $content = null ) {
 	endif;
 	wp_reset_postdata();
 	$return.="</section>";
-	$return.="<p class='more'><a href='".get_bloginfo("url")."/large_cat/".$large_cat."/?umbrella_category=".$category."'>MORE</a></p>";
+	if( is_array($large_cat) ){
+		$large_cat_url = implode("+",$large_cat);
+	}else{
+		$large_cat_url = $large_cat;
+	}
+	$return.="<p class='more'><a href='".get_bloginfo("url")."/large_cat/".$large_cat_url."/?umbrella_category=".$category."'>MORE</a></p>";
 	return $return;
 }
 add_shortcode('カテゴリ指定商品', 'ks_showProductsByCategory');
