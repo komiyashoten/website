@@ -1252,6 +1252,16 @@ header .fix-navi-pc .fix-navi-logo {
     padding: 0;
   }
 }
+.big_main_slide li a .text .overflow_text.left_top > div {
+  margin-top: 5px;
+  margin-right: 50px;
+}
+.big_main_slide li a .text .overflow_text.left_top .caption {
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  margin-left: 1.4em;
+}
 .big_main_slide li a .text .overflow_text.static {
   height: 300px;
   text-align: center;

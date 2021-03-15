@@ -1271,6 +1271,37 @@ header .fix-navi-pc .fix-navi-logo{
 						padding: 0;
 					}
 
+					&.left_top{
+						&>div{
+							margin-top: 5px;
+							margin-right: 50px;
+						}
+						.caption{
+							font-family: _font('gothic'); 
+							font-size: 1.2rem; 
+							letter-spacing: 0.2em; 
+							margin-left: 1.4em;
+						}
+						h2{
+							font-size: 3.65rem; 
+							line-height: 1.7; 
+							letter-spacing: 0.12em; 
+							margin: -0.08em 0 0 0.6em;
+						}
+						p{
+							font-size: 1.5rem;
+							font-family: _font('gothic'); 
+							line-height: 2.2em; 
+							letter-spacing: 0.11em; 
+							margin-left: 0.3em;
+						}
+						.read{
+							font-family: _font('gothic'); 
+							font-size: 1.2rem; 
+							padding: 0.8em 0.3em;
+						}
+					}
+
 					&.static{
 						height: 300px;
 						text-align: center;
