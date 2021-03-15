@@ -1341,11 +1341,30 @@ header .fix-navi-pc .fix-navi-logo{
 						*{
 							text-align: center;
 						}
+						.caption{
+							font-family: _font('gothic'); 
+							font-size: 1.2rem; 
+							letter-spacing: 0.2em; 
+							margin-bottom: 1.4em;
+						}
 						h2{
-							line-height: 1.5;
+							font-size: 3.65rem; 
+							line-height: 1.7; 
+							letter-spacing: 0.09em; 
+							margin-bottom: 0.7em;
+						}
+						p{
+							font-size: 1.5rem;
+							font-family: _font('gothic'); 
+							line-height: 2.2em; 
+							letter-spacing: 0.13em; 
+							margin-bottom: 1.5em;
 						}
 						.read{
 							text-align: center;
+							font-family: _font('gothic'); 
+							font-size: 1.2rem; 
+							padding: 0.3em 0.8em;
 						}
 					}
 

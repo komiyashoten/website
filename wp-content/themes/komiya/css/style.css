@@ -1321,11 +1321,30 @@ header .fix-navi-pc .fix-navi-logo {
 .big_main_slide li a .text .overflow_text.static * {
   text-align: center;
 }
+.big_main_slide li a .text .overflow_text.static .caption {
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.4em;
+}
 .big_main_slide li a .text .overflow_text.static h2 {
-  line-height: 1.5;
+  font-size: 3.65rem;
+  line-height: 1.7;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.7em;
+}
+.big_main_slide li a .text .overflow_text.static p {
+  font-size: 1.5rem;
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 2.2em;
+  letter-spacing: 0.13em;
+  margin-bottom: 1.5em;
 }
 .big_main_slide li a .text .overflow_text.static .read {
   text-align: center;
+  font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.3em 0.8em;
 }
 .big_main_slide li a .text .overflow_text .read {
   font-size: 0.9em;
