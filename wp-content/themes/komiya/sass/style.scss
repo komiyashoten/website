@@ -5373,6 +5373,8 @@ h2.elHeading {
 		width: 70%;
 		box-sizing: border-box;
 		padding: 2em;
+		padding-top: 0;
+
 
 		@include mq() {
 			flex-basis: 100%;
@@ -5456,6 +5458,15 @@ h2.elHeading {
 			@include mq() {
 				margin: 10px 0;
 			}
+		}
+	}
+}
+
+.blog{
+	.content{
+		&>.product_box{
+			width: 100%;
+			margin: 0;
 		}
 	}
 }

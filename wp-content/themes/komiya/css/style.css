@@ -5576,6 +5576,7 @@ h2.elHeading {
   width: 70%;
   box-sizing: border-box;
   padding: 2em;
+  padding-top: 0;
 }
 @media screen and (max-width: 960px) {
   .product_box .product_content {
@@ -5655,6 +5656,10 @@ h2.elHeading {
   .product_box .links .product_button {
     margin: 10px 0;
   }
+}
+.blog .content > .product_box {
+  width: 100%;
+  margin: 0;
 }
 .products_box {
   display: flex;
