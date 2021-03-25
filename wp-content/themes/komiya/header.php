@@ -31,7 +31,7 @@ jQuery(function() {
 <header id="backtotop">
     <h1><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten.jpg" alt="小宮商店 KOMIYA SHOTEN" class="logo_komiyashoten"></a></h1>
 	<div class="navi-pc">
-		<div class="fix-navi-logo"><!-- <a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten2.jpg" alt="小宮商店"></a> --></div>
+		<div class="fix-navi-logo"><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten_black.png" alt="小宮商店"></a></div>
 		<?php get_template_part('navi'); ?>
 	</div>
 	<div class="navi-sp">
