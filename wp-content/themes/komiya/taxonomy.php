@@ -143,6 +143,18 @@
 			<div class="thumbnail_set">
 				<ul>
 				<?php while ( have_posts() ) : the_post(); ?>
+				<?php 
+					//商品URLからyahooかrakutenか判定する
+					$post_id = get_the_ID();
+					$goods_url = get_post_meta($post_id,'商品ページURL', true);
+					//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
+					$which_shop = which_shop($goods_url);
+					$$which_shop = $goods_url;
+					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
+					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
+					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
+					$amazon = get_post_meta($post->ID,'Amazon', true);
+				?>
 					<li><a href="<?php echo post_custom('商品ページURL'); ?>">
 						<div class="thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
 						<div class="brand"><?php echo post_custom('ブランド'); ?></div>
@@ -151,6 +163,22 @@
 							<?php echo post_custom('大分類'); ?>
 						</div>
 						<div class="price">¥<?php echo custom_post_custom('値段'); ?></div>
+						<div class="links">
+							<?php
+								if( $rakuten != null ):
+									//楽天のURLがあれば楽天のボタン表示
+									echo '<a class="product_button" href="'.$rakuten.'">楽天で詳細を見る</a>';
+								endif;
+								if( $yahoo != null ):
+									//ヤフーのURLがあればヤフーのボタン表示
+									echo '<a class="product_button" href="'.$yahoo.'">ヤフーで詳細を見る</a>';
+								endif;
+								if( $amazon != null ):
+									//アマゾンのURLがあればアマゾンのボタン表示
+									echo '<a class="product_button" href="'.$amazon.'">アマゾンで詳細を見る</a>';
+								endif;			
+							?>
+						</div>
 					</a></li>
 				<?php endwhile; ?>
 				</ul>
