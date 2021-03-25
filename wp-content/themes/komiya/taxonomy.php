@@ -163,22 +163,22 @@
 							<?php echo post_custom('大分類'); ?>
 						</div>
 						<div class="price">¥<?php echo custom_post_custom('値段'); ?></div>
-						<div class="links">
+						<!-- <div class="links"> -->
 							<?php
 								if( $rakuten != null ):
 									//楽天のURLがあれば楽天のボタン表示
-									echo '<a class="product_button" href="'.$rakuten.'">楽天で詳細を見る</a>';
+									// echo '<a class="product_button" href="'.$rakuten.'">楽天で詳細を見る</a>';
 								endif;
 								if( $yahoo != null ):
 									//ヤフーのURLがあればヤフーのボタン表示
-									echo '<a class="product_button" href="'.$yahoo.'">ヤフーで詳細を見る</a>';
+									// echo '<a class="product_button" href="'.$yahoo.'">ヤフーで詳細を見る</a>';
 								endif;
 								if( $amazon != null ):
 									//アマゾンのURLがあればアマゾンのボタン表示
-									echo '<a class="product_button" href="'.$amazon.'">アマゾンで詳細を見る</a>';
+									// echo '<a class="product_button" href="'.$amazon.'">アマゾンで詳細を見る</a>';
 								endif;			
 							?>
-						</div>
+						<!-- </div> -->
 					</a></li>
 				<?php endwhile; ?>
 				</ul>
