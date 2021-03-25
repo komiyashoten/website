@@ -905,7 +905,7 @@ header .fix-navi-pc {
 header .fix-navi-pc .fix-navi-logo {
   display: inline;
 }
-.logged_in .fix-navi-logo {
+.logged_in header .fix-navi-pc, .logged_in .fix-navi-logo {
   top: 32px;
 }
 .breadcrumbs {
