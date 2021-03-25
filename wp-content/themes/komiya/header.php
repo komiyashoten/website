@@ -27,7 +27,7 @@ jQuery(function() {
 });
 </script>
 </head>
-<body onload="initialize();" onclick="checkSelect();">
+<body onload="initialize();" onclick="checkSelect();" class="<?php echo $class; ?>">
 <header id="backtotop">
     <h1><a href="/"><img src="/wp-content/themes/komiya/img/logo_komiyashoten.jpg" alt="小宮商店 KOMIYA SHOTEN" class="logo_komiyashoten"></a></h1>
 	<div class="navi-pc">
