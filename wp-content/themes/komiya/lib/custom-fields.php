@@ -236,7 +236,7 @@ if( function_exists('acf_add_local_field_group') ):
             ),
             array(
                 'key' => 'field_606270b9177ba',
-                'label' => '一覧表示する商品性別',
+                'label' => '一覧表示する商品性別（まとめ一覧ページテンプレート選択時にのみ有効）',
                 'name' => 'summary_gender',
                 'type' => 'radio',
                 'instructions' => '',
