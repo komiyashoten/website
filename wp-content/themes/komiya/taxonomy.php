@@ -154,14 +154,14 @@
 					$yahoo = null; //初期化
 					$amazon = null; //初期化
 					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
-					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
-					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
-					$amazon = get_post_meta($post->ID,'Amazon', true);
+					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post_id,'楽天', true);
+					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post_id,'Yahoo', true);
+					$amazon = get_post_meta($post_id,'Amazon', true);
 				?>
 					<li><a href="<?php echo post_custom('商品ページURL'); ?>">
 						<div class="thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
 						<div class="brand"><?php echo post_custom('ブランド'); ?></div>
-						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post->ID, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post->ID, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
+						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post_id, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post_id, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
 						<div class="spec">
 							<?php echo post_custom('大分類'); ?>
 						</div>
