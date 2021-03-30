@@ -54,6 +54,7 @@ global $post;
 	?>
 	<section class="blog clear summary gray">
 		<div class="content summary">
+			<?php if(count($slides) > 0){ ?>
 			<div class="sliders">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
@@ -102,6 +103,7 @@ global $post;
 			</script>
 
 			</div>
+			<?php } ?>
 			<p><?php the_content(); ?></p>			
 		</div>
 
