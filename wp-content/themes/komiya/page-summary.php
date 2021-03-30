@@ -27,10 +27,10 @@ global $post;
 			'order'           => "ASC",
 			'meta_query' => array(
 				array(
-					'key' => 'is_summary',
-					'value' => '1',
-				)
-			)
+				  'key' => 'is_summary', 
+				  'value' => 1,
+				),
+			  ),
 		);
 	
 		$the_query = new WP_Query( $args );
@@ -131,7 +131,7 @@ global $post;
 				'meta_query' => array(
 					array(
 						'key' => 'is_summary',
-						'value' => '1',
+						'value' => 1,
 					)
 				)
 			);
