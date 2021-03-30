@@ -150,6 +150,9 @@
 					//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
 					$which_shop = which_shop($goods_url);
 					$$which_shop = $goods_url;
+					$rakuten = null; //初期化
+					$yahoo = null; //初期化
+					$amazon = null; //初期化
 					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
 					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
 					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
