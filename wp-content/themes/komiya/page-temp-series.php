@@ -46,19 +46,22 @@ Template Post Type: post, page
 					$goods_url = get_post_meta($post_id,'商品ページURL', true);
 					//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
 					$which_shop = which_shop($goods_url);
+					$rakuten = null; //初期化
+					$yahoo = null; //初期化
+					$amazon = null; //初期化
 					$$which_shop = $goods_url;
 					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
-					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
-					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
-					$amazon = get_post_meta($post->ID,'Amazon', true);
+					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post_id,'楽天', true);
+					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post_id,'Yahoo', true);
+					$amazon = get_post_meta($post_id,'Amazon', true);
 				?>
 				<li class="clear">
 					<div class="thumbnail"><?php the_post_thumbnail('medium'); ?></div>
 					<div class="text">
 						<div class="lead"><?php echo post_custom('リード'); ?></div>			
-						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post->ID, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post->ID, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
+						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post_id, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post_id, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
 						<div class="spec">
-							<?php echo get_my_term_list( $post->ID, 'large_cat', ' ', '／', '','men, women' ); ?>
+							<?php echo get_my_term_list( $post_id, 'large_cat', ' ', '／', '','men, women' ); ?>
 						</div>
 						<div class="price">¥<?php echo custom_post_custom('値段'); ?></div>
 					</div>
