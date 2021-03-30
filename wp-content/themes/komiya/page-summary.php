@@ -19,8 +19,8 @@ global $post;
 	<?php
 		//まとめページに属し、なおかつ現在表示中の性別用途の記事を出す
 		$args = array(
-			'number_posts'    => 5,
-			'posts_per_page'  => 5,
+			'number_posts'    => -1,
+			'posts_per_page'  => -1,
 			'post_type'       => array("post","page"),
 			'post_status'     => 'publish',
 			'orderby'         => 'menu_order',
@@ -54,7 +54,7 @@ global $post;
 	?>
 	<section class="blog clear summary gray">
 		<div class="content summary">
-			<?php if(count($slides) > 0){ ?>
+			<?php if(count($slides) != 0){ ?>
 			<div class="sliders">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
