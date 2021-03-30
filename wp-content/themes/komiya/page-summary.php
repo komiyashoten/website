@@ -110,7 +110,7 @@ global $post;
 
 		<ul class="summary_posts">
 		<?php
-			$product_gender = get_post_meta($post->ID,'is_summary_gender',true);
+			$product_gender = get_post_meta($post->ID,'summary_gender',true);
 			if(!$product_gender){
 				$product_gender = "men"; //デフォルトはmen
 			}
