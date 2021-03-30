@@ -128,6 +128,12 @@ global $post;
 						'terms'    => 'how-to-select-'.$product_gender,
 					),
 				),
+				'meta_query' => array(
+					array(
+						'key' => 'is_summary',
+						'value' => 1,
+					)
+				)
 			);
 
 			$the_query = new WP_Query( $args );
