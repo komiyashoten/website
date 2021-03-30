@@ -5,58 +5,9 @@ add_action( 'admin_menu', 'add_custom_field' );
 function add_custom_field() {
     add_meta_box( 'summary', 'まとめタイトル（英語／日本語）', 'create_summary', 'post', 'normal' );
     add_meta_box( 'summary', 'まとめタイトル（英語／日本語）', 'create_summary', 'page', 'normal' );
-    add_meta_box( 'is_summary', 'まとめ記事オプション', 'create_is_summary', 'post', 'normal' );
-    add_meta_box( 'is_summary', 'まとめ記事オプション', 'create_is_summary', 'page', 'normal' );
     add_meta_box( 'goodsURLs', '商品URL', 'create_goodsurls', 'product', 'normal' );
 }
  
-
-function create_summary() {
-    $keyname = array('まとめ英語タイトル', 'まとめ日本語タイトル');
-    global $post;
-    foreach($keyname as $key):
-        if($key == 'まとめ英語タイトル'):
-            $placeholder = 'まとめタイトル（英語）';
-        else:
-            $placeholder = 'まとめタイトル（日本語）';
-        endif;
-        // 保存されているカスタムフィールドの値を取得
-        $get_value = get_post_meta( $post->ID, $key, true );
-        // nonceの追加
-        wp_nonce_field( 'action-' . $key, 'nonce-' . $key );
-        // HTMLの出力
-        echo '<input name="' . $key . '" value="' . $get_value . '" style="width:99%; border-radius: 3px; border: solid 1px #DEDEDE; padding: 5px; margin-bottom: 10px;" placeholder="'.$placeholder.'">';
-    endforeach;
-}
-
-function create_is_summary() {
-    $key = 'is_summary_gender';
-    $get_value = get_post_meta( $post->ID, $key, true );
-    if($get_value == "men"){
-        $men_is_selected = 'selected';
-    }else if($get_value == "women"){
-        $women_is_selected = 'selected';
-    }
-        wp_nonce_field( 'action-' . $key, 'nonce-' . $key );
-    echo '<div><strong>まとめ一覧テンプレートの場合、表示する商品性別：</strong><select name="' . $key . '">';
-    echo '<option value="men" '.$men_is_selected.'>MEN</option>';
-    echo '<option value="women"'.$women_is_selected.'>WOMEN</option>';
-    echo '</select></div><br>';
-
-    $key = 'is_summary';
-    $placeholder = 'まとめ記事に属するページの場合はチェック';
-    global $post;
-    // 保存されているカスタムフィールドの値を取得
-    $get_value = get_post_meta( $post->ID, $key, true );
-    // nonceの追加
-    wp_nonce_field( 'action-' . $key, 'nonce-' . $key );
-    // HTMLの出力
-    if($get_value){
-        $is_checked = 'checked';
-    }
-    echo '<input type="checkbox" name="' . $key . '" '.$is_checked.' value="1" style=""> <strong>まとめ一覧に属する記事の場合はチェック</strong><br>';
-
-}
 
 function create_goodsurls() {
     $keyname = array('楽天', 'Yahoo', 'Amazon');
@@ -76,7 +27,7 @@ function create_goodsurls() {
 // カスタムフィールドの保存
 add_action( 'save_post', 'save_custom_field' );
 function save_custom_field( $post_id ) {
-    $custom_fields = ['まとめ英語タイトル','まとめ日本語タイトル','楽天', 'Yahoo', 'Amazon','is_summary','is_summary_gender'];
+    $custom_fields = ['まとめ英語タイトル','まとめ日本語タイトル','楽天', 'Yahoo', 'Amazon'];
  
     foreach( $custom_fields as $d ) {
         if ( isset( $_POST['nonce-' . $d] ) && $_POST['nonce-' . $d] ) {
@@ -242,5 +193,91 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
+    acf_add_local_field_group(array(
+        'key' => 'group_60626f59ddebb',
+        'title' => 'まとめ記事一覧に表示する',
+        'fields' => array(
+            array(
+                'key' => 'field_60626f6b3c2bb',
+                'label' => 'まとめ一覧ページに表示するか',
+                'name' => 'is_summary',
+                'type' => 'checkbox',
+                'instructions' => 'まとめ一覧ページに表示する場合はチェック',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    '表示する' => '表示する',
+                ),
+                'allow_custom' => 0,
+                'default_value' => array(
+                ),
+                'layout' => 'vertical',
+                'toggle' => 0,
+                'return_format' => 'value',
+                'save_custom' => 0,
+            ),
+            array(
+                'key' => 'field_606270b9177ba',
+                'label' => '一覧表示する商品性別（まとめ一覧テンプレート使用時のみ有効）',
+                'name' => 'summary_gender',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_60626f6b3c2bb',
+                            'operator' => '==empty',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'men' => 'メンズ',
+                    'women' => 'ウィメンズ',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'default_value' => 'men : メンズ',
+                'layout' => 'horizontal',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+        
     endif;
