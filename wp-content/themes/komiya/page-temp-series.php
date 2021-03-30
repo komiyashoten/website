@@ -41,8 +41,18 @@ Template Post Type: post, page
 				);
 				$my_query = new WP_Query($args);
 				if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+					//商品URLからyahooかrakutenか判定する
+					$post_id = get_the_ID();
+					$goods_url = get_post_meta($post_id,'商品ページURL', true);
+					//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
+					$which_shop = which_shop($goods_url);
+					$$which_shop = $goods_url;
+					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
+					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
+					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
+					$amazon = get_post_meta($post->ID,'Amazon', true);
 				?>
-				<li class="clear"><a href="<?php echo post_custom('商品ページURL'); ?>" class="clear">
+				<li class="clear">
 					<div class="thumbnail"><?php the_post_thumbnail('medium'); ?></div>
 					<div class="text">
 						<div class="lead"><?php echo post_custom('リード'); ?></div>			
@@ -52,7 +62,24 @@ Template Post Type: post, page
 						</div>
 						<div class="price">¥<?php echo custom_post_custom('値段'); ?></div>
 					</div>
-				</a></li>
+					<div class="links">
+					<?php
+						if( $rakuten != null ):
+							//楽天のURLがあれば楽天のボタン表示
+							echo '<a class="product_button" href="'.$rakuten.'">楽天で<br class="sp">詳細を見る</a>';
+						endif;
+						if( $yahoo != null ):
+							//ヤフーのURLがあればヤフーのボタン表示
+							echo '<a class="product_button" href="'.$yahoo.'">ヤフーで<br class="sp">詳細を見る</a>';
+						endif;
+						if( $amazon != null ):
+							//アマゾンのURLがあればアマゾンのボタン表示
+							echo '<a class="product_button" href="'.$amazon.'">アマゾンで<br class="sp">詳細を見る</a>';
+						endif;			
+					?>
+				</div>
+
+				</li>
 				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</ul>
 		</section>

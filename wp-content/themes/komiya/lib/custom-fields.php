@@ -4,6 +4,9 @@
 add_action( 'admin_menu', 'add_custom_field' );
 function add_custom_field() {
     add_meta_box( 'summary', 'まとめタイトル（英語／日本語）', 'create_summary', 'post', 'normal' );
+    add_meta_box( 'summary', 'まとめタイトル（英語／日本語）', 'create_summary', 'page', 'normal' );
+    add_meta_box( 'is_summary', 'まとめ記事オプション', 'create_is_summary', 'post', 'normal' );
+    add_meta_box( 'is_summary', 'まとめ記事オプション', 'create_is_summary', 'page', 'normal' );
     add_meta_box( 'goodsURLs', '商品URL', 'create_goodsurls', 'product', 'normal' );
 }
  
@@ -26,6 +29,35 @@ function create_summary() {
     endforeach;
 }
 
+function create_is_summary() {
+    $key = 'is_summary_gender';
+    $get_value = get_post_meta( $post->ID, $key, true );
+    if($get_value == "men"){
+        $men_is_selected = 'selected';
+    }else if($get_value == "women"){
+        $women_is_selected = 'selected';
+    }
+        wp_nonce_field( 'action-' . $key, 'nonce-' . $key );
+    echo '<div><strong>まとめ一覧テンプレートの場合、表示する商品性別：</strong><select name="' . $key . '">';
+    echo '<option value="men" '.$men_is_selected.'>MEN</option>';
+    echo '<option value="women"'.$women_is_selected.'>WOMEN</option>';
+    echo '</select></div><br>';
+
+    $key = 'is_summary';
+    $placeholder = 'まとめ記事に属するページの場合はチェック';
+    global $post;
+    // 保存されているカスタムフィールドの値を取得
+    $get_value = get_post_meta( $post->ID, $key, true );
+    // nonceの追加
+    wp_nonce_field( 'action-' . $key, 'nonce-' . $key );
+    // HTMLの出力
+    if($get_value){
+        $is_checked = 'checked';
+    }
+    echo '<input type="checkbox" name="' . $key . '" '.$is_checked.' value="1" style=""> <strong>まとめ一覧に属する記事の場合はチェック</strong><br>';
+
+}
+
 function create_goodsurls() {
     $keyname = array('楽天', 'Yahoo', 'Amazon');
     global $post;
@@ -44,7 +76,7 @@ function create_goodsurls() {
 // カスタムフィールドの保存
 add_action( 'save_post', 'save_custom_field' );
 function save_custom_field( $post_id ) {
-    $custom_fields = ['まとめ英語タイトル','まとめ日本語タイトル','楽天', 'Yahoo', 'Amazon'];
+    $custom_fields = ['まとめ英語タイトル','まとめ日本語タイトル','楽天', 'Yahoo', 'Amazon','is_summary','is_summary_gender'];
  
     foreach( $custom_fields as $d ) {
         if ( isset( $_POST['nonce-' . $d] ) && $_POST['nonce-' . $d] ) {

@@ -32,29 +32,6 @@ jQuery(function() {
 <!-- ヘッダーラインバナー -->
 <style type="text/css">
 
-/* .top_sub_nav {
-	padding-top: 45px;
-}
-.wrap-header-line-banner {
-	padding: 10px;
-	background: #846355;
-	color: #fff;
-	display: block;
-}
-@media screen and (max-width: 960px) {
-.wrap-header-line-banner {
-	margin-top: 60px;
-	border: 15px #ffffff solid;
-	}
-}
-.wrap-header-line-banner:hover {
-	background: #966b5c;
-}
-.header-line-banner {
-	text-align: center;
-	font-size: 1.3rem;
-} */
-
 </style>
 </head>
 <?php $class = get_ks_class(); ?>

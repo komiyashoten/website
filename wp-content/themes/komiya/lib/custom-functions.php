@@ -58,18 +58,21 @@ function get_ks_class(){
     global $post;
     $is_logged_in = is_user_logged_in();
     if( $is_logged_in ) $is_logged_in = "logged_in";
+    if(basename( get_page_template() ) == "single-summary.php"){
+        $add_class = "summary";
+    }
 	$slug = $post->post_name;
     if($slug == "men" || $slug == "women"){
-        return "series ".$is_logged_in;
+        return "series ".$is_logged_in." ".$add_class;
     }else{
-        return $is_logged_in;
+        return $is_logged_in." ".$add_class;
     }
 }
 
 function ks_logo(){
     global $post;
 	$slug = $post->post_name;
-    if($slug == "men" || $slug == "women"){
+    if($slug == "men" || $slug == "women" || basename( get_page_template() ) == "single-summary.php"){
         echo "logo_komiyashoten_white.png";
     }else{
         echo "logo_komiyashoten.jpg";
