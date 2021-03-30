@@ -148,17 +148,17 @@
 					$post_id = get_the_ID();
 					$goods_url = get_post_meta($post_id,'商品ページURL', true);
 					//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
-					$which_shop = which_shop($goods_url);
-					$$which_shop = $goods_url;
 					$rakuten = null; //初期化
 					$yahoo = null; //初期化
 					$amazon = null; //初期化
+					$which_shop = which_shop($goods_url);
+					$$which_shop = $goods_url;
 					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
 					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post_id,'楽天', true);
 					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post_id,'Yahoo', true);
 					$amazon = get_post_meta($post_id,'Amazon', true);
 				?>
-					<li><a href="<?php echo post_custom('商品ページURL'); ?>">
+					<li>
 						<div class="thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
 						<div class="brand"><?php echo post_custom('ブランド'); ?></div>
 						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post_id, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post_id, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
@@ -182,7 +182,7 @@
 								endif;			
 							?>
 						</div>
-					</a></li>
+					</li>
 				<?php endwhile; ?>
 				</ul>
 			</div>
