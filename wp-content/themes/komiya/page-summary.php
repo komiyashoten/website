@@ -16,53 +16,45 @@ global $post;
 			</h1>
 		</div>
 	</section>
-	<?php
-		//まとめページに属し、なおかつ現在表示中の性別用途の記事を出す
-		$args = array(
-			'number_posts'    => -1,
-			'posts_per_page'  => -1,
-			'post_type'       => array("post","page"),
-			'post_status'     => 'publish',
-			'orderby'         => 'menu_order',
-			'order'           => "ASC",
-			'meta_query' => array(
-				array(
-				  'key' => 'is_summary', 
-				  'value' => 1,
-				),
-			  ),
-		);
-	
-		$the_query = new WP_Query( $args );
-		if( $the_query->have_posts() ):
-			while ( $the_query->have_posts() ): $the_query->the_post();
-				$post_ = $the_query->post;
-				$thumbnail_id = get_post_thumbnail_id($the_query->post->ID);
-				$image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
-				$src = $image[0];
-				$html = ""; //一旦初期化
-				$html.='<img src="'.$src.'">';
-				$html.='<a class="description" href="'.get_permalink().'">';
-				$html.='	<h2>'.$post_->post_title.'</h2>';
-				$html.='	<h3>'.get_post_meta($post_->ID,'まとめ英語タイトル',true).'</h3>';
-				$html.='	<aside>'.get_post_meta($post_->ID,'まとめ日本語タイトル',true).'</aside>';
-				$html.='</a>';
-				$slides[] = $html;
-			endwhile;
-		endif;
-		wp_reset_postdata();
-	?>
 	<section class="blog clear summary gray">
 		<div class="content summary">
-			<?php if(count($slides) != 0){ ?>
 			<div class="sliders">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-					<?php foreach($slides as $slide){ ?>
-						<div class="swiper-slide">
-							<?php echo $slide; ?>
-						</div>
-					<?php } ?>
+							<?php
+								//まとめページに属し、なおかつ現在表示中の性別用途の記事を出す
+								$args = array(
+									'number_posts'    => -1,
+									'posts_per_page'  => -1,
+									'post_type'       => array("post","page"),
+									'post_status'     => 'publish',
+									'orderby'         => 'menu_order',
+									'order'           => "ASC",
+									'meta_query' => array(
+										array(
+										'key' => 'is_summary', 
+										'value' => 1,
+										),
+									),
+								);
+							
+								$the_query = new WP_Query( $args );
+								if( $the_query->have_posts() ):
+									while ( $the_query->have_posts() ): $the_query->the_post();
+										$post_ = $the_query->post;
+										$thumbnail_id = get_post_thumbnail_id($the_query->post->ID);
+										$image = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+										$src = $image[0];
+										echo '<div class="swiper-slide"><img src="'.$src.'">';
+										echo '<a class="description" href="'.get_permalink().'">';
+										echo '	<h2>'.$post_->post_title.'</h2>';
+										echo '	<h3>'.get_post_meta($post_->ID,'まとめ英語タイトル',true).'</h3>';
+										echo '	<aside>'.get_post_meta($post_->ID,'まとめ日本語タイトル',true).'</aside>';
+										echo '</a></div>';
+									endwhile;
+								endif;
+								wp_reset_postdata();
+							?>
 					</div>
 				</div>
 				<div class="swiper-button-next swiper-button-black"></div>
@@ -103,7 +95,6 @@ global $post;
 			</script>
 
 			</div>
-			<?php } ?>
 			<p><?php the_content(); ?></p>			
 		</div>
 
