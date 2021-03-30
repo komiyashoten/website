@@ -58,7 +58,7 @@ function get_ks_class(){
     global $post;
     $is_logged_in = is_user_logged_in();
     if( $is_logged_in ) $is_logged_in = "logged_in";
-    if(basename( get_page_template() ) == "single-summary.php"){
+    if(basename( get_page_template() ) == "single-summary.php" || basename( get_page_template() ) == "page-summary.php"){
         $add_class = "summary";
     }
 	$slug = $post->post_name;
@@ -72,7 +72,7 @@ function get_ks_class(){
 function ks_logo(){
     global $post;
 	$slug = $post->post_name;
-    if($slug == "men" || $slug == "women" || basename( get_page_template() ) == "single-summary.php"){
+    if($slug == "men" || $slug == "women" || basename( get_page_template() ) == "single-summary.php" || basename( get_page_template() ) == "page-summary.php"){
         echo "logo_komiyashoten_white.png";
     }else{
         echo "logo_komiyashoten.jpg";
