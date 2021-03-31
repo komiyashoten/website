@@ -13,7 +13,7 @@ Template Post Type: post, page
 	<li><a href="/about/koshu-weave/">甲州織のこと</a></li>
 	<li><a href="/about/traditional-craft/">伝統工芸品のこと</a></li>
 	<li><a href="/about/company/">会社概要</a></li>
-	<li><a href="/about/eruboshi/">「えるぼし」認定</a></li>
+	<li><a href="/about/jyokatsutaishou/">女性活躍推進大賞</a></li>
 </ul>
 <section class="about">
 	<?php if(have_posts()): while(have_posts()):the_post(); ?>
