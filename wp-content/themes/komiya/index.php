@@ -1,6 +1,6 @@
 <?php get_header('top'); ?>
  
-<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/2021-4/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;"><span style="color: #af8569;">●</span> 「東日本橋ショップ」の営業時間変更につきまして（4月より毎週土曜日営業いたします。） [3/8更新]</a></div>
+<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/paypay-chuoku/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">【4月1日～4月30日まで】東日本橋ショップでPayPayボーナスが最大20%戻ってくる</a></div>
 
 <section>
 
