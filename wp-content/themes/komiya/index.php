@@ -1,8 +1,6 @@
 <?php get_header('top'); ?>
  
-<!--<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/paypay-chuoku/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">【4月1日～4月30日まで】東日本橋ショップでPayPayボーナスが最大20%戻ってくる</a></div>-->
-<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/rinji/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">【お知らせ】4月10日(土)14時～15時の間、臨時休憩をいただきます</a></div>
-
+<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/paypay-chuoku/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">【4月1日～4月30日まで】東日本橋ショップでPayPayボーナスが最大20%戻ってくる</a></div>
 <section>
 
 <?php
@@ -196,7 +194,6 @@
 		（水曜日のみ10:00～20:00）</p>
 		<p>[定休日]<br>
 		日・祝<br>
-		<span style="color: #ff0000;">4月10日(土)14:00～15:00、臨時休憩をいただきます</span><br>
 		※日曜は大江戸問屋祭りの日のみ<br>
 		年2回／営業時間 9:00～16:00</p>
 		<span class="sp_calender"><?php echo do_shortcode('[xo_event_calendar ID="xo-event-calendar-2" holidays="day-off,20pm"]'); ?></span>
