@@ -1,6 +1,6 @@
 <?php get_header('top'); ?>
  
-<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/paypay-chuoku/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">【4月1日～4月30日まで】東日本橋ショップでPayPayボーナスが最大20%戻ってくる</a></div>
+<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/gw2021/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">ゴールデンウィーク休業期間のご案内</a></div>
 <section>
 
 <?php
@@ -195,7 +195,9 @@
 		<p>[定休日]<br>
 		日・祝<br>
 		※日曜は大江戸問屋祭りの日のみ<br>
-		年2回／営業時間 9:00～16:00</p>
+		年2回／営業時間 9:00～16:00<br>
+		<strong>＜ゴールデンウィーク休業期間＞<br>
+		2021年4月29日から5月5日</strong></p>
 		<span class="sp_calender"><?php echo do_shortcode('[xo_event_calendar ID="xo-event-calendar-2" holidays="day-off,20pm"]'); ?></span>
 	</div>
 	<div>
