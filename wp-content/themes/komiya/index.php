@@ -1,6 +1,6 @@
 <?php get_header('top'); ?>
  
-<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/gw2021/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">ゴールデンウィーク休業期間のご案内</a></div>
+<!--<div style="padding: 0.3em 1em 1em 1em;"><a href="https://www.komiyakasa.jp/gw2021/" style="font-size: 1.3rem; padding: 0.8em; background: #efe8e1; width: 100%; display: block; color: #333; text-align: center;">ゴールデンウィーク休業期間のご案内</a></div>-->
 <section>
 
 <?php
