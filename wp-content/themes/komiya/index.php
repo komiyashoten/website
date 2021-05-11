@@ -195,9 +195,7 @@
 		<p>[定休日]<br>
 		日・祝<br>
 		※日曜は大江戸問屋祭りの日のみ<br>
-		年2回／営業時間 9:00～16:00<br>
-		<strong>＜ゴールデンウィーク休業期間＞<br>
-		2021年4月29日から5月5日</strong></p>
+		年2回／営業時間 9:00～16:00</p>
 		<span class="sp_calender"><?php echo do_shortcode('[xo_event_calendar ID="xo-event-calendar-2" holidays="day-off,20pm"]'); ?></span>
 	</div>
 	<div>
