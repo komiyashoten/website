@@ -27,7 +27,7 @@ if ( $st_query->have_posts() ): ?>
 		<?php while ( $st_query->have_posts() ) : $st_query->the_post(); ?>
 			<li>
 				<a href="<?php the_permalink(); ?>">
-					<div><?php echo post_custom('開始'); ?> ~ <?php echo post_custom('終了'); ?></div>
+					<div><?php echo date("Y/n/j", strtotime(post_custom('開始'))); ?> ~ <?php echo date("Y/n/j", strtotime(post_custom('終了'))); ?></div>
 					<div><?php echo post_custom('場所'); ?></div>
 					<div><?php the_title(); ?></div>
 				</a>
