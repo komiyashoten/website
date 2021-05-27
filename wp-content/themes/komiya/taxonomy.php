@@ -148,38 +148,41 @@
 					$post_id = get_the_ID();
 					$goods_url = get_post_meta($post_id,'商品ページURL', true);
 					//ショップのURLから楽天かヤフーかを判定し、それぞれの変数に格納
+					$rakuten = null; //初期化
+					$yahoo = null; //初期化
+					$amazon = null; //初期化
 					$which_shop = which_shop($goods_url);
 					$$which_shop = $goods_url;
 					//もし新フィールドに値がなければ旧フィールドのURLを元々フィールドにあったURLとする
-					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post->ID,'楽天', true);
-					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post->ID,'Yahoo', true);
-					$amazon = get_post_meta($post->ID,'Amazon', true);
+					$rakuten = isset($rakuten) ? $rakuten : get_post_meta($post_id,'楽天', true);
+					$yahoo = isset($yahoo) ? $yahoo : get_post_meta($post_id,'Yahoo', true);
+					$amazon = get_post_meta($post_id,'Amazon', true);
 				?>
-					<li><a href="<?php echo post_custom('商品ページURL'); ?>">
+					<li>
 						<div class="thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
 						<div class="brand"><?php echo post_custom('ブランド'); ?></div>
-						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post->ID, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post->ID, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
+						<h3><?php echo post_custom('シリーズ名'); ?>&nbsp;&nbsp;<span><?php $terms = get_the_terms($post_id, 'size'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?>&nbsp;<?php $terms = get_the_terms($post_id, 'ribs'); foreach ($terms as $term) : ?><?php echo $term->name; ?><?php endforeach; ?></span></h3>
 						<div class="spec">
 							<?php echo post_custom('大分類'); ?>
 						</div>
 						<div class="price">¥<?php echo custom_post_custom('値段'); ?></div>
-						<!-- <div class="links"> -->
+						<div class="links">
 							<?php
 								if( $rakuten != null ):
 									//楽天のURLがあれば楽天のボタン表示
-									// echo '<a class="product_button" href="'.$rakuten.'">楽天で詳細を見る</a>';
+									echo '<a class="product_button" href="'.$rakuten.'">楽天で<br class="sp">詳細を見る</a>';
 								endif;
 								if( $yahoo != null ):
 									//ヤフーのURLがあればヤフーのボタン表示
-									// echo '<a class="product_button" href="'.$yahoo.'">ヤフーで詳細を見る</a>';
+									echo '<a class="product_button" href="'.$yahoo.'">ヤフーで<br class="sp">詳細を見る</a>';
 								endif;
 								if( $amazon != null ):
 									//アマゾンのURLがあればアマゾンのボタン表示
-									// echo '<a class="product_button" href="'.$amazon.'">アマゾンで詳細を見る</a>';
+									echo '<a class="product_button" href="'.$amazon.'">アマゾンで<br class="sp">詳細を見る</a>';
 								endif;			
 							?>
-						<!-- </div> -->
-					</a></li>
+						</div>
+					</li>
 				<?php endwhile; ?>
 				</ul>
 			</div>

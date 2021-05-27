@@ -45,6 +45,14 @@ input[type="submit"]::-webkit-search-decoration, input[type="button"]::-webkit-s
 input[type="submit"]::focus, input[type="button"]::focus {
   outline-offset: -2px;
 }
+.sp {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .sp {
+    display: block;
+  }
+}
 /* ベース
  ----------------------------------------- */
 html {
@@ -1817,6 +1825,7 @@ header .fix-navi-pc .fix-navi-logo {
   margin-bottom: 2.9em;
   font-size: 1.3rem;
   line-height: 1.4;
+  position: relative;
   /*word-wrap:break-word; 後でとる */
 }
 .thumbnail_set ul li:nth-child(3n+2):last-child {
@@ -1867,19 +1876,25 @@ header .fix-navi-pc .fix-navi-logo {
   transition: 0.6s;
   opacity: 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
+  transition: 0.3s;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, .4);
-  justify-content: center;
-  align-items: center;
 }
 @media screen and (max-width: 960px) {
   .thumbnail_set ul li .links {
     flex-direction: column;
   }
+}
+.thumbnail_set ul li .links:hover {
+  opacity: 0.9;
 }
 .thumbnail_set ul li .links .product_button {
   transition: 0.3s;
@@ -1891,15 +1906,16 @@ header .fix-navi-pc .fix-navi-logo {
   background: #fff;
   text-align: center;
   color: #000;
-  margin: 0 10px;
-  width: 155px;
+  margin: 10px;
+  width: 165px;
 }
 .thumbnail_set ul li .links .product_button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 @media screen and (max-width: 960px) {
   .thumbnail_set ul li .links .product_button {
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 90%;
   }
 }
 .thumbnail_set2 ul {
@@ -1996,6 +2012,7 @@ ul.product_list li {
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
+  position: relative;
 }
 ul.product_list li:hover {
   background: #f7f7f7;
@@ -2019,6 +2036,52 @@ ul.product_list li .thumbnail {
 }
 ul.product_list li .thumbnail img {
   width: 100%;
+}
+ul.product_list li .links {
+  transition: 0.6s;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  transition: 0.3s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+@media screen and (max-width: 960px) {
+  ul.product_list li .links {
+    flex-direction: column;
+  }
+}
+ul.product_list li .links:hover {
+  opacity: 0.9;
+}
+ul.product_list li .links .product_button {
+  transition: 0.3s;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0.85em 1.5em;
+  background: #fff;
+  text-align: center;
+  color: #000;
+  margin: 10px;
+  width: 165px;
+}
+ul.product_list li .links .product_button:hover {
+  opacity: 0.9;
+}
+@media screen and (max-width: 960px) {
+  ul.product_list li .links .product_button {
+    margin: 10px auto;
+    width: 90%;
+  }
 }
 ul.product_list li .text {
   width: 63%;
@@ -5377,6 +5440,204 @@ h2.elHeading {
 .blog.summary {
   width: 100%;
 }
+.blog.summary.gray {
+  background: #e8e8e8;
+}
+.sliders {
+  width: 1230px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  position: relative;
+}
+@media screen and (max-width: 960px) {
+  .sliders {
+    width: 95%;
+  }
+}
+.sliders .swiper-container {
+  width: 1100px;
+}
+@media screen and (max-width: 960px) {
+  .sliders .swiper-container {
+    width: 95%;
+  }
+}
+.sliders .swiper-container .swiper-slide {
+  height: 295px;
+  position: relative;
+}
+@media screen and (max-width: 960px) {
+  .sliders .swiper-container .swiper-slide {
+    height: 200px;
+  }
+}
+.sliders .swiper-container .swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.sliders .swiper-container .swiper-slide .description {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sliders .swiper-container .swiper-slide .description:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+.sliders .swiper-container .swiper-slide .description h2 {
+  font-size: 13px;
+  color: #fff;
+  text-decoration: underline;
+  line-height: 1em;
+  position: relative;
+  z-index: 3;
+}
+@media screen and (max-width: 960px) {
+  .sliders .swiper-container .swiper-slide .description h2 {
+    font-size: 9px;
+  }
+}
+.sliders .swiper-container .swiper-slide .description h3 {
+  font-size: 39px;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  color: #fff;
+  line-height: 1em;
+  margin-bottom: 30px;
+  letter-spacing: 0.09em;
+  font-weight: normal;
+  position: relative;
+  z-index: 3;
+}
+@media screen and (max-width: 960px) {
+  .sliders .swiper-container .swiper-slide .description h3 {
+    font-size: 20px;
+  }
+}
+.sliders .swiper-container .swiper-slide .description aside {
+  font-size: 16px;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  color: #fff;
+  line-height: 1em;
+  font-weight: normal;
+  position: relative;
+  z-index: 3;
+}
+@media screen and (max-width: 960px) {
+  .sliders .swiper-container .swiper-slide .description aside {
+    font-size: 11px;
+  }
+}
+.sliders .swiper-pagination {
+  display: flex;
+  width: 1230px;
+  justify-content: center;
+}
+@media screen and (max-width: 960px) {
+  .sliders .swiper-pagination {
+    width: 95%;
+  }
+}
+.sliders .swiper-pagination span {
+  margin: 0 5px;
+}
+.summary_posts {
+  width: 1040px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts {
+    width: 95%;
+  }
+}
+.summary_posts li {
+  margin-bottom: 20px;
+}
+.summary_posts li a {
+  background: #fff;
+  display: flex;
+  height: 250px;
+  width: 100%;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts li a {
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+.summary_posts li a div {
+  flex-basis: 50%;
+  width: 50%;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts li a div {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+.summary_posts li a div img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts li a div img {
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+.summary_posts li a div.description {
+  padding: 30px 35px;
+  box-sizing: border-box;
+}
+.summary_posts li a div.description * {
+  color: #000;
+  text-align: left;
+}
+.summary_posts li a div.description h2 {
+  font-size: 12px;
+  text-decoration: underline;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts li a div.description h2 {
+    font-size: 9px;
+  }
+}
+.summary_posts li a div.description h3 {
+  font-size: 44px;
+  line-height: 1.35;
+  margin-bottom: 15px;
+  letter-spacing: 0.09em;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts li a div.description h3 {
+    font-size: 29px;
+  }
+}
+.summary_posts li a div.description aside {
+  font-size: 18px;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-weight: normal;
+}
+@media screen and (max-width: 960px) {
+  .summary_posts li a div.description aside {
+    font-size: 11px;
+  }
+}
 .content.summary {
   width: 100%;
   float: static;
@@ -5903,10 +6164,10 @@ h2.elHeading {
 #wpadminbar *, #wpadminbar *:before, #wpadminbar *:after {
   max-width: initial;
 }
-.logged_in.series header {
+.logged_in.series header, .logged_in.summary header {
   top: 32px;
 }
-.series header {
+.series header, .summary header {
   position: absolute;
   top: 0;
   left: 0;
@@ -5916,7 +6177,7 @@ h2.elHeading {
   align-items: center;
   padding-top: 20px;
 }
-.series header h1 {
+.series header h1, .summary header h1 {
   width: 300px;
   flex-basis: 300px;
   height: 25px;
@@ -5924,47 +6185,47 @@ h2.elHeading {
   padding-left: 50px;
   box-sizing: border-box;
 }
-.series header h1 a {
+.series header h1 a, .summary header h1 a {
   height: 25px;
   display: block;
   margin: 0;
   padding: 0;
 }
-.series header h1 a img {
+.series header h1 a img, .summary header h1 a img {
   display: block;
 }
-.series header .navi-pc {
+.series header .navi-pc, .summary header .navi-pc {
   width: calc(100% - 300px);
   flex-basis: calc(100% - 300px);
 }
-.series header .navi-pc > div > ul {
+.series header .navi-pc > div > ul, .summary header .navi-pc > div > ul {
   display: flex;
   justify-content: flex-end;
   padding-right: 50px;
 }
-.series header .navi-pc > div > ul > li > a {
+.series header .navi-pc > div > ul > li > a, .summary header .navi-pc > div > ul > li > a {
   color: #fff;
 }
-.series header .navi-pc.fix-navi-pc {
+.series header .navi-pc.fix-navi-pc, .summary header .navi-pc.fix-navi-pc {
   width: 100%;
   flex-basis: 100%;
 }
-.series header .navi-pc.fix-navi-pc > div > ul > li > a {
+.series header .navi-pc.fix-navi-pc > div > ul > li > a, .summary header .navi-pc.fix-navi-pc > div > ul > li > a {
   color: #000;
 }
-.series header .top_sub_nav {
+.series header .top_sub_nav, .summary header .top_sub_nav {
   display: none;
 }
-.series .big_banner_top li a, .series .big_banner_top li .summary {
+.series .big_banner_top li a, .summary .big_banner_top li a, .series .big_banner_top li .summary, .summary .big_banner_top li .summary {
   height: 700px;
 }
-.series .big_banner_top li a .text, .series .big_banner_top li .summary .text {
+.series .big_banner_top li a .text, .summary .big_banner_top li a .text, .series .big_banner_top li .summary .text, .summary .big_banner_top li .summary .text {
   margin-top: 14em;
 }
-.series .big_banner_top li a .text h3, .series .big_banner_top li .summary .text h3 {
+.series .big_banner_top li a .text h3, .summary .big_banner_top li a .text h3, .series .big_banner_top li .summary .text h3, .summary .big_banner_top li .summary .text h3 {
   margin-bottom: 10px;
 }
-.series .big_banner_top li a .read, .series .big_banner_top li .summary .read {
+.series .big_banner_top li a .read, .summary .big_banner_top li a .read, .series .big_banner_top li .summary .read, .summary .big_banner_top li .summary .read {
   margin-top: 20px;
   color: #000;
   background: #fff;
@@ -5973,23 +6234,23 @@ h2.elHeading {
   font-size: 0.9em;
   font-family: 'Quicksand', '游ゴシック体', "Yu Gothic", "YuGothic", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-.series .big_banner_top li a .read a, .series .big_banner_top li .summary .read a {
+.series .big_banner_top li a .read a, .summary .big_banner_top li a .read a, .series .big_banner_top li .summary .read a, .summary .big_banner_top li .summary .read a {
   height: auto;
   color: #000;
 }
-.series .big_banner_top li a .black, .series .big_banner_top li .summary .black {
+.series .big_banner_top li a .black, .summary .big_banner_top li a .black, .series .big_banner_top li .summary .black, .summary .big_banner_top li .summary .black {
   height: 700px;
 }
-.series .big_banner_top li a .bg img, .series .big_banner_top li .summary .bg img {
+.series .big_banner_top li a .bg img, .summary .big_banner_top li a .bg img, .series .big_banner_top li .summary .bg img, .summary .big_banner_top li .summary .bg img {
   height: 700px;
 }
-.series .bx-wrapper {
+.series .bx-wrapper, .summary .bx-wrapper {
   height: 700px;
 }
-.series .bxslider > li {
+.series .bxslider > li, .summary .bxslider > li {
   height: 700px;
 }
-.series .bxslider > li > img {
+.series .bxslider > li > img, .summary .bxslider > li > img {
   height: 700px;
 }
 .more {

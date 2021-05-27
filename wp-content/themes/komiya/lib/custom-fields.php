@@ -4,10 +4,10 @@
 add_action( 'admin_menu', 'add_custom_field' );
 function add_custom_field() {
     add_meta_box( 'summary', 'まとめタイトル（英語／日本語）', 'create_summary', 'post', 'normal' );
+    add_meta_box( 'summary', 'まとめタイトル（英語／日本語）', 'create_summary', 'page', 'normal' );
     add_meta_box( 'goodsURLs', '商品URL', 'create_goodsurls', 'product', 'normal' );
 }
  
-
 function create_summary() {
     $keyname = array('まとめ英語タイトル', 'まとめ日本語タイトル');
     global $post;
@@ -210,5 +210,87 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
+    acf_add_local_field_group(array(
+        'key' => 'group_60626f59ddebb',
+        'title' => 'まとめ記事一覧に表示する',
+        'fields' => array(
+            array(
+                'key' => 'field_60626f6b3c2bb',
+                'label' => 'まとめ一覧ページに表示するか',
+                'name' => 'is_summary',
+                'type' => 'true_false',
+                'instructions' => 'まとめ一覧ページに表示する場合はチェック',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 0,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
+            ),
+            array(
+                'key' => 'field_606270b9177ba',
+                'label' => '一覧表示する商品性別（まとめ一覧ページテンプレート選択時にのみ有効）',
+                'name' => 'summary_gender',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'field_60626f6b3c2bb',
+                            'operator' => '!=',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'men' => 'メンズ',
+                    'women' => 'ウィメンズ',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+                'default_value' => 'men : メンズ',
+                'layout' => 'horizontal',
+                'return_format' => 'value',
+                'save_other_choice' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+        
     endif;

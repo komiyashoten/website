@@ -4,7 +4,7 @@ Template Name: まとめページ
 Template Post Type: post, page
 */
 ?>
-<?php get_header('blog'); ?>
+<?php get_header('top'); ?>
 <?php if(have_posts()): while(have_posts()):the_post(); ?>
 	<section id="summary_header">
 		<img src="<?php echo kmy_get_thumbnail(get_the_ID()); ?>">
